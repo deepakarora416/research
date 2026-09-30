@@ -1,0 +1,2595 @@
+{
+  "model": "resnet50",
+  "dataset_dir": "../../datasets/places365",
+  "num_classes": 365,
+  "train_size": 10950,
+  "test_size": 3650,
+  "config": {
+    "epochs": 3,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "optimizer": "AdamW",
+    "loss_function": "CrossEntropyLoss",
+    "image_size": 224,
+    "pretrained": true,
+    "device": "mps"
+  },
+  "classes": [
+    "airfield",
+    "airplane_cabin",
+    "airport_terminal",
+    "alcove",
+    "alley",
+    "amphitheater",
+    "amusement_arcade",
+    "amusement_park",
+    "apartment_building_outdoor",
+    "aquarium",
+    "aqueduct",
+    "arcade",
+    "arch",
+    "archaelogical_excavation",
+    "archive",
+    "arena_hockey",
+    "arena_performance",
+    "arena_rodeo",
+    "army_base",
+    "art_gallery",
+    "art_school",
+    "art_studio",
+    "artists_loft",
+    "assembly_line",
+    "athletic_field_outdoor",
+    "atrium_public",
+    "attic",
+    "auditorium",
+    "auto_factory",
+    "auto_showroom",
+    "badlands",
+    "bakery_shop",
+    "balcony_exterior",
+    "balcony_interior",
+    "ball_pit",
+    "ballroom",
+    "bamboo_forest",
+    "bank_vault",
+    "banquet_hall",
+    "bar",
+    "barn",
+    "barndoor",
+    "baseball_field",
+    "basement",
+    "basketball_court_indoor",
+    "bathroom",
+    "bazaar_indoor",
+    "bazaar_outdoor",
+    "beach",
+    "beach_house",
+    "beauty_salon",
+    "bedchamber",
+    "bedroom",
+    "beer_garden",
+    "beer_hall",
+    "berth",
+    "biology_laboratory",
+    "boardwalk",
+    "boat_deck",
+    "boathouse",
+    "bookstore",
+    "booth_indoor",
+    "botanical_garden",
+    "bow_window_indoor",
+    "bowling_alley",
+    "boxing_ring",
+    "bridge",
+    "building_facade",
+    "bullring",
+    "burial_chamber",
+    "bus_interior",
+    "bus_station_indoor",
+    "butchers_shop",
+    "butte",
+    "cabin_outdoor",
+    "cafeteria",
+    "campsite",
+    "campus",
+    "canal_natural",
+    "canal_urban",
+    "candy_store",
+    "canyon",
+    "car_interior",
+    "carrousel",
+    "castle",
+    "catacomb",
+    "cemetery",
+    "chalet",
+    "chemistry_lab",
+    "childs_room",
+    "church_indoor",
+    "church_outdoor",
+    "classroom",
+    "clean_room",
+    "cliff",
+    "closet",
+    "clothing_store",
+    "coast",
+    "cockpit",
+    "coffee_shop",
+    "computer_room",
+    "conference_center",
+    "conference_room",
+    "construction_site",
+    "corn_field",
+    "corral",
+    "corridor",
+    "cottage",
+    "courthouse",
+    "courtyard",
+    "creek",
+    "crevasse",
+    "crosswalk",
+    "dam",
+    "delicatessen",
+    "department_store",
+    "desert_road",
+    "desert_sand",
+    "desert_vegetation",
+    "diner_outdoor",
+    "dining_hall",
+    "dining_room",
+    "discotheque",
+    "doorway_outdoor",
+    "dorm_room",
+    "downtown",
+    "dressing_room",
+    "driveway",
+    "drugstore",
+    "elevator_door",
+    "elevator_lobby",
+    "elevator_shaft",
+    "embassy",
+    "engine_room",
+    "entrance_hall",
+    "escalator_indoor",
+    "excavation",
+    "fabric_store",
+    "farm",
+    "fastfood_restaurant",
+    "field_cultivated",
+    "field_road",
+    "field_wild",
+    "fire_escape",
+    "fire_station",
+    "fishpond",
+    "flea_market_indoor",
+    "florist_shop_indoor",
+    "food_court",
+    "football_field",
+    "forest_broadleaf",
+    "forest_path",
+    "forest_road",
+    "formal_garden",
+    "fountain",
+    "galley",
+    "garage_indoor",
+    "garage_outdoor",
+    "gas_station",
+    "gazebo_exterior",
+    "general_store_indoor",
+    "general_store_outdoor",
+    "gift_shop",
+    "glacier",
+    "golf_course",
+    "greenhouse_indoor",
+    "greenhouse_outdoor",
+    "grotto",
+    "gymnasium_indoor",
+    "hangar_indoor",
+    "hangar_outdoor",
+    "harbor",
+    "hardware_store",
+    "hayfield",
+    "heliport",
+    "highway",
+    "home_office",
+    "home_theater",
+    "hospital",
+    "hospital_room",
+    "hot_spring",
+    "hotel_outdoor",
+    "hotel_room",
+    "house",
+    "hunting_lodge_outdoor",
+    "ice_cream_parlor",
+    "ice_floe",
+    "ice_shelf",
+    "ice_skating_rink_indoor",
+    "ice_skating_rink_outdoor",
+    "iceberg",
+    "igloo",
+    "industrial_area",
+    "inn_outdoor",
+    "islet",
+    "jacuzzi_indoor",
+    "jail_cell",
+    "japanese_garden",
+    "jewelry_shop",
+    "junkyard",
+    "kasbah",
+    "kennel_outdoor",
+    "kindergarden_classroom",
+    "kitchen",
+    "lagoon",
+    "lake_natural",
+    "landfill",
+    "landing_deck",
+    "laundromat",
+    "lawn",
+    "lecture_room",
+    "legislative_chamber",
+    "library_indoor",
+    "library_outdoor",
+    "lighthouse",
+    "living_room",
+    "loading_dock",
+    "lobby",
+    "lock_chamber",
+    "locker_room",
+    "mansion",
+    "manufactured_home",
+    "market_indoor",
+    "market_outdoor",
+    "marsh",
+    "martial_arts_gym",
+    "mausoleum",
+    "medina",
+    "mezzanine",
+    "moat_water",
+    "mosque_outdoor",
+    "motel",
+    "mountain",
+    "mountain_path",
+    "mountain_snowy",
+    "movie_theater_indoor",
+    "museum_indoor",
+    "museum_outdoor",
+    "music_studio",
+    "natural_history_museum",
+    "nursery",
+    "nursing_home",
+    "oast_house",
+    "ocean",
+    "office",
+    "office_building",
+    "office_cubicles",
+    "oilrig",
+    "operating_room",
+    "orchard",
+    "orchestra_pit",
+    "pagoda",
+    "palace",
+    "pantry",
+    "park",
+    "parking_garage_indoor",
+    "parking_garage_outdoor",
+    "parking_lot",
+    "pasture",
+    "patio",
+    "pavilion",
+    "pet_shop",
+    "pharmacy",
+    "phone_booth",
+    "physics_laboratory",
+    "picnic_area",
+    "pier",
+    "pizzeria",
+    "playground",
+    "playroom",
+    "plaza",
+    "pond",
+    "porch",
+    "promenade",
+    "pub_indoor",
+    "racecourse",
+    "raceway",
+    "raft",
+    "railroad_track",
+    "rainforest",
+    "reception",
+    "recreation_room",
+    "repair_shop",
+    "residential_neighborhood",
+    "restaurant",
+    "restaurant_kitchen",
+    "restaurant_patio",
+    "rice_paddy",
+    "river",
+    "rock_arch",
+    "roof_garden",
+    "rope_bridge",
+    "ruin",
+    "runway",
+    "sandbox",
+    "sauna",
+    "schoolhouse",
+    "science_museum",
+    "server_room",
+    "shed",
+    "shoe_shop",
+    "shopfront",
+    "shopping_mall_indoor",
+    "shower",
+    "ski_resort",
+    "ski_slope",
+    "sky",
+    "skyscraper",
+    "slum",
+    "snowfield",
+    "soccer_field",
+    "stable",
+    "stadium_baseball",
+    "stadium_football",
+    "stadium_soccer",
+    "stage_indoor",
+    "stage_outdoor",
+    "staircase",
+    "storage_room",
+    "street",
+    "subway_station_platform",
+    "supermarket",
+    "sushi_bar",
+    "swamp",
+    "swimming_hole",
+    "swimming_pool_indoor",
+    "swimming_pool_outdoor",
+    "synagogue_outdoor",
+    "television_room",
+    "television_studio",
+    "temple_asia",
+    "throne_room",
+    "ticket_booth",
+    "topiary_garden",
+    "tower",
+    "toyshop",
+    "train_interior",
+    "train_station_platform",
+    "tree_farm",
+    "tree_house",
+    "trench",
+    "tundra",
+    "underwater_ocean_deep",
+    "utility_room",
+    "valley",
+    "vegetable_garden",
+    "veterinarians_office",
+    "viaduct",
+    "village",
+    "vineyard",
+    "volcano",
+    "volleyball_court_outdoor",
+    "waiting_room",
+    "water_park",
+    "water_tower",
+    "waterfall",
+    "watering_hole",
+    "wave",
+    "wet_bar",
+    "wheat_field",
+    "wind_farm",
+    "windmill",
+    "yard",
+    "youth_hostel",
+    "zen_garden"
+  ],
+  "results": {
+    "accuracy": 0.2854794520547945,
+    "precision_macro": 0.2690226042660909,
+    "recall_macro": 0.2854794520547945,
+    "f1_macro": 0.2470921754181235,
+    "per_class": {
+      "airfield": {
+        "precision": 0.2916666666666667,
+        "recall": 0.7,
+        "f1-score": 0.4117647058823529,
+        "support": 10.0
+      },
+      "airplane_cabin": {
+        "precision": 0.375,
+        "recall": 0.6,
+        "f1-score": 0.46153846153846156,
+        "support": 10.0
+      },
+      "airport_terminal": {
+        "precision": 0.4,
+        "recall": 0.2,
+        "f1-score": 0.26666666666666666,
+        "support": 10.0
+      },
+      "alcove": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "alley": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "amphitheater": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "amusement_arcade": {
+        "precision": 0.46153846153846156,
+        "recall": 0.6,
+        "f1-score": 0.5217391304347826,
+        "support": 10.0
+      },
+      "amusement_park": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "apartment_building_outdoor": {
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1-score": 0.16666666666666666,
+        "support": 10.0
+      },
+      "aquarium": {
+        "precision": 0.3,
+        "recall": 0.6,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "aqueduct": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "arcade": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "arch": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "archaelogical_excavation": {
+        "precision": 0.5,
+        "recall": 0.6,
+        "f1-score": 0.5454545454545454,
+        "support": 10.0
+      },
+      "archive": {
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1-score": 0.16666666666666666,
+        "support": 10.0
+      },
+      "arena_hockey": {
+        "precision": 0.47368421052631576,
+        "recall": 0.9,
+        "f1-score": 0.6206896551724138,
+        "support": 10.0
+      },
+      "arena_performance": {
+        "precision": 0.14285714285714285,
+        "recall": 0.1,
+        "f1-score": 0.11764705882352941,
+        "support": 10.0
+      },
+      "arena_rodeo": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "army_base": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1-score": 0.7272727272727273,
+        "support": 10.0
+      },
+      "art_gallery": {
+        "precision": 1.0,
+        "recall": 0.1,
+        "f1-score": 0.18181818181818182,
+        "support": 10.0
+      },
+      "art_school": {
+        "precision": 0.12121212121212122,
+        "recall": 0.4,
+        "f1-score": 0.18604651162790697,
+        "support": 10.0
+      },
+      "art_studio": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "artists_loft": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "assembly_line": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "athletic_field_outdoor": {
+        "precision": 0.2222222222222222,
+        "recall": 0.2,
+        "f1-score": 0.21052631578947367,
+        "support": 10.0
+      },
+      "atrium_public": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "attic": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "auditorium": {
+        "precision": 0.16666666666666666,
+        "recall": 0.1,
+        "f1-score": 0.125,
+        "support": 10.0
+      },
+      "auto_factory": {
+        "precision": 0.2222222222222222,
+        "recall": 0.2,
+        "f1-score": 0.21052631578947367,
+        "support": 10.0
+      },
+      "auto_showroom": {
+        "precision": 0.4666666666666667,
+        "recall": 0.7,
+        "f1-score": 0.56,
+        "support": 10.0
+      },
+      "badlands": {
+        "precision": 0.19047619047619047,
+        "recall": 0.4,
+        "f1-score": 0.25806451612903225,
+        "support": 10.0
+      },
+      "bakery_shop": {
+        "precision": 0.2857142857142857,
+        "recall": 0.2,
+        "f1-score": 0.23529411764705882,
+        "support": 10.0
+      },
+      "balcony_exterior": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "balcony_interior": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "ball_pit": {
+        "precision": 0.5384615384615384,
+        "recall": 0.7,
+        "f1-score": 0.6086956521739131,
+        "support": 10.0
+      },
+      "ballroom": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 10.0
+      },
+      "bamboo_forest": {
+        "precision": 0.38095238095238093,
+        "recall": 0.8,
+        "f1-score": 0.5161290322580645,
+        "support": 10.0
+      },
+      "bank_vault": {
+        "precision": 0.4166666666666667,
+        "recall": 0.5,
+        "f1-score": 0.45454545454545453,
+        "support": 10.0
+      },
+      "banquet_hall": {
+        "precision": 0.21212121212121213,
+        "recall": 0.7,
+        "f1-score": 0.32558139534883723,
+        "support": 10.0
+      },
+      "bar": {
+        "precision": 0.15384615384615385,
+        "recall": 0.2,
+        "f1-score": 0.17391304347826086,
+        "support": 10.0
+      },
+      "barn": {
+        "precision": 0.3333333333333333,
+        "recall": 0.8,
+        "f1-score": 0.47058823529411764,
+        "support": 10.0
+      },
+      "barndoor": {
+        "precision": 0.75,
+        "recall": 0.3,
+        "f1-score": 0.42857142857142855,
+        "support": 10.0
+      },
+      "baseball_field": {
+        "precision": 0.6363636363636364,
+        "recall": 0.7,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "basement": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "basketball_court_indoor": {
+        "precision": 0.36363636363636365,
+        "recall": 0.8,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "bathroom": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "bazaar_indoor": {
+        "precision": 0.3076923076923077,
+        "recall": 0.4,
+        "f1-score": 0.34782608695652173,
+        "support": 10.0
+      },
+      "bazaar_outdoor": {
+        "precision": 0.46153846153846156,
+        "recall": 0.6,
+        "f1-score": 0.5217391304347826,
+        "support": 10.0
+      },
+      "beach": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "beach_house": {
+        "precision": 0.2,
+        "recall": 0.1,
+        "f1-score": 0.13333333333333333,
+        "support": 10.0
+      },
+      "beauty_salon": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "bedchamber": {
+        "precision": 0.15384615384615385,
+        "recall": 0.4,
+        "f1-score": 0.2222222222222222,
+        "support": 10.0
+      },
+      "bedroom": {
+        "precision": 0.125,
+        "recall": 0.1,
+        "f1-score": 0.1111111111111111,
+        "support": 10.0
+      },
+      "beer_garden": {
+        "precision": 0.1875,
+        "recall": 0.3,
+        "f1-score": 0.23076923076923078,
+        "support": 10.0
+      },
+      "beer_hall": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "berth": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "biology_laboratory": {
+        "precision": 0.1,
+        "recall": 0.1,
+        "f1-score": 0.1,
+        "support": 10.0
+      },
+      "boardwalk": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "boat_deck": {
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1-score": 0.4444444444444444,
+        "support": 10.0
+      },
+      "boathouse": {
+        "precision": 0.38461538461538464,
+        "recall": 0.5,
+        "f1-score": 0.43478260869565216,
+        "support": 10.0
+      },
+      "bookstore": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.15384615384615385,
+        "support": 10.0
+      },
+      "booth_indoor": {
+        "precision": 0.21428571428571427,
+        "recall": 0.3,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "botanical_garden": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "bow_window_indoor": {
+        "precision": 0.18181818181818182,
+        "recall": 0.6,
+        "f1-score": 0.27906976744186046,
+        "support": 10.0
+      },
+      "bowling_alley": {
+        "precision": 0.6666666666666666,
+        "recall": 0.2,
+        "f1-score": 0.3076923076923077,
+        "support": 10.0
+      },
+      "boxing_ring": {
+        "precision": 0.5,
+        "recall": 0.9,
+        "f1-score": 0.6428571428571429,
+        "support": 10.0
+      },
+      "bridge": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "building_facade": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "bullring": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "burial_chamber": {
+        "precision": 0.38461538461538464,
+        "recall": 0.5,
+        "f1-score": 0.43478260869565216,
+        "support": 10.0
+      },
+      "bus_interior": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3,
+        "f1-score": 0.3157894736842105,
+        "support": 10.0
+      },
+      "bus_station_indoor": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1-score": 0.8888888888888888,
+        "support": 10.0
+      },
+      "butchers_shop": {
+        "precision": 0.4,
+        "recall": 0.2,
+        "f1-score": 0.26666666666666666,
+        "support": 10.0
+      },
+      "butte": {
+        "precision": 0.23529411764705882,
+        "recall": 0.4,
+        "f1-score": 0.2962962962962963,
+        "support": 10.0
+      },
+      "cabin_outdoor": {
+        "precision": 0.2631578947368421,
+        "recall": 0.5,
+        "f1-score": 0.3448275862068966,
+        "support": 10.0
+      },
+      "cafeteria": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "campsite": {
+        "precision": 0.42857142857142855,
+        "recall": 0.6,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "campus": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.15384615384615385,
+        "support": 10.0
+      },
+      "canal_natural": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "canal_urban": {
+        "precision": 0.29411764705882354,
+        "recall": 0.5,
+        "f1-score": 0.37037037037037035,
+        "support": 10.0
+      },
+      "candy_store": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "canyon": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "car_interior": {
+        "precision": 0.47058823529411764,
+        "recall": 0.8,
+        "f1-score": 0.5925925925925926,
+        "support": 10.0
+      },
+      "carrousel": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6,
+        "f1-score": 0.631578947368421,
+        "support": 10.0
+      },
+      "castle": {
+        "precision": 0.14285714285714285,
+        "recall": 0.1,
+        "f1-score": 0.11764705882352941,
+        "support": 10.0
+      },
+      "catacomb": {
+        "precision": 0.15384615384615385,
+        "recall": 0.2,
+        "f1-score": 0.17391304347826086,
+        "support": 10.0
+      },
+      "cemetery": {
+        "precision": 0.5384615384615384,
+        "recall": 0.7,
+        "f1-score": 0.6086956521739131,
+        "support": 10.0
+      },
+      "chalet": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "chemistry_lab": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "childs_room": {
+        "precision": 0.16666666666666666,
+        "recall": 0.2,
+        "f1-score": 0.18181818181818182,
+        "support": 10.0
+      },
+      "church_indoor": {
+        "precision": 0.3125,
+        "recall": 0.5,
+        "f1-score": 0.38461538461538464,
+        "support": 10.0
+      },
+      "church_outdoor": {
+        "precision": 0.12121212121212122,
+        "recall": 0.4,
+        "f1-score": 0.18604651162790697,
+        "support": 10.0
+      },
+      "classroom": {
+        "precision": 0.1111111111111111,
+        "recall": 0.1,
+        "f1-score": 0.10526315789473684,
+        "support": 10.0
+      },
+      "clean_room": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "cliff": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "closet": {
+        "precision": 0.2,
+        "recall": 0.3,
+        "f1-score": 0.24,
+        "support": 10.0
+      },
+      "clothing_store": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "coast": {
+        "precision": 0.06666666666666667,
+        "recall": 0.1,
+        "f1-score": 0.08,
+        "support": 10.0
+      },
+      "cockpit": {
+        "precision": 0.4666666666666667,
+        "recall": 0.7,
+        "f1-score": 0.56,
+        "support": 10.0
+      },
+      "coffee_shop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "computer_room": {
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1-score": 0.4444444444444444,
+        "support": 10.0
+      },
+      "conference_center": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "conference_room": {
+        "precision": 0.125,
+        "recall": 0.1,
+        "f1-score": 0.1111111111111111,
+        "support": 10.0
+      },
+      "construction_site": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "corn_field": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.15384615384615385,
+        "support": 10.0
+      },
+      "corral": {
+        "precision": 0.7142857142857143,
+        "recall": 0.5,
+        "f1-score": 0.5882352941176471,
+        "support": 10.0
+      },
+      "corridor": {
+        "precision": 0.2222222222222222,
+        "recall": 0.4,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "cottage": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "courthouse": {
+        "precision": 0.14285714285714285,
+        "recall": 0.3,
+        "f1-score": 0.1935483870967742,
+        "support": 10.0
+      },
+      "courtyard": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "creek": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "crevasse": {
+        "precision": 0.6,
+        "recall": 0.3,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "crosswalk": {
+        "precision": 0.2,
+        "recall": 0.1,
+        "f1-score": 0.13333333333333333,
+        "support": 10.0
+      },
+      "dam": {
+        "precision": 0.5,
+        "recall": 0.3,
+        "f1-score": 0.375,
+        "support": 10.0
+      },
+      "delicatessen": {
+        "precision": 0.07142857142857142,
+        "recall": 0.1,
+        "f1-score": 0.08333333333333333,
+        "support": 10.0
+      },
+      "department_store": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "desert_road": {
+        "precision": 0.3125,
+        "recall": 0.5,
+        "f1-score": 0.38461538461538464,
+        "support": 10.0
+      },
+      "desert_sand": {
+        "precision": 0.26666666666666666,
+        "recall": 0.4,
+        "f1-score": 0.32,
+        "support": 10.0
+      },
+      "desert_vegetation": {
+        "precision": 0.2727272727272727,
+        "recall": 0.3,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "diner_outdoor": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "dining_hall": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "dining_room": {
+        "precision": 0.2727272727272727,
+        "recall": 0.6,
+        "f1-score": 0.375,
+        "support": 10.0
+      },
+      "discotheque": {
+        "precision": 0.3076923076923077,
+        "recall": 0.4,
+        "f1-score": 0.34782608695652173,
+        "support": 10.0
+      },
+      "doorway_outdoor": {
+        "precision": 0.17647058823529413,
+        "recall": 0.6,
+        "f1-score": 0.2727272727272727,
+        "support": 10.0
+      },
+      "dorm_room": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "downtown": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3,
+        "f1-score": 0.3157894736842105,
+        "support": 10.0
+      },
+      "dressing_room": {
+        "precision": 0.3076923076923077,
+        "recall": 0.4,
+        "f1-score": 0.34782608695652173,
+        "support": 10.0
+      },
+      "driveway": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "drugstore": {
+        "precision": 0.08695652173913043,
+        "recall": 0.2,
+        "f1-score": 0.12121212121212122,
+        "support": 10.0
+      },
+      "elevator_door": {
+        "precision": 0.16666666666666666,
+        "recall": 0.2,
+        "f1-score": 0.18181818181818182,
+        "support": 10.0
+      },
+      "elevator_lobby": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "elevator_shaft": {
+        "precision": 0.3076923076923077,
+        "recall": 0.4,
+        "f1-score": 0.34782608695652173,
+        "support": 10.0
+      },
+      "embassy": {
+        "precision": 0.6666666666666666,
+        "recall": 0.2,
+        "f1-score": 0.3076923076923077,
+        "support": 10.0
+      },
+      "engine_room": {
+        "precision": 0.2222222222222222,
+        "recall": 0.6,
+        "f1-score": 0.32432432432432434,
+        "support": 10.0
+      },
+      "entrance_hall": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "escalator_indoor": {
+        "precision": 0.38461538461538464,
+        "recall": 0.5,
+        "f1-score": 0.43478260869565216,
+        "support": 10.0
+      },
+      "excavation": {
+        "precision": 0.29411764705882354,
+        "recall": 0.5,
+        "f1-score": 0.37037037037037035,
+        "support": 10.0
+      },
+      "fabric_store": {
+        "precision": 0.4666666666666667,
+        "recall": 0.7,
+        "f1-score": 0.56,
+        "support": 10.0
+      },
+      "farm": {
+        "precision": 0.16666666666666666,
+        "recall": 0.1,
+        "f1-score": 0.125,
+        "support": 10.0
+      },
+      "fastfood_restaurant": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "field_cultivated": {
+        "precision": 0.3,
+        "recall": 0.3,
+        "f1-score": 0.3,
+        "support": 10.0
+      },
+      "field_road": {
+        "precision": 0.1111111111111111,
+        "recall": 0.1,
+        "f1-score": 0.10526315789473684,
+        "support": 10.0
+      },
+      "field_wild": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "fire_escape": {
+        "precision": 0.8,
+        "recall": 0.4,
+        "f1-score": 0.5333333333333333,
+        "support": 10.0
+      },
+      "fire_station": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "fishpond": {
+        "precision": 0.11764705882352941,
+        "recall": 0.2,
+        "f1-score": 0.14814814814814814,
+        "support": 10.0
+      },
+      "flea_market_indoor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "florist_shop_indoor": {
+        "precision": 0.375,
+        "recall": 0.9,
+        "f1-score": 0.5294117647058824,
+        "support": 10.0
+      },
+      "food_court": {
+        "precision": 0.06666666666666667,
+        "recall": 0.1,
+        "f1-score": 0.08,
+        "support": 10.0
+      },
+      "football_field": {
+        "precision": 0.3333333333333333,
+        "recall": 0.4,
+        "f1-score": 0.36363636363636365,
+        "support": 10.0
+      },
+      "forest_broadleaf": {
+        "precision": 0.23076923076923078,
+        "recall": 0.3,
+        "f1-score": 0.2608695652173913,
+        "support": 10.0
+      },
+      "forest_path": {
+        "precision": 0.16666666666666666,
+        "recall": 0.3,
+        "f1-score": 0.21428571428571427,
+        "support": 10.0
+      },
+      "forest_road": {
+        "precision": 0.2857142857142857,
+        "recall": 0.2,
+        "f1-score": 0.23529411764705882,
+        "support": 10.0
+      },
+      "formal_garden": {
+        "precision": 0.25,
+        "recall": 0.4,
+        "f1-score": 0.3076923076923077,
+        "support": 10.0
+      },
+      "fountain": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "galley": {
+        "precision": 0.3125,
+        "recall": 0.5,
+        "f1-score": 0.38461538461538464,
+        "support": 10.0
+      },
+      "garage_indoor": {
+        "precision": 0.6666666666666666,
+        "recall": 0.2,
+        "f1-score": 0.3076923076923077,
+        "support": 10.0
+      },
+      "garage_outdoor": {
+        "precision": 0.09090909090909091,
+        "recall": 0.1,
+        "f1-score": 0.09523809523809523,
+        "support": 10.0
+      },
+      "gas_station": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.15384615384615385,
+        "support": 10.0
+      },
+      "gazebo_exterior": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "general_store_indoor": {
+        "precision": 0.08333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.09090909090909091,
+        "support": 10.0
+      },
+      "general_store_outdoor": {
+        "precision": 0.20512820512820512,
+        "recall": 0.8,
+        "f1-score": 0.32653061224489793,
+        "support": 10.0
+      },
+      "gift_shop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "glacier": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "golf_course": {
+        "precision": 0.13333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.16,
+        "support": 10.0
+      },
+      "greenhouse_indoor": {
+        "precision": 0.36363636363636365,
+        "recall": 0.4,
+        "f1-score": 0.38095238095238093,
+        "support": 10.0
+      },
+      "greenhouse_outdoor": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "grotto": {
+        "precision": 0.3333333333333333,
+        "recall": 0.4,
+        "f1-score": 0.36363636363636365,
+        "support": 10.0
+      },
+      "gymnasium_indoor": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "hangar_indoor": {
+        "precision": 0.5,
+        "recall": 0.9,
+        "f1-score": 0.6428571428571429,
+        "support": 10.0
+      },
+      "hangar_outdoor": {
+        "precision": 0.375,
+        "recall": 0.3,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "harbor": {
+        "precision": 0.20833333333333334,
+        "recall": 0.5,
+        "f1-score": 0.29411764705882354,
+        "support": 10.0
+      },
+      "hardware_store": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "hayfield": {
+        "precision": 0.16666666666666666,
+        "recall": 0.5,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "heliport": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "highway": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "home_office": {
+        "precision": 0.26666666666666666,
+        "recall": 0.4,
+        "f1-score": 0.32,
+        "support": 10.0
+      },
+      "home_theater": {
+        "precision": 0.2857142857142857,
+        "recall": 0.2,
+        "f1-score": 0.23529411764705882,
+        "support": 10.0
+      },
+      "hospital": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "hospital_room": {
+        "precision": 0.29411764705882354,
+        "recall": 0.5,
+        "f1-score": 0.37037037037037035,
+        "support": 10.0
+      },
+      "hot_spring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "hotel_outdoor": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.15384615384615385,
+        "support": 10.0
+      },
+      "hotel_room": {
+        "precision": 0.1,
+        "recall": 0.1,
+        "f1-score": 0.1,
+        "support": 10.0
+      },
+      "house": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "hunting_lodge_outdoor": {
+        "precision": 0.2222222222222222,
+        "recall": 0.2,
+        "f1-score": 0.21052631578947367,
+        "support": 10.0
+      },
+      "ice_cream_parlor": {
+        "precision": 0.375,
+        "recall": 0.3,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "ice_floe": {
+        "precision": 0.1,
+        "recall": 0.2,
+        "f1-score": 0.13333333333333333,
+        "support": 10.0
+      },
+      "ice_shelf": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "ice_skating_rink_indoor": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.15384615384615385,
+        "support": 10.0
+      },
+      "ice_skating_rink_outdoor": {
+        "precision": 0.09090909090909091,
+        "recall": 0.1,
+        "f1-score": 0.09523809523809523,
+        "support": 10.0
+      },
+      "iceberg": {
+        "precision": 0.20833333333333334,
+        "recall": 0.5,
+        "f1-score": 0.29411764705882354,
+        "support": 10.0
+      },
+      "igloo": {
+        "precision": 0.2857142857142857,
+        "recall": 0.2,
+        "f1-score": 0.23529411764705882,
+        "support": 10.0
+      },
+      "industrial_area": {
+        "precision": 0.2,
+        "recall": 0.1,
+        "f1-score": 0.13333333333333333,
+        "support": 10.0
+      },
+      "inn_outdoor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "islet": {
+        "precision": 0.08333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.09090909090909091,
+        "support": 10.0
+      },
+      "jacuzzi_indoor": {
+        "precision": 0.6,
+        "recall": 0.3,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "jail_cell": {
+        "precision": 0.2222222222222222,
+        "recall": 0.2,
+        "f1-score": 0.21052631578947367,
+        "support": 10.0
+      },
+      "japanese_garden": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "jewelry_shop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "junkyard": {
+        "precision": 0.4375,
+        "recall": 0.7,
+        "f1-score": 0.5384615384615384,
+        "support": 10.0
+      },
+      "kasbah": {
+        "precision": 0.3333333333333333,
+        "recall": 0.6,
+        "f1-score": 0.42857142857142855,
+        "support": 10.0
+      },
+      "kennel_outdoor": {
+        "precision": 0.2,
+        "recall": 0.2,
+        "f1-score": 0.2,
+        "support": 10.0
+      },
+      "kindergarden_classroom": {
+        "precision": 0.2222222222222222,
+        "recall": 0.2,
+        "f1-score": 0.21052631578947367,
+        "support": 10.0
+      },
+      "kitchen": {
+        "precision": 0.2857142857142857,
+        "recall": 0.2,
+        "f1-score": 0.23529411764705882,
+        "support": 10.0
+      },
+      "lagoon": {
+        "precision": 0.08333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.09090909090909091,
+        "support": 10.0
+      },
+      "lake_natural": {
+        "precision": 0.08333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.09090909090909091,
+        "support": 10.0
+      },
+      "landfill": {
+        "precision": 0.6,
+        "recall": 0.3,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "landing_deck": {
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "f1-score": 0.5714285714285714,
+        "support": 10.0
+      },
+      "laundromat": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "lawn": {
+        "precision": 0.25,
+        "recall": 0.2,
+        "f1-score": 0.2222222222222222,
+        "support": 10.0
+      },
+      "lecture_room": {
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1-score": 0.4444444444444444,
+        "support": 10.0
+      },
+      "legislative_chamber": {
+        "precision": 0.22727272727272727,
+        "recall": 0.5,
+        "f1-score": 0.3125,
+        "support": 10.0
+      },
+      "library_indoor": {
+        "precision": 0.2727272727272727,
+        "recall": 0.3,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "library_outdoor": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.15384615384615385,
+        "support": 10.0
+      },
+      "lighthouse": {
+        "precision": 0.42857142857142855,
+        "recall": 0.6,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "living_room": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "loading_dock": {
+        "precision": 0.4,
+        "recall": 0.2,
+        "f1-score": 0.26666666666666666,
+        "support": 10.0
+      },
+      "lobby": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "lock_chamber": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.15384615384615385,
+        "support": 10.0
+      },
+      "locker_room": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "mansion": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "manufactured_home": {
+        "precision": 0.14583333333333334,
+        "recall": 0.7,
+        "f1-score": 0.2413793103448276,
+        "support": 10.0
+      },
+      "market_indoor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "market_outdoor": {
+        "precision": 0.1875,
+        "recall": 0.3,
+        "f1-score": 0.23076923076923078,
+        "support": 10.0
+      },
+      "marsh": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "martial_arts_gym": {
+        "precision": 0.25,
+        "recall": 0.3,
+        "f1-score": 0.2727272727272727,
+        "support": 10.0
+      },
+      "mausoleum": {
+        "precision": 1.0,
+        "recall": 0.1,
+        "f1-score": 0.18181818181818182,
+        "support": 10.0
+      },
+      "medina": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "mezzanine": {
+        "precision": 0.19047619047619047,
+        "recall": 0.4,
+        "f1-score": 0.25806451612903225,
+        "support": 10.0
+      },
+      "moat_water": {
+        "precision": 0.25,
+        "recall": 0.6,
+        "f1-score": 0.35294117647058826,
+        "support": 10.0
+      },
+      "mosque_outdoor": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "motel": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "mountain": {
+        "precision": 0.16666666666666666,
+        "recall": 0.1,
+        "f1-score": 0.125,
+        "support": 10.0
+      },
+      "mountain_path": {
+        "precision": 0.09090909090909091,
+        "recall": 0.1,
+        "f1-score": 0.09523809523809523,
+        "support": 10.0
+      },
+      "mountain_snowy": {
+        "precision": 0.4,
+        "recall": 0.6,
+        "f1-score": 0.48,
+        "support": 10.0
+      },
+      "movie_theater_indoor": {
+        "precision": 0.2222222222222222,
+        "recall": 0.6,
+        "f1-score": 0.32432432432432434,
+        "support": 10.0
+      },
+      "museum_indoor": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "museum_outdoor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "music_studio": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "natural_history_museum": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "nursery": {
+        "precision": 0.2631578947368421,
+        "recall": 0.5,
+        "f1-score": 0.3448275862068966,
+        "support": 10.0
+      },
+      "nursing_home": {
+        "precision": 0.5,
+        "recall": 0.3,
+        "f1-score": 0.375,
+        "support": 10.0
+      },
+      "oast_house": {
+        "precision": 0.375,
+        "recall": 0.3,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "ocean": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "office": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "office_building": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "office_cubicles": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "oilrig": {
+        "precision": 0.4,
+        "recall": 0.8,
+        "f1-score": 0.5333333333333333,
+        "support": 10.0
+      },
+      "operating_room": {
+        "precision": 0.1111111111111111,
+        "recall": 0.1,
+        "f1-score": 0.10526315789473684,
+        "support": 10.0
+      },
+      "orchard": {
+        "precision": 0.2,
+        "recall": 0.1,
+        "f1-score": 0.13333333333333333,
+        "support": 10.0
+      },
+      "orchestra_pit": {
+        "precision": 0.27586206896551724,
+        "recall": 0.8,
+        "f1-score": 0.41025641025641024,
+        "support": 10.0
+      },
+      "pagoda": {
+        "precision": 0.36363636363636365,
+        "recall": 0.8,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "palace": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "pantry": {
+        "precision": 0.4,
+        "recall": 0.6,
+        "f1-score": 0.48,
+        "support": 10.0
+      },
+      "park": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "parking_garage_indoor": {
+        "precision": 0.42857142857142855,
+        "recall": 0.3,
+        "f1-score": 0.35294117647058826,
+        "support": 10.0
+      },
+      "parking_garage_outdoor": {
+        "precision": 0.1935483870967742,
+        "recall": 0.6,
+        "f1-score": 0.2926829268292683,
+        "support": 10.0
+      },
+      "parking_lot": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "pasture": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "patio": {
+        "precision": 0.1875,
+        "recall": 0.3,
+        "f1-score": 0.23076923076923078,
+        "support": 10.0
+      },
+      "pavilion": {
+        "precision": 0.0625,
+        "recall": 0.1,
+        "f1-score": 0.07692307692307693,
+        "support": 10.0
+      },
+      "pet_shop": {
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1-score": 0.16666666666666666,
+        "support": 10.0
+      },
+      "pharmacy": {
+        "precision": 0.14285714285714285,
+        "recall": 0.1,
+        "f1-score": 0.11764705882352941,
+        "support": 10.0
+      },
+      "phone_booth": {
+        "precision": 0.5555555555555556,
+        "recall": 1.0,
+        "f1-score": 0.7142857142857143,
+        "support": 10.0
+      },
+      "physics_laboratory": {
+        "precision": 0.25,
+        "recall": 0.3,
+        "f1-score": 0.2727272727272727,
+        "support": 10.0
+      },
+      "picnic_area": {
+        "precision": 0.14285714285714285,
+        "recall": 0.1,
+        "f1-score": 0.11764705882352941,
+        "support": 10.0
+      },
+      "pier": {
+        "precision": 0.3,
+        "recall": 0.3,
+        "f1-score": 0.3,
+        "support": 10.0
+      },
+      "pizzeria": {
+        "precision": 0.4166666666666667,
+        "recall": 0.5,
+        "f1-score": 0.45454545454545453,
+        "support": 10.0
+      },
+      "playground": {
+        "precision": 0.75,
+        "recall": 0.3,
+        "f1-score": 0.42857142857142855,
+        "support": 10.0
+      },
+      "playroom": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "plaza": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "pond": {
+        "precision": 0.1111111111111111,
+        "recall": 0.1,
+        "f1-score": 0.10526315789473684,
+        "support": 10.0
+      },
+      "porch": {
+        "precision": 0.16666666666666666,
+        "recall": 0.1,
+        "f1-score": 0.125,
+        "support": 10.0
+      },
+      "promenade": {
+        "precision": 0.5,
+        "recall": 0.3,
+        "f1-score": 0.375,
+        "support": 10.0
+      },
+      "pub_indoor": {
+        "precision": 0.23809523809523808,
+        "recall": 0.5,
+        "f1-score": 0.3225806451612903,
+        "support": 10.0
+      },
+      "racecourse": {
+        "precision": 0.47058823529411764,
+        "recall": 0.8,
+        "f1-score": 0.5925925925925926,
+        "support": 10.0
+      },
+      "raceway": {
+        "precision": 0.47368421052631576,
+        "recall": 0.9,
+        "f1-score": 0.6206896551724138,
+        "support": 10.0
+      },
+      "raft": {
+        "precision": 0.5384615384615384,
+        "recall": 0.7,
+        "f1-score": 0.6086956521739131,
+        "support": 10.0
+      },
+      "railroad_track": {
+        "precision": 0.26666666666666666,
+        "recall": 0.4,
+        "f1-score": 0.32,
+        "support": 10.0
+      },
+      "rainforest": {
+        "precision": 0.2857142857142857,
+        "recall": 0.2,
+        "f1-score": 0.23529411764705882,
+        "support": 10.0
+      },
+      "reception": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "recreation_room": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "repair_shop": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "residential_neighborhood": {
+        "precision": 0.2857142857142857,
+        "recall": 0.2,
+        "f1-score": 0.23529411764705882,
+        "support": 10.0
+      },
+      "restaurant": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "restaurant_kitchen": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "restaurant_patio": {
+        "precision": 0.2,
+        "recall": 0.1,
+        "f1-score": 0.13333333333333333,
+        "support": 10.0
+      },
+      "rice_paddy": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "river": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "rock_arch": {
+        "precision": 0.24,
+        "recall": 0.6,
+        "f1-score": 0.34285714285714286,
+        "support": 10.0
+      },
+      "roof_garden": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "rope_bridge": {
+        "precision": 0.25,
+        "recall": 0.3,
+        "f1-score": 0.2727272727272727,
+        "support": 10.0
+      },
+      "ruin": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "runway": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "sandbox": {
+        "precision": 0.43478260869565216,
+        "recall": 1.0,
+        "f1-score": 0.6060606060606061,
+        "support": 10.0
+      },
+      "sauna": {
+        "precision": 0.17857142857142858,
+        "recall": 0.5,
+        "f1-score": 0.2631578947368421,
+        "support": 10.0
+      },
+      "schoolhouse": {
+        "precision": 0.3,
+        "recall": 0.3,
+        "f1-score": 0.3,
+        "support": 10.0
+      },
+      "science_museum": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "server_room": {
+        "precision": 0.12903225806451613,
+        "recall": 0.4,
+        "f1-score": 0.1951219512195122,
+        "support": 10.0
+      },
+      "shed": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "shoe_shop": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "shopfront": {
+        "precision": 0.29411764705882354,
+        "recall": 0.5,
+        "f1-score": 0.37037037037037035,
+        "support": 10.0
+      },
+      "shopping_mall_indoor": {
+        "precision": 0.6,
+        "recall": 0.3,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "shower": {
+        "precision": 0.11627906976744186,
+        "recall": 0.5,
+        "f1-score": 0.18867924528301888,
+        "support": 10.0
+      },
+      "ski_resort": {
+        "precision": 0.2727272727272727,
+        "recall": 0.3,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "ski_slope": {
+        "precision": 0.09090909090909091,
+        "recall": 0.1,
+        "f1-score": 0.09523809523809523,
+        "support": 10.0
+      },
+      "sky": {
+        "precision": 0.6,
+        "recall": 0.3,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "skyscraper": {
+        "precision": 0.25925925925925924,
+        "recall": 0.7,
+        "f1-score": 0.3783783783783784,
+        "support": 10.0
+      },
+      "slum": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "snowfield": {
+        "precision": 0.38461538461538464,
+        "recall": 0.5,
+        "f1-score": 0.43478260869565216,
+        "support": 10.0
+      },
+      "soccer_field": {
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "f1-score": 0.5714285714285714,
+        "support": 10.0
+      },
+      "stable": {
+        "precision": 0.5,
+        "recall": 0.7,
+        "f1-score": 0.5833333333333334,
+        "support": 10.0
+      },
+      "stadium_baseball": {
+        "precision": 0.4,
+        "recall": 0.4,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "stadium_football": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "stadium_soccer": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "stage_indoor": {
+        "precision": 1.0,
+        "recall": 0.1,
+        "f1-score": 0.18181818181818182,
+        "support": 10.0
+      },
+      "stage_outdoor": {
+        "precision": 0.3076923076923077,
+        "recall": 0.4,
+        "f1-score": 0.34782608695652173,
+        "support": 10.0
+      },
+      "staircase": {
+        "precision": 0.2,
+        "recall": 0.2,
+        "f1-score": 0.2,
+        "support": 10.0
+      },
+      "storage_room": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "street": {
+        "precision": 0.13636363636363635,
+        "recall": 0.3,
+        "f1-score": 0.1875,
+        "support": 10.0
+      },
+      "subway_station_platform": {
+        "precision": 0.38461538461538464,
+        "recall": 0.5,
+        "f1-score": 0.43478260869565216,
+        "support": 10.0
+      },
+      "supermarket": {
+        "precision": 0.2,
+        "recall": 0.2,
+        "f1-score": 0.2,
+        "support": 10.0
+      },
+      "sushi_bar": {
+        "precision": 0.2,
+        "recall": 0.1,
+        "f1-score": 0.13333333333333333,
+        "support": 10.0
+      },
+      "swamp": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "swimming_hole": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 10.0
+      },
+      "swimming_pool_indoor": {
+        "precision": 0.4117647058823529,
+        "recall": 0.7,
+        "f1-score": 0.5185185185185185,
+        "support": 10.0
+      },
+      "swimming_pool_outdoor": {
+        "precision": 0.3333333333333333,
+        "recall": 0.6,
+        "f1-score": 0.42857142857142855,
+        "support": 10.0
+      },
+      "synagogue_outdoor": {
+        "precision": 0.2857142857142857,
+        "recall": 0.2,
+        "f1-score": 0.23529411764705882,
+        "support": 10.0
+      },
+      "television_room": {
+        "precision": 0.42857142857142855,
+        "recall": 0.3,
+        "f1-score": 0.35294117647058826,
+        "support": 10.0
+      },
+      "television_studio": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "temple_asia": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "throne_room": {
+        "precision": 0.6153846153846154,
+        "recall": 0.8,
+        "f1-score": 0.6956521739130435,
+        "support": 10.0
+      },
+      "ticket_booth": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "topiary_garden": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "tower": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "toyshop": {
+        "precision": 0.375,
+        "recall": 0.6,
+        "f1-score": 0.46153846153846156,
+        "support": 10.0
+      },
+      "train_interior": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "train_station_platform": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "tree_farm": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "tree_house": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 10.0
+      },
+      "trench": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "tundra": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "underwater_ocean_deep": {
+        "precision": 0.5294117647058824,
+        "recall": 0.9,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "utility_room": {
+        "precision": 0.3333333333333333,
+        "recall": 0.9,
+        "f1-score": 0.4864864864864865,
+        "support": 10.0
+      },
+      "valley": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "vegetable_garden": {
+        "precision": 0.14285714285714285,
+        "recall": 0.1,
+        "f1-score": 0.11764705882352941,
+        "support": 10.0
+      },
+      "veterinarians_office": {
+        "precision": 0.4117647058823529,
+        "recall": 0.7,
+        "f1-score": 0.5185185185185185,
+        "support": 10.0
+      },
+      "viaduct": {
+        "precision": 0.5714285714285714,
+        "recall": 0.8,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "village": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.15384615384615385,
+        "support": 10.0
+      },
+      "vineyard": {
+        "precision": 0.2,
+        "recall": 0.1,
+        "f1-score": 0.13333333333333333,
+        "support": 10.0
+      },
+      "volcano": {
+        "precision": 0.23529411764705882,
+        "recall": 0.4,
+        "f1-score": 0.2962962962962963,
+        "support": 10.0
+      },
+      "volleyball_court_outdoor": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "waiting_room": {
+        "precision": 0.25,
+        "recall": 0.1,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "water_park": {
+        "precision": 0.25,
+        "recall": 0.2,
+        "f1-score": 0.2222222222222222,
+        "support": 10.0
+      },
+      "water_tower": {
+        "precision": 0.23529411764705882,
+        "recall": 0.4,
+        "f1-score": 0.2962962962962963,
+        "support": 10.0
+      },
+      "waterfall": {
+        "precision": 0.25,
+        "recall": 0.8,
+        "f1-score": 0.38095238095238093,
+        "support": 10.0
+      },
+      "watering_hole": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "wave": {
+        "precision": 0.25,
+        "recall": 0.5,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "wet_bar": {
+        "precision": 0.1111111111111111,
+        "recall": 0.2,
+        "f1-score": 0.14285714285714285,
+        "support": 10.0
+      },
+      "wheat_field": {
+        "precision": 0.21739130434782608,
+        "recall": 0.5,
+        "f1-score": 0.30303030303030304,
+        "support": 10.0
+      },
+      "wind_farm": {
+        "precision": 0.38461538461538464,
+        "recall": 0.5,
+        "f1-score": 0.43478260869565216,
+        "support": 10.0
+      },
+      "windmill": {
+        "precision": 0.5555555555555556,
+        "recall": 0.5,
+        "f1-score": 0.5263157894736842,
+        "support": 10.0
+      },
+      "yard": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "youth_hostel": {
+        "precision": 0.2,
+        "recall": 0.1,
+        "f1-score": 0.13333333333333333,
+        "support": 10.0
+      },
+      "zen_garden": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "accuracy": 0.2854794520547945,
+      "macro avg": {
+        "precision": 0.2690226042660909,
+        "recall": 0.2854794520547945,
+        "f1-score": 0.2470921754181235,
+        "support": 3650.0
+      },
+      "weighted avg": {
+        "precision": 0.2690226042660909,
+        "recall": 0.2854794520547945,
+        "f1-score": 0.2470921754181235,
+        "support": 3650.0
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "model": "resnet50",
+  "dataset_dir": "../../datasets/scene15",
+  "num_classes": 15,
+  "train_size": 1500,
+  "test_size": 2985,
+  "config": {
+    "epochs": 3,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "optimizer": "AdamW",
+    "loss_function": "CrossEntropyLoss",
+    "image_size": 224,
+    "pretrained": true,
+    "device": "mps"
+  },
+  "classes": [
+    "bedroom",
+    "coast",
+    "forest",
+    "highway",
+    "industrial",
+    "insidecity",
+    "kitchen",
+    "livingroom",
+    "mountain",
+    "office",
+    "opencountry",
+    "store",
+    "street",
+    "suburb",
+    "tallbuilding"
+  ],
+  "results": {
+    "accuracy": 0.7889447236180904,
+    "precision_macro": 0.8013519249518972,
+    "recall_macro": 0.8011028208001659,
+    "f1_macro": 0.788156766797801,
+    "per_class": {
+      "bedroom": {
+        "precision": 0.8271604938271605,
+        "recall": 0.5775862068965517,
+        "f1-score": 0.6802030456852792,
+        "support": 116.0
+      },
+      "coast": {
+        "precision": 0.7337662337662337,
+        "recall": 0.8692307692307693,
+        "f1-score": 0.795774647887324,
+        "support": 260.0
+      },
+      "forest": {
+        "precision": 0.7672727272727272,
+        "recall": 0.9254385964912281,
+        "f1-score": 0.8389662027833003,
+        "support": 228.0
+      },
+      "highway": {
+        "precision": 0.9202898550724637,
+        "recall": 0.79375,
+        "f1-score": 0.8523489932885906,
+        "support": 160.0
+      },
+      "industrial": {
+        "precision": 0.8666666666666667,
+        "recall": 0.7393364928909952,
+        "f1-score": 0.7979539641943734,
+        "support": 211.0
+      },
+      "insidecity": {
+        "precision": 0.8985507246376812,
+        "recall": 0.5961538461538461,
+        "f1-score": 0.7167630057803468,
+        "support": 208.0
+      },
+      "kitchen": {
+        "precision": 0.7796610169491526,
+        "recall": 0.8363636363636363,
+        "f1-score": 0.8070175438596491,
+        "support": 110.0
+      },
+      "livingroom": {
+        "precision": 0.6796116504854369,
+        "recall": 0.7407407407407407,
+        "f1-score": 0.7088607594936709,
+        "support": 189.0
+      },
+      "mountain": {
+        "precision": 0.7452830188679245,
+        "recall": 0.864963503649635,
+        "f1-score": 0.8006756756756757,
+        "support": 274.0
+      },
+      "office": {
+        "precision": 0.7115384615384616,
+        "recall": 0.9652173913043478,
+        "f1-score": 0.8191881918819188,
+        "support": 115.0
+      },
+      "opencountry": {
+        "precision": 0.7668711656441718,
+        "recall": 0.4032258064516129,
+        "f1-score": 0.5285412262156448,
+        "support": 310.0
+      },
+      "store": {
+        "precision": 0.9230769230769231,
+        "recall": 0.8372093023255814,
+        "f1-score": 0.8780487804878049,
+        "support": 215.0
+      },
+      "street": {
+        "precision": 0.6491228070175439,
+        "recall": 0.9635416666666666,
+        "f1-score": 0.7756813417190775,
+        "support": 192.0
+      },
+      "suburb": {
+        "precision": 0.8475609756097561,
+        "recall": 0.9858156028368794,
+        "f1-score": 0.9114754098360656,
+        "support": 141.0
+      },
+      "tallbuilding": {
+        "precision": 0.9038461538461539,
+        "recall": 0.91796875,
+        "f1-score": 0.9108527131782945,
+        "support": 256.0
+      },
+      "accuracy": 0.7889447236180904,
+      "macro avg": {
+        "precision": 0.8013519249518972,
+        "recall": 0.8011028208001659,
+        "f1-score": 0.788156766797801,
+        "support": 2985.0
+      },
+      "weighted avg": {
+        "precision": 0.8008835141847007,
+        "recall": 0.7889447236180904,
+        "f1-score": 0.7807416717021874,
+        "support": 2985.0
+      }
+    }
+  }
+}

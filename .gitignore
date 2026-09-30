@@ -1,0 +1,17 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Dataset images are large and reproducible via datasets/prepare_*.py
+datasets/intel_image/
+datasets/mit67/
+datasets/sun397/
+datasets/ucmerced/
+datasets/places365/
+datasets/scene15/
+datasets/_places365_raw/
+datasets/_scene15_raw/
+
+# Model checkpoints are large (270-320MB each) and reproducible by re-running training
+results/*.pt
