@@ -1,0 +1,2940 @@
+{
+  "model": "cg_cbat_resnet50",
+  "dataset_dir": "../../datasets/sun397",
+  "num_classes": 397,
+  "train_size": 10123,
+  "test_size": 3970,
+  "config": {
+    "epochs": 16,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "optimizer": "AdamW",
+    "loss_function": "CrossEntropyLoss",
+    "image_size": 224,
+    "pretrained": true,
+    "device": "mps"
+  },
+  "classes": [
+    "abbey",
+    "airplane cabin",
+    "airport terminal",
+    "alley",
+    "amphitheater",
+    "amusement arcade",
+    "amusement park",
+    "anechoic chamber",
+    "apartment building outdoor",
+    "apse indoor",
+    "aquarium",
+    "aqueduct",
+    "arch",
+    "archive",
+    "arrival gate outdoor",
+    "art gallery",
+    "art school",
+    "art studio",
+    "assembly line",
+    "athletic field outdoor",
+    "atrium public",
+    "attic",
+    "auditorium",
+    "auto factory",
+    "badlands",
+    "badminton court indoor",
+    "baggage claim",
+    "bakery shop",
+    "balcony exterior",
+    "balcony interior",
+    "ball pit",
+    "ballroom",
+    "bamboo forest",
+    "banquet hall",
+    "bar",
+    "barn",
+    "barndoor",
+    "baseball field",
+    "basement",
+    "basilica",
+    "basketball court outdoor",
+    "bathroom",
+    "batters box",
+    "bayou",
+    "bazaar indoor",
+    "bazaar outdoor",
+    "beach",
+    "beauty salon",
+    "bedroom",
+    "berth",
+    "biology laboratory",
+    "bistro indoor",
+    "boardwalk",
+    "boat deck",
+    "boathouse",
+    "bookstore",
+    "booth indoor",
+    "botanical garden",
+    "bow window indoor",
+    "bow window outdoor",
+    "bowling alley",
+    "boxing ring",
+    "brewery indoor",
+    "bridge",
+    "building facade",
+    "bullring",
+    "burial chamber",
+    "bus interior",
+    "butchers shop",
+    "butte",
+    "cabin outdoor",
+    "cafeteria",
+    "campsite",
+    "campus",
+    "canal natural",
+    "canal urban",
+    "candy store",
+    "canyon",
+    "car interior backseat",
+    "car interior frontseat",
+    "carrousel",
+    "casino indoor",
+    "castle",
+    "catacomb",
+    "cathedral indoor",
+    "cathedral outdoor",
+    "cavern indoor",
+    "cemetery",
+    "chalet",
+    "cheese factory",
+    "chemistry lab",
+    "chicken coop indoor",
+    "chicken coop outdoor",
+    "childs room",
+    "church indoor",
+    "church outdoor",
+    "classroom",
+    "clean room",
+    "cliff",
+    "cloister indoor",
+    "closet",
+    "clothing store",
+    "coast",
+    "cockpit",
+    "coffee shop",
+    "computer room",
+    "conference center",
+    "conference room",
+    "construction site",
+    "control room",
+    "control tower outdoor",
+    "corn field",
+    "corral",
+    "corridor",
+    "cottage garden",
+    "courthouse",
+    "courtroom",
+    "courtyard",
+    "covered bridge exterior",
+    "creek",
+    "crevasse",
+    "crosswalk",
+    "cubicle office",
+    "dam",
+    "delicatessen",
+    "dentists office",
+    "desert sand",
+    "desert vegetation",
+    "diner indoor",
+    "diner outdoor",
+    "dinette home",
+    "dinette vehicle",
+    "dining car",
+    "dining room",
+    "discotheque",
+    "dock",
+    "doorway outdoor",
+    "dorm room",
+    "driveway",
+    "driving range outdoor",
+    "drugstore",
+    "electrical substation",
+    "elevator door",
+    "elevator interior",
+    "elevator shaft",
+    "engine room",
+    "escalator indoor",
+    "excavation",
+    "factory indoor",
+    "fairway",
+    "fastfood restaurant",
+    "field cultivated",
+    "field wild",
+    "fire escape",
+    "fire station",
+    "firing range indoor",
+    "fishpond",
+    "florist shop indoor",
+    "food court",
+    "forest broadleaf",
+    "forest needleleaf",
+    "forest path",
+    "forest road",
+    "formal garden",
+    "fountain",
+    "galley",
+    "game room",
+    "garage indoor",
+    "garbage dump",
+    "gas station",
+    "gazebo exterior",
+    "general store indoor",
+    "general store outdoor",
+    "gift shop",
+    "golf course",
+    "greenhouse indoor",
+    "greenhouse outdoor",
+    "gymnasium indoor",
+    "hangar indoor",
+    "hangar outdoor",
+    "harbor",
+    "hayfield",
+    "heliport",
+    "herb garden",
+    "highway",
+    "hill",
+    "home office",
+    "hospital",
+    "hospital room",
+    "hot spring",
+    "hot tub outdoor",
+    "hotel outdoor",
+    "hotel room",
+    "house",
+    "hunting lodge outdoor",
+    "ice cream parlor",
+    "ice floe",
+    "ice shelf",
+    "ice skating rink indoor",
+    "ice skating rink outdoor",
+    "iceberg",
+    "igloo",
+    "industrial area",
+    "inn outdoor",
+    "islet",
+    "jacuzzi indoor",
+    "jail cell",
+    "jail indoor",
+    "jewelry shop",
+    "kasbah",
+    "kennel indoor",
+    "kennel outdoor",
+    "kindergarden classroom",
+    "kitchen",
+    "kitchenette",
+    "labyrinth outdoor",
+    "lake natural",
+    "landfill",
+    "landing deck",
+    "laundromat",
+    "lecture room",
+    "library indoor",
+    "library outdoor",
+    "lido deck outdoor",
+    "lift bridge",
+    "lighthouse",
+    "limousine interior",
+    "living room",
+    "lobby",
+    "lock chamber",
+    "locker room",
+    "mansion",
+    "manufactured home",
+    "market indoor",
+    "market outdoor",
+    "marsh",
+    "martial arts gym",
+    "mausoleum",
+    "medina",
+    "moat water",
+    "monastery outdoor",
+    "mosque indoor",
+    "mosque outdoor",
+    "motel",
+    "mountain",
+    "mountain snowy",
+    "movie theater indoor",
+    "museum indoor",
+    "music store",
+    "music studio",
+    "nuclear power plant outdoor",
+    "nursery",
+    "oast house",
+    "observatory outdoor",
+    "ocean",
+    "office",
+    "office building",
+    "oil refinery outdoor",
+    "oilrig",
+    "operating room",
+    "orchard",
+    "outhouse outdoor",
+    "pagoda",
+    "palace",
+    "pantry",
+    "park",
+    "parking garage indoor",
+    "parking garage outdoor",
+    "parking lot",
+    "parlor",
+    "pasture",
+    "patio",
+    "pavilion",
+    "pharmacy",
+    "phone booth",
+    "physics laboratory",
+    "picnic area",
+    "pilothouse indoor",
+    "planetarium outdoor",
+    "playground",
+    "playroom",
+    "plaza",
+    "podium indoor",
+    "podium outdoor",
+    "pond",
+    "poolroom establishment",
+    "poolroom home",
+    "power plant outdoor",
+    "promenade deck",
+    "pub indoor",
+    "pulpit",
+    "putting green",
+    "racecourse",
+    "raceway",
+    "raft",
+    "railroad track",
+    "rainforest",
+    "reception",
+    "recreation room",
+    "residential neighborhood",
+    "restaurant",
+    "restaurant kitchen",
+    "restaurant patio",
+    "rice paddy",
+    "riding arena",
+    "river",
+    "rock arch",
+    "rope bridge",
+    "ruin",
+    "runway",
+    "sandbar",
+    "sandbox",
+    "sauna",
+    "schoolhouse",
+    "sea cliff",
+    "server room",
+    "shed",
+    "shoe shop",
+    "shopfront",
+    "shopping mall indoor",
+    "shower",
+    "skatepark",
+    "ski lodge",
+    "ski resort",
+    "ski slope",
+    "sky",
+    "skyscraper",
+    "slum",
+    "snowfield",
+    "squash court",
+    "stable",
+    "stadium baseball",
+    "stadium football",
+    "stage indoor",
+    "staircase",
+    "street",
+    "subway interior",
+    "subway station platform",
+    "supermarket",
+    "sushi bar",
+    "swamp",
+    "swimming pool indoor",
+    "swimming pool outdoor",
+    "synagogue indoor",
+    "synagogue outdoor",
+    "television studio",
+    "temple east asia",
+    "temple south asia",
+    "tennis court indoor",
+    "tennis court outdoor",
+    "tent outdoor",
+    "theater indoor procenium",
+    "theater indoor seats",
+    "thriftshop",
+    "throne room",
+    "ticket booth",
+    "toll plaza",
+    "topiary garden",
+    "tower",
+    "toyshop",
+    "track outdoor",
+    "train railway",
+    "train station platform",
+    "tree farm",
+    "tree house",
+    "trench",
+    "underwater coral reef",
+    "utility room",
+    "valley",
+    "van interior",
+    "vegetable garden",
+    "veranda",
+    "veterinarians office",
+    "viaduct",
+    "videostore",
+    "village",
+    "vineyard",
+    "volcano",
+    "volleyball court indoor",
+    "volleyball court outdoor",
+    "waiting room",
+    "warehouse indoor",
+    "water tower",
+    "waterfall block",
+    "waterfall fan",
+    "waterfall plunge",
+    "watering hole",
+    "wave",
+    "wet bar",
+    "wheat field",
+    "wind farm",
+    "windmill",
+    "wine cellar barrel storage",
+    "wine cellar bottle storage",
+    "wrestling ring indoor",
+    "yard",
+    "youth hostel"
+  ],
+  "results": {
+    "accuracy": 0.5677581863979849,
+    "precision_macro": 0.6049643357898319,
+    "recall_macro": 0.5677581863979849,
+    "f1_macro": 0.565688579057067,
+    "per_class": {
+      "abbey": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "airplane cabin": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "airport terminal": {
+        "precision": 0.15384615384615385,
+        "recall": 0.2,
+        "f1-score": 0.17391304347826086,
+        "support": 10.0
+      },
+      "alley": {
+        "precision": 0.42857142857142855,
+        "recall": 0.3,
+        "f1-score": 0.35294117647058826,
+        "support": 10.0
+      },
+      "amphitheater": {
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1-score": 0.7692307692307693,
+        "support": 10.0
+      },
+      "amusement arcade": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "amusement park": {
+        "precision": 0.7142857142857143,
+        "recall": 0.5,
+        "f1-score": 0.5882352941176471,
+        "support": 10.0
+      },
+      "anechoic chamber": {
+        "precision": 0.5384615384615384,
+        "recall": 0.7,
+        "f1-score": 0.6086956521739131,
+        "support": 10.0
+      },
+      "apartment building outdoor": {
+        "precision": 0.16666666666666666,
+        "recall": 0.1,
+        "f1-score": 0.125,
+        "support": 10.0
+      },
+      "apse indoor": {
+        "precision": 0.5714285714285714,
+        "recall": 0.8,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "aquarium": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "aqueduct": {
+        "precision": 0.5454545454545454,
+        "recall": 0.6,
+        "f1-score": 0.5714285714285714,
+        "support": 10.0
+      },
+      "arch": {
+        "precision": 0.3888888888888889,
+        "recall": 0.7,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "archive": {
+        "precision": 0.7142857142857143,
+        "recall": 0.5,
+        "f1-score": 0.5882352941176471,
+        "support": 10.0
+      },
+      "arrival gate outdoor": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "art gallery": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1-score": 0.6,
+        "support": 10.0
+      },
+      "art school": {
+        "precision": 0.3333333333333333,
+        "recall": 0.6,
+        "f1-score": 0.42857142857142855,
+        "support": 10.0
+      },
+      "art studio": {
+        "precision": 0.2,
+        "recall": 0.2,
+        "f1-score": 0.2,
+        "support": 10.0
+      },
+      "assembly line": {
+        "precision": 0.2222222222222222,
+        "recall": 0.2,
+        "f1-score": 0.21052631578947367,
+        "support": 10.0
+      },
+      "athletic field outdoor": {
+        "precision": 0.25,
+        "recall": 0.2,
+        "f1-score": 0.2222222222222222,
+        "support": 10.0
+      },
+      "atrium public": {
+        "precision": 0.4,
+        "recall": 0.6,
+        "f1-score": 0.48,
+        "support": 10.0
+      },
+      "attic": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "auditorium": {
+        "precision": 0.2727272727272727,
+        "recall": 0.3,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "auto factory": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "badlands": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "badminton court indoor": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "baggage claim": {
+        "precision": 0.5833333333333334,
+        "recall": 0.7,
+        "f1-score": 0.6363636363636364,
+        "support": 10.0
+      },
+      "bakery shop": {
+        "precision": 0.5555555555555556,
+        "recall": 0.5,
+        "f1-score": 0.5263157894736842,
+        "support": 10.0
+      },
+      "balcony exterior": {
+        "precision": 0.5,
+        "recall": 0.7,
+        "f1-score": 0.5833333333333334,
+        "support": 10.0
+      },
+      "balcony interior": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6,
+        "f1-score": 0.631578947368421,
+        "support": 10.0
+      },
+      "ball pit": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1-score": 0.9090909090909091,
+        "support": 10.0
+      },
+      "ballroom": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "bamboo forest": {
+        "precision": 0.8888888888888888,
+        "recall": 0.8,
+        "f1-score": 0.8421052631578947,
+        "support": 10.0
+      },
+      "banquet hall": {
+        "precision": 0.4375,
+        "recall": 0.7,
+        "f1-score": 0.5384615384615384,
+        "support": 10.0
+      },
+      "bar": {
+        "precision": 0.42857142857142855,
+        "recall": 0.3,
+        "f1-score": 0.35294117647058826,
+        "support": 10.0
+      },
+      "barn": {
+        "precision": 0.6428571428571429,
+        "recall": 0.9,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "barndoor": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "baseball field": {
+        "precision": 0.4666666666666667,
+        "recall": 0.7,
+        "f1-score": 0.56,
+        "support": 10.0
+      },
+      "basement": {
+        "precision": 0.4166666666666667,
+        "recall": 0.5,
+        "f1-score": 0.45454545454545453,
+        "support": 10.0
+      },
+      "basilica": {
+        "precision": 0.4,
+        "recall": 0.2,
+        "f1-score": 0.26666666666666666,
+        "support": 10.0
+      },
+      "basketball court outdoor": {
+        "precision": 0.46153846153846156,
+        "recall": 0.6,
+        "f1-score": 0.5217391304347826,
+        "support": 10.0
+      },
+      "bathroom": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "batters box": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "bayou": {
+        "precision": 0.7272727272727273,
+        "recall": 0.8,
+        "f1-score": 0.7619047619047619,
+        "support": 10.0
+      },
+      "bazaar indoor": {
+        "precision": 0.5,
+        "recall": 0.7,
+        "f1-score": 0.5833333333333334,
+        "support": 10.0
+      },
+      "bazaar outdoor": {
+        "precision": 0.4666666666666667,
+        "recall": 0.7,
+        "f1-score": 0.56,
+        "support": 10.0
+      },
+      "beach": {
+        "precision": 0.8888888888888888,
+        "recall": 0.8,
+        "f1-score": 0.8421052631578947,
+        "support": 10.0
+      },
+      "beauty salon": {
+        "precision": 0.5625,
+        "recall": 0.9,
+        "f1-score": 0.6923076923076923,
+        "support": 10.0
+      },
+      "bedroom": {
+        "precision": 0.4444444444444444,
+        "recall": 0.4,
+        "f1-score": 0.42105263157894735,
+        "support": 10.0
+      },
+      "berth": {
+        "precision": 0.34615384615384615,
+        "recall": 0.9,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "biology laboratory": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "bistro indoor": {
+        "precision": 0.5,
+        "recall": 0.3,
+        "f1-score": 0.375,
+        "support": 10.0
+      },
+      "boardwalk": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "boat deck": {
+        "precision": 0.4444444444444444,
+        "recall": 0.4,
+        "f1-score": 0.42105263157894735,
+        "support": 10.0
+      },
+      "boathouse": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "bookstore": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "booth indoor": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "botanical garden": {
+        "precision": 0.25,
+        "recall": 0.2,
+        "f1-score": 0.2222222222222222,
+        "support": 10.0
+      },
+      "bow window indoor": {
+        "precision": 0.8888888888888888,
+        "recall": 0.8,
+        "f1-score": 0.8421052631578947,
+        "support": 10.0
+      },
+      "bow window outdoor": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1-score": 0.7272727272727273,
+        "support": 10.0
+      },
+      "bowling alley": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "boxing ring": {
+        "precision": 0.5263157894736842,
+        "recall": 1.0,
+        "f1-score": 0.6896551724137931,
+        "support": 10.0
+      },
+      "brewery indoor": {
+        "precision": 0.75,
+        "recall": 0.9,
+        "f1-score": 0.8181818181818182,
+        "support": 10.0
+      },
+      "bridge": {
+        "precision": 0.625,
+        "recall": 0.5,
+        "f1-score": 0.5555555555555556,
+        "support": 10.0
+      },
+      "building facade": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "bullring": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1-score": 0.8888888888888888,
+        "support": 10.0
+      },
+      "burial chamber": {
+        "precision": 0.4,
+        "recall": 0.4,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "bus interior": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6,
+        "f1-score": 0.631578947368421,
+        "support": 10.0
+      },
+      "butchers shop": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "butte": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "cabin outdoor": {
+        "precision": 0.5454545454545454,
+        "recall": 0.6,
+        "f1-score": 0.5714285714285714,
+        "support": 10.0
+      },
+      "cafeteria": {
+        "precision": 0.5555555555555556,
+        "recall": 0.5,
+        "f1-score": 0.5263157894736842,
+        "support": 10.0
+      },
+      "campsite": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "campus": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "canal natural": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "canal urban": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "candy store": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "canyon": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1-score": 0.6,
+        "support": 10.0
+      },
+      "car interior backseat": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "car interior frontseat": {
+        "precision": 0.6428571428571429,
+        "recall": 0.9,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "carrousel": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1-score": 0.8888888888888888,
+        "support": 10.0
+      },
+      "casino indoor": {
+        "precision": 0.6153846153846154,
+        "recall": 0.8,
+        "f1-score": 0.6956521739130435,
+        "support": 10.0
+      },
+      "castle": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 10.0
+      },
+      "catacomb": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "cathedral indoor": {
+        "precision": 0.625,
+        "recall": 0.5,
+        "f1-score": 0.5555555555555556,
+        "support": 10.0
+      },
+      "cathedral outdoor": {
+        "precision": 0.2916666666666667,
+        "recall": 0.7,
+        "f1-score": 0.4117647058823529,
+        "support": 10.0
+      },
+      "cavern indoor": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "cemetery": {
+        "precision": 0.42857142857142855,
+        "recall": 0.3,
+        "f1-score": 0.35294117647058826,
+        "support": 10.0
+      },
+      "chalet": {
+        "precision": 0.5,
+        "recall": 0.1,
+        "f1-score": 0.16666666666666666,
+        "support": 10.0
+      },
+      "cheese factory": {
+        "precision": 0.8571428571428571,
+        "recall": 0.6,
+        "f1-score": 0.7058823529411765,
+        "support": 10.0
+      },
+      "chemistry lab": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "chicken coop indoor": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "chicken coop outdoor": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "childs room": {
+        "precision": 0.1111111111111111,
+        "recall": 0.1,
+        "f1-score": 0.10526315789473684,
+        "support": 10.0
+      },
+      "church indoor": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "church outdoor": {
+        "precision": 0.375,
+        "recall": 0.3,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "classroom": {
+        "precision": 0.5,
+        "recall": 0.6,
+        "f1-score": 0.5454545454545454,
+        "support": 10.0
+      },
+      "clean room": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3,
+        "f1-score": 0.3157894736842105,
+        "support": 10.0
+      },
+      "cliff": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 10.0
+      },
+      "cloister indoor": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "closet": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "clothing store": {
+        "precision": 0.38461538461538464,
+        "recall": 0.5,
+        "f1-score": 0.43478260869565216,
+        "support": 10.0
+      },
+      "coast": {
+        "precision": 0.625,
+        "recall": 0.5,
+        "f1-score": 0.5555555555555556,
+        "support": 10.0
+      },
+      "cockpit": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "coffee shop": {
+        "precision": 0.1111111111111111,
+        "recall": 0.1,
+        "f1-score": 0.10526315789473684,
+        "support": 10.0
+      },
+      "computer room": {
+        "precision": 0.8181818181818182,
+        "recall": 0.9,
+        "f1-score": 0.8571428571428571,
+        "support": 10.0
+      },
+      "conference center": {
+        "precision": 0.2,
+        "recall": 0.2,
+        "f1-score": 0.2,
+        "support": 10.0
+      },
+      "conference room": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "construction site": {
+        "precision": 0.23076923076923078,
+        "recall": 0.3,
+        "f1-score": 0.2608695652173913,
+        "support": 10.0
+      },
+      "control room": {
+        "precision": 0.4666666666666667,
+        "recall": 0.7,
+        "f1-score": 0.56,
+        "support": 10.0
+      },
+      "control tower outdoor": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "corn field": {
+        "precision": 0.5454545454545454,
+        "recall": 0.6,
+        "f1-score": 0.5714285714285714,
+        "support": 10.0
+      },
+      "corral": {
+        "precision": 0.38461538461538464,
+        "recall": 0.5,
+        "f1-score": 0.43478260869565216,
+        "support": 10.0
+      },
+      "corridor": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "cottage garden": {
+        "precision": 0.5714285714285714,
+        "recall": 0.4,
+        "f1-score": 0.47058823529411764,
+        "support": 10.0
+      },
+      "courthouse": {
+        "precision": 0.5454545454545454,
+        "recall": 0.6,
+        "f1-score": 0.5714285714285714,
+        "support": 10.0
+      },
+      "courtroom": {
+        "precision": 0.625,
+        "recall": 0.5,
+        "f1-score": 0.5555555555555556,
+        "support": 10.0
+      },
+      "courtyard": {
+        "precision": 0.42857142857142855,
+        "recall": 0.3,
+        "f1-score": 0.35294117647058826,
+        "support": 10.0
+      },
+      "covered bridge exterior": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "creek": {
+        "precision": 0.2631578947368421,
+        "recall": 0.5,
+        "f1-score": 0.3448275862068966,
+        "support": 10.0
+      },
+      "crevasse": {
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1-score": 0.7692307692307693,
+        "support": 10.0
+      },
+      "crosswalk": {
+        "precision": 0.35714285714285715,
+        "recall": 0.5,
+        "f1-score": 0.4166666666666667,
+        "support": 10.0
+      },
+      "cubicle office": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "dam": {
+        "precision": 0.7272727272727273,
+        "recall": 0.8,
+        "f1-score": 0.7619047619047619,
+        "support": 10.0
+      },
+      "delicatessen": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "dentists office": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "desert sand": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "desert vegetation": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "diner indoor": {
+        "precision": 0.5,
+        "recall": 0.6,
+        "f1-score": 0.5454545454545454,
+        "support": 10.0
+      },
+      "diner outdoor": {
+        "precision": 0.5,
+        "recall": 0.3,
+        "f1-score": 0.375,
+        "support": 10.0
+      },
+      "dinette home": {
+        "precision": 0.4117647058823529,
+        "recall": 0.7,
+        "f1-score": 0.5185185185185185,
+        "support": 10.0
+      },
+      "dinette vehicle": {
+        "precision": 0.5384615384615384,
+        "recall": 0.7,
+        "f1-score": 0.6086956521739131,
+        "support": 10.0
+      },
+      "dining car": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6,
+        "f1-score": 0.631578947368421,
+        "support": 10.0
+      },
+      "dining room": {
+        "precision": 0.375,
+        "recall": 0.3,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "discotheque": {
+        "precision": 0.8181818181818182,
+        "recall": 0.9,
+        "f1-score": 0.8571428571428571,
+        "support": 10.0
+      },
+      "dock": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "doorway outdoor": {
+        "precision": 0.8571428571428571,
+        "recall": 0.6,
+        "f1-score": 0.7058823529411765,
+        "support": 10.0
+      },
+      "dorm room": {
+        "precision": 0.2631578947368421,
+        "recall": 0.5,
+        "f1-score": 0.3448275862068966,
+        "support": 10.0
+      },
+      "driveway": {
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1-score": 0.7692307692307693,
+        "support": 10.0
+      },
+      "driving range outdoor": {
+        "precision": 0.2222222222222222,
+        "recall": 0.2,
+        "f1-score": 0.21052631578947367,
+        "support": 10.0
+      },
+      "drugstore": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "electrical substation": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1-score": 0.9473684210526315,
+        "support": 10.0
+      },
+      "elevator door": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "elevator interior": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "elevator shaft": {
+        "precision": 0.5,
+        "recall": 0.6,
+        "f1-score": 0.5454545454545454,
+        "support": 10.0
+      },
+      "engine room": {
+        "precision": 0.6923076923076923,
+        "recall": 0.9,
+        "f1-score": 0.782608695652174,
+        "support": 10.0
+      },
+      "escalator indoor": {
+        "precision": 0.5833333333333334,
+        "recall": 0.7,
+        "f1-score": 0.6363636363636364,
+        "support": 10.0
+      },
+      "excavation": {
+        "precision": 0.5454545454545454,
+        "recall": 0.6,
+        "f1-score": 0.5714285714285714,
+        "support": 10.0
+      },
+      "factory indoor": {
+        "precision": 0.5,
+        "recall": 0.6,
+        "f1-score": 0.5454545454545454,
+        "support": 10.0
+      },
+      "fairway": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "fastfood restaurant": {
+        "precision": 0.3,
+        "recall": 0.3,
+        "f1-score": 0.3,
+        "support": 10.0
+      },
+      "field cultivated": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "field wild": {
+        "precision": 0.3888888888888889,
+        "recall": 0.7,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "fire escape": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1-score": 0.6,
+        "support": 10.0
+      },
+      "fire station": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "firing range indoor": {
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1-score": 0.4444444444444444,
+        "support": 10.0
+      },
+      "fishpond": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6,
+        "f1-score": 0.631578947368421,
+        "support": 10.0
+      },
+      "florist shop indoor": {
+        "precision": 0.8888888888888888,
+        "recall": 0.8,
+        "f1-score": 0.8421052631578947,
+        "support": 10.0
+      },
+      "food court": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 10.0
+      },
+      "forest broadleaf": {
+        "precision": 1.0,
+        "recall": 0.3,
+        "f1-score": 0.46153846153846156,
+        "support": 10.0
+      },
+      "forest needleleaf": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "forest path": {
+        "precision": 0.4,
+        "recall": 0.4,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "forest road": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "formal garden": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1-score": 0.6,
+        "support": 10.0
+      },
+      "fountain": {
+        "precision": 0.375,
+        "recall": 0.6,
+        "f1-score": 0.46153846153846156,
+        "support": 10.0
+      },
+      "galley": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 10.0
+      },
+      "game room": {
+        "precision": 0.6,
+        "recall": 0.3,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "garage indoor": {
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1-score": 0.4444444444444444,
+        "support": 10.0
+      },
+      "garbage dump": {
+        "precision": 0.36363636363636365,
+        "recall": 0.4,
+        "f1-score": 0.38095238095238093,
+        "support": 10.0
+      },
+      "gas station": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1-score": 0.6,
+        "support": 10.0
+      },
+      "gazebo exterior": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "general store indoor": {
+        "precision": 0.25,
+        "recall": 0.4,
+        "f1-score": 0.3076923076923077,
+        "support": 10.0
+      },
+      "general store outdoor": {
+        "precision": 0.36363636363636365,
+        "recall": 0.4,
+        "f1-score": 0.38095238095238093,
+        "support": 10.0
+      },
+      "gift shop": {
+        "precision": 0.4166666666666667,
+        "recall": 0.5,
+        "f1-score": 0.45454545454545453,
+        "support": 10.0
+      },
+      "golf course": {
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1-score": 0.4444444444444444,
+        "support": 10.0
+      },
+      "greenhouse indoor": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "greenhouse outdoor": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1-score": 0.7272727272727273,
+        "support": 10.0
+      },
+      "gymnasium indoor": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1-score": 0.8235294117647058,
+        "support": 10.0
+      },
+      "hangar indoor": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6,
+        "f1-score": 0.631578947368421,
+        "support": 10.0
+      },
+      "hangar outdoor": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "harbor": {
+        "precision": 0.75,
+        "recall": 0.9,
+        "f1-score": 0.8181818181818182,
+        "support": 10.0
+      },
+      "hayfield": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "heliport": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "herb garden": {
+        "precision": 0.2857142857142857,
+        "recall": 0.4,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "highway": {
+        "precision": 0.36363636363636365,
+        "recall": 0.4,
+        "f1-score": 0.38095238095238093,
+        "support": 10.0
+      },
+      "hill": {
+        "precision": 0.75,
+        "recall": 0.3,
+        "f1-score": 0.42857142857142855,
+        "support": 10.0
+      },
+      "home office": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "hospital": {
+        "precision": 0.28,
+        "recall": 0.7,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "hospital room": {
+        "precision": 0.42857142857142855,
+        "recall": 0.3,
+        "f1-score": 0.35294117647058826,
+        "support": 10.0
+      },
+      "hot spring": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "hot tub outdoor": {
+        "precision": 0.8181818181818182,
+        "recall": 0.9,
+        "f1-score": 0.8571428571428571,
+        "support": 10.0
+      },
+      "hotel outdoor": {
+        "precision": 0.42857142857142855,
+        "recall": 0.3,
+        "f1-score": 0.35294117647058826,
+        "support": 10.0
+      },
+      "hotel room": {
+        "precision": 0.6666666666666666,
+        "recall": 0.2,
+        "f1-score": 0.3076923076923077,
+        "support": 10.0
+      },
+      "house": {
+        "precision": 0.4117647058823529,
+        "recall": 0.7,
+        "f1-score": 0.5185185185185185,
+        "support": 10.0
+      },
+      "hunting lodge outdoor": {
+        "precision": 0.8,
+        "recall": 0.4,
+        "f1-score": 0.5333333333333333,
+        "support": 10.0
+      },
+      "ice cream parlor": {
+        "precision": 0.4444444444444444,
+        "recall": 0.4,
+        "f1-score": 0.42105263157894735,
+        "support": 10.0
+      },
+      "ice floe": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1-score": 0.6,
+        "support": 10.0
+      },
+      "ice shelf": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "ice skating rink indoor": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1-score": 0.9473684210526315,
+        "support": 10.0
+      },
+      "ice skating rink outdoor": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "iceberg": {
+        "precision": 0.7272727272727273,
+        "recall": 0.8,
+        "f1-score": 0.7619047619047619,
+        "support": 10.0
+      },
+      "igloo": {
+        "precision": 0.8181818181818182,
+        "recall": 0.9,
+        "f1-score": 0.8571428571428571,
+        "support": 10.0
+      },
+      "industrial area": {
+        "precision": 0.26666666666666666,
+        "recall": 0.8,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "inn outdoor": {
+        "precision": 0.18181818181818182,
+        "recall": 0.2,
+        "f1-score": 0.19047619047619047,
+        "support": 10.0
+      },
+      "islet": {
+        "precision": 0.36363636363636365,
+        "recall": 0.8,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "jacuzzi indoor": {
+        "precision": 0.7272727272727273,
+        "recall": 0.8,
+        "f1-score": 0.7619047619047619,
+        "support": 10.0
+      },
+      "jail cell": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "jail indoor": {
+        "precision": 0.8571428571428571,
+        "recall": 0.6,
+        "f1-score": 0.7058823529411765,
+        "support": 10.0
+      },
+      "jewelry shop": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.15384615384615385,
+        "support": 10.0
+      },
+      "kasbah": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1-score": 0.8235294117647058,
+        "support": 10.0
+      },
+      "kennel indoor": {
+        "precision": 0.4166666666666667,
+        "recall": 0.5,
+        "f1-score": 0.45454545454545453,
+        "support": 10.0
+      },
+      "kennel outdoor": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1,
+        "f1-score": 0.15384615384615385,
+        "support": 10.0
+      },
+      "kindergarden classroom": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "kitchen": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "kitchenette": {
+        "precision": 0.25,
+        "recall": 0.4,
+        "f1-score": 0.3076923076923077,
+        "support": 10.0
+      },
+      "labyrinth outdoor": {
+        "precision": 0.8888888888888888,
+        "recall": 0.8,
+        "f1-score": 0.8421052631578947,
+        "support": 10.0
+      },
+      "lake natural": {
+        "precision": 0.25,
+        "recall": 0.3,
+        "f1-score": 0.2727272727272727,
+        "support": 10.0
+      },
+      "landfill": {
+        "precision": 0.5384615384615384,
+        "recall": 0.7,
+        "f1-score": 0.6086956521739131,
+        "support": 10.0
+      },
+      "landing deck": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "laundromat": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1-score": 0.8235294117647058,
+        "support": 10.0
+      },
+      "lecture room": {
+        "precision": 0.21428571428571427,
+        "recall": 0.3,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "library indoor": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1-score": 0.6,
+        "support": 10.0
+      },
+      "library outdoor": {
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1-score": 0.4444444444444444,
+        "support": 10.0
+      },
+      "lido deck outdoor": {
+        "precision": 0.8181818181818182,
+        "recall": 0.9,
+        "f1-score": 0.8571428571428571,
+        "support": 10.0
+      },
+      "lift bridge": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "lighthouse": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "limousine interior": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "living room": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6,
+        "f1-score": 0.631578947368421,
+        "support": 10.0
+      },
+      "lobby": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "lock chamber": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "locker room": {
+        "precision": 0.3333333333333333,
+        "recall": 0.6,
+        "f1-score": 0.42857142857142855,
+        "support": 10.0
+      },
+      "mansion": {
+        "precision": 0.15384615384615385,
+        "recall": 0.2,
+        "f1-score": 0.17391304347826086,
+        "support": 10.0
+      },
+      "manufactured home": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1-score": 0.8888888888888888,
+        "support": 10.0
+      },
+      "market indoor": {
+        "precision": 0.25,
+        "recall": 0.3,
+        "f1-score": 0.2727272727272727,
+        "support": 10.0
+      },
+      "market outdoor": {
+        "precision": 0.36363636363636365,
+        "recall": 0.4,
+        "f1-score": 0.38095238095238093,
+        "support": 10.0
+      },
+      "marsh": {
+        "precision": 0.4,
+        "recall": 0.4,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "martial arts gym": {
+        "precision": 0.5454545454545454,
+        "recall": 0.6,
+        "f1-score": 0.5714285714285714,
+        "support": 10.0
+      },
+      "mausoleum": {
+        "precision": 0.8,
+        "recall": 0.4,
+        "f1-score": 0.5333333333333333,
+        "support": 10.0
+      },
+      "medina": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 10.0
+      },
+      "moat water": {
+        "precision": 0.2,
+        "recall": 0.1,
+        "f1-score": 0.13333333333333333,
+        "support": 10.0
+      },
+      "monastery outdoor": {
+        "precision": 0.1,
+        "recall": 0.1,
+        "f1-score": 0.1,
+        "support": 10.0
+      },
+      "mosque indoor": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 10.0
+      },
+      "mosque outdoor": {
+        "precision": 0.8571428571428571,
+        "recall": 0.6,
+        "f1-score": 0.7058823529411765,
+        "support": 10.0
+      },
+      "motel": {
+        "precision": 0.23809523809523808,
+        "recall": 0.5,
+        "f1-score": 0.3225806451612903,
+        "support": 10.0
+      },
+      "mountain": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "mountain snowy": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "movie theater indoor": {
+        "precision": 0.5454545454545454,
+        "recall": 0.6,
+        "f1-score": 0.5714285714285714,
+        "support": 10.0
+      },
+      "museum indoor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "music store": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1-score": 0.8235294117647058,
+        "support": 10.0
+      },
+      "music studio": {
+        "precision": 0.47058823529411764,
+        "recall": 0.8,
+        "f1-score": 0.5925925925925926,
+        "support": 10.0
+      },
+      "nuclear power plant outdoor": {
+        "precision": 0.4,
+        "recall": 0.2,
+        "f1-score": 0.26666666666666666,
+        "support": 10.0
+      },
+      "nursery": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "oast house": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "observatory outdoor": {
+        "precision": 0.5,
+        "recall": 0.6,
+        "f1-score": 0.5454545454545454,
+        "support": 10.0
+      },
+      "ocean": {
+        "precision": 0.6923076923076923,
+        "recall": 0.9,
+        "f1-score": 0.782608695652174,
+        "support": 10.0
+      },
+      "office": {
+        "precision": 0.5,
+        "recall": 0.3,
+        "f1-score": 0.375,
+        "support": 10.0
+      },
+      "office building": {
+        "precision": 0.2,
+        "recall": 0.4,
+        "f1-score": 0.26666666666666666,
+        "support": 10.0
+      },
+      "oil refinery outdoor": {
+        "precision": 1.0,
+        "recall": 0.2,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "oilrig": {
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1-score": 0.9,
+        "support": 10.0
+      },
+      "operating room": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "orchard": {
+        "precision": 0.8,
+        "recall": 0.4,
+        "f1-score": 0.5333333333333333,
+        "support": 10.0
+      },
+      "outhouse outdoor": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "pagoda": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "palace": {
+        "precision": 0.4,
+        "recall": 0.4,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "pantry": {
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1-score": 0.9,
+        "support": 10.0
+      },
+      "park": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "parking garage indoor": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1-score": 0.8888888888888888,
+        "support": 10.0
+      },
+      "parking garage outdoor": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "parking lot": {
+        "precision": 0.5,
+        "recall": 0.3,
+        "f1-score": 0.375,
+        "support": 10.0
+      },
+      "parlor": {
+        "precision": 0.5,
+        "recall": 0.8,
+        "f1-score": 0.6153846153846154,
+        "support": 10.0
+      },
+      "pasture": {
+        "precision": 0.2727272727272727,
+        "recall": 0.3,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "patio": {
+        "precision": 0.375,
+        "recall": 0.3,
+        "f1-score": 0.3333333333333333,
+        "support": 10.0
+      },
+      "pavilion": {
+        "precision": 0.75,
+        "recall": 0.9,
+        "f1-score": 0.8181818181818182,
+        "support": 10.0
+      },
+      "pharmacy": {
+        "precision": 0.2903225806451613,
+        "recall": 0.9,
+        "f1-score": 0.43902439024390244,
+        "support": 10.0
+      },
+      "phone booth": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1-score": 0.8235294117647058,
+        "support": 10.0
+      },
+      "physics laboratory": {
+        "precision": 0.5,
+        "recall": 0.4,
+        "f1-score": 0.4444444444444444,
+        "support": 10.0
+      },
+      "picnic area": {
+        "precision": 0.6363636363636364,
+        "recall": 0.7,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "pilothouse indoor": {
+        "precision": 0.625,
+        "recall": 0.5,
+        "f1-score": 0.5555555555555556,
+        "support": 10.0
+      },
+      "planetarium outdoor": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "playground": {
+        "precision": 0.5333333333333333,
+        "recall": 0.8,
+        "f1-score": 0.64,
+        "support": 10.0
+      },
+      "playroom": {
+        "precision": 0.3333333333333333,
+        "recall": 0.4,
+        "f1-score": 0.36363636363636365,
+        "support": 10.0
+      },
+      "plaza": {
+        "precision": 0.3333333333333333,
+        "recall": 0.6,
+        "f1-score": 0.42857142857142855,
+        "support": 10.0
+      },
+      "podium indoor": {
+        "precision": 0.5714285714285714,
+        "recall": 0.8,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "podium outdoor": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1-score": 0.9473684210526315,
+        "support": 10.0
+      },
+      "pond": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "poolroom establishment": {
+        "precision": 0.8571428571428571,
+        "recall": 0.6,
+        "f1-score": 0.7058823529411765,
+        "support": 10.0
+      },
+      "poolroom home": {
+        "precision": 0.4,
+        "recall": 0.2,
+        "f1-score": 0.26666666666666666,
+        "support": 10.0
+      },
+      "power plant outdoor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 10.0
+      },
+      "promenade deck": {
+        "precision": 0.3888888888888889,
+        "recall": 0.7,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "pub indoor": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6,
+        "f1-score": 0.631578947368421,
+        "support": 10.0
+      },
+      "pulpit": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "putting green": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1-score": 0.7272727272727273,
+        "support": 10.0
+      },
+      "racecourse": {
+        "precision": 0.625,
+        "recall": 0.5,
+        "f1-score": 0.5555555555555556,
+        "support": 10.0
+      },
+      "raceway": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "raft": {
+        "precision": 0.9090909090909091,
+        "recall": 1.0,
+        "f1-score": 0.9523809523809523,
+        "support": 10.0
+      },
+      "railroad track": {
+        "precision": 0.7142857142857143,
+        "recall": 0.5,
+        "f1-score": 0.5882352941176471,
+        "support": 10.0
+      },
+      "rainforest": {
+        "precision": 0.2631578947368421,
+        "recall": 0.5,
+        "f1-score": 0.3448275862068966,
+        "support": 10.0
+      },
+      "reception": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "recreation room": {
+        "precision": 0.2222222222222222,
+        "recall": 0.6,
+        "f1-score": 0.32432432432432434,
+        "support": 10.0
+      },
+      "residential neighborhood": {
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "f1-score": 0.5714285714285714,
+        "support": 10.0
+      },
+      "restaurant": {
+        "precision": 0.25,
+        "recall": 0.2,
+        "f1-score": 0.2222222222222222,
+        "support": 10.0
+      },
+      "restaurant kitchen": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "restaurant patio": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "rice paddy": {
+        "precision": 0.2222222222222222,
+        "recall": 0.4,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "riding arena": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "river": {
+        "precision": 0.3,
+        "recall": 0.3,
+        "f1-score": 0.3,
+        "support": 10.0
+      },
+      "rock arch": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "rope bridge": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "ruin": {
+        "precision": 0.8571428571428571,
+        "recall": 0.6,
+        "f1-score": 0.7058823529411765,
+        "support": 10.0
+      },
+      "runway": {
+        "precision": 0.625,
+        "recall": 0.5,
+        "f1-score": 0.5555555555555556,
+        "support": 10.0
+      },
+      "sandbar": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 10.0
+      },
+      "sandbox": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "sauna": {
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1-score": 0.8333333333333334,
+        "support": 10.0
+      },
+      "schoolhouse": {
+        "precision": 0.36363636363636365,
+        "recall": 0.8,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "sea cliff": {
+        "precision": 1.0,
+        "recall": 0.3,
+        "f1-score": 0.46153846153846156,
+        "support": 10.0
+      },
+      "server room": {
+        "precision": 0.625,
+        "recall": 0.5,
+        "f1-score": 0.5555555555555556,
+        "support": 10.0
+      },
+      "shed": {
+        "precision": 0.5625,
+        "recall": 0.9,
+        "f1-score": 0.6923076923076923,
+        "support": 10.0
+      },
+      "shoe shop": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "shopfront": {
+        "precision": 0.5384615384615384,
+        "recall": 0.7,
+        "f1-score": 0.6086956521739131,
+        "support": 10.0
+      },
+      "shopping mall indoor": {
+        "precision": 0.3,
+        "recall": 0.3,
+        "f1-score": 0.3,
+        "support": 10.0
+      },
+      "shower": {
+        "precision": 0.4117647058823529,
+        "recall": 0.7,
+        "f1-score": 0.5185185185185185,
+        "support": 10.0
+      },
+      "skatepark": {
+        "precision": 0.8,
+        "recall": 0.4,
+        "f1-score": 0.5333333333333333,
+        "support": 10.0
+      },
+      "ski lodge": {
+        "precision": 0.5,
+        "recall": 0.6,
+        "f1-score": 0.5454545454545454,
+        "support": 10.0
+      },
+      "ski resort": {
+        "precision": 0.8181818181818182,
+        "recall": 0.9,
+        "f1-score": 0.8571428571428571,
+        "support": 10.0
+      },
+      "ski slope": {
+        "precision": 0.47058823529411764,
+        "recall": 0.8,
+        "f1-score": 0.5925925925925926,
+        "support": 10.0
+      },
+      "sky": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1-score": 0.9090909090909091,
+        "support": 10.0
+      },
+      "skyscraper": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "slum": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "snowfield": {
+        "precision": 0.16666666666666666,
+        "recall": 0.1,
+        "f1-score": 0.125,
+        "support": 10.0
+      },
+      "squash court": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "stable": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "stadium baseball": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "stadium football": {
+        "precision": 0.625,
+        "recall": 1.0,
+        "f1-score": 0.7692307692307693,
+        "support": 10.0
+      },
+      "stage indoor": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "staircase": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6,
+        "f1-score": 0.631578947368421,
+        "support": 10.0
+      },
+      "street": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "subway interior": {
+        "precision": 0.8571428571428571,
+        "recall": 0.6,
+        "f1-score": 0.7058823529411765,
+        "support": 10.0
+      },
+      "subway station platform": {
+        "precision": 0.7272727272727273,
+        "recall": 0.8,
+        "f1-score": 0.7619047619047619,
+        "support": 10.0
+      },
+      "supermarket": {
+        "precision": 0.36363636363636365,
+        "recall": 0.4,
+        "f1-score": 0.38095238095238093,
+        "support": 10.0
+      },
+      "sushi bar": {
+        "precision": 0.5384615384615384,
+        "recall": 0.7,
+        "f1-score": 0.6086956521739131,
+        "support": 10.0
+      },
+      "swamp": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1-score": 0.8235294117647058,
+        "support": 10.0
+      },
+      "swimming pool indoor": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 10.0
+      },
+      "swimming pool outdoor": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "synagogue indoor": {
+        "precision": 0.2857142857142857,
+        "recall": 0.2,
+        "f1-score": 0.23529411764705882,
+        "support": 10.0
+      },
+      "synagogue outdoor": {
+        "precision": 0.5833333333333334,
+        "recall": 0.7,
+        "f1-score": 0.6363636363636364,
+        "support": 10.0
+      },
+      "television studio": {
+        "precision": 0.5833333333333334,
+        "recall": 0.7,
+        "f1-score": 0.6363636363636364,
+        "support": 10.0
+      },
+      "temple east asia": {
+        "precision": 0.5833333333333334,
+        "recall": 0.7,
+        "f1-score": 0.6363636363636364,
+        "support": 10.0
+      },
+      "temple south asia": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1-score": 0.5,
+        "support": 10.0
+      },
+      "tennis court indoor": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "tennis court outdoor": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "tent outdoor": {
+        "precision": 0.8181818181818182,
+        "recall": 0.9,
+        "f1-score": 0.8571428571428571,
+        "support": 10.0
+      },
+      "theater indoor procenium": {
+        "precision": 0.8,
+        "recall": 0.4,
+        "f1-score": 0.5333333333333333,
+        "support": 10.0
+      },
+      "theater indoor seats": {
+        "precision": 0.6,
+        "recall": 0.3,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "thriftshop": {
+        "precision": 0.3333333333333333,
+        "recall": 0.2,
+        "f1-score": 0.25,
+        "support": 10.0
+      },
+      "throne room": {
+        "precision": 0.5714285714285714,
+        "recall": 0.8,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "ticket booth": {
+        "precision": 0.35294117647058826,
+        "recall": 0.6,
+        "f1-score": 0.4444444444444444,
+        "support": 10.0
+      },
+      "toll plaza": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1-score": 0.6,
+        "support": 10.0
+      },
+      "topiary garden": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "tower": {
+        "precision": 0.3684210526315789,
+        "recall": 0.7,
+        "f1-score": 0.4827586206896552,
+        "support": 10.0
+      },
+      "toyshop": {
+        "precision": 0.7142857142857143,
+        "recall": 0.5,
+        "f1-score": 0.5882352941176471,
+        "support": 10.0
+      },
+      "track outdoor": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1-score": 0.8235294117647058,
+        "support": 10.0
+      },
+      "train railway": {
+        "precision": 0.7272727272727273,
+        "recall": 0.8,
+        "f1-score": 0.7619047619047619,
+        "support": 10.0
+      },
+      "train station platform": {
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1-score": 0.9,
+        "support": 10.0
+      },
+      "tree farm": {
+        "precision": 0.3076923076923077,
+        "recall": 0.4,
+        "f1-score": 0.34782608695652173,
+        "support": 10.0
+      },
+      "tree house": {
+        "precision": 0.7272727272727273,
+        "recall": 0.8,
+        "f1-score": 0.7619047619047619,
+        "support": 10.0
+      },
+      "trench": {
+        "precision": 0.5,
+        "recall": 0.6,
+        "f1-score": 0.5454545454545454,
+        "support": 10.0
+      },
+      "underwater coral reef": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 10.0
+      },
+      "utility room": {
+        "precision": 0.8571428571428571,
+        "recall": 0.6,
+        "f1-score": 0.7058823529411765,
+        "support": 10.0
+      },
+      "valley": {
+        "precision": 0.3125,
+        "recall": 0.5,
+        "f1-score": 0.38461538461538464,
+        "support": 10.0
+      },
+      "van interior": {
+        "precision": 0.4,
+        "recall": 0.4,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "vegetable garden": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1-score": 0.47619047619047616,
+        "support": 10.0
+      },
+      "veranda": {
+        "precision": 0.5714285714285714,
+        "recall": 0.4,
+        "f1-score": 0.47058823529411764,
+        "support": 10.0
+      },
+      "veterinarians office": {
+        "precision": 0.6923076923076923,
+        "recall": 0.9,
+        "f1-score": 0.782608695652174,
+        "support": 10.0
+      },
+      "viaduct": {
+        "precision": 0.7272727272727273,
+        "recall": 0.8,
+        "f1-score": 0.7619047619047619,
+        "support": 10.0
+      },
+      "videostore": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "village": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7,
+        "f1-score": 0.7368421052631579,
+        "support": 10.0
+      },
+      "vineyard": {
+        "precision": 0.38461538461538464,
+        "recall": 0.5,
+        "f1-score": 0.43478260869565216,
+        "support": 10.0
+      },
+      "volcano": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1-score": 0.7272727272727273,
+        "support": 10.0
+      },
+      "volleyball court indoor": {
+        "precision": 0.6363636363636364,
+        "recall": 0.7,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "volleyball court outdoor": {
+        "precision": 0.5,
+        "recall": 0.3,
+        "f1-score": 0.375,
+        "support": 10.0
+      },
+      "waiting room": {
+        "precision": 0.35714285714285715,
+        "recall": 0.5,
+        "f1-score": 0.4166666666666667,
+        "support": 10.0
+      },
+      "warehouse indoor": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "water tower": {
+        "precision": 0.6363636363636364,
+        "recall": 0.7,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "waterfall block": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 10.0
+      },
+      "waterfall fan": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6,
+        "f1-score": 0.631578947368421,
+        "support": 10.0
+      },
+      "waterfall plunge": {
+        "precision": 0.7,
+        "recall": 0.7,
+        "f1-score": 0.7,
+        "support": 10.0
+      },
+      "watering hole": {
+        "precision": 0.875,
+        "recall": 0.7,
+        "f1-score": 0.7777777777777778,
+        "support": 10.0
+      },
+      "wave": {
+        "precision": 0.8888888888888888,
+        "recall": 0.8,
+        "f1-score": 0.8421052631578947,
+        "support": 10.0
+      },
+      "wet bar": {
+        "precision": 0.6,
+        "recall": 0.3,
+        "f1-score": 0.4,
+        "support": 10.0
+      },
+      "wheat field": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "wind farm": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 10.0
+      },
+      "windmill": {
+        "precision": 0.6,
+        "recall": 0.9,
+        "f1-score": 0.72,
+        "support": 10.0
+      },
+      "wine cellar barrel storage": {
+        "precision": 1.0,
+        "recall": 0.7,
+        "f1-score": 0.8235294117647058,
+        "support": 10.0
+      },
+      "wine cellar bottle storage": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6,
+        "f1-score": 0.631578947368421,
+        "support": 10.0
+      },
+      "wrestling ring indoor": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "yard": {
+        "precision": 0.2727272727272727,
+        "recall": 0.3,
+        "f1-score": 0.2857142857142857,
+        "support": 10.0
+      },
+      "youth hostel": {
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1-score": 0.625,
+        "support": 10.0
+      },
+      "accuracy": 0.5677581863979849,
+      "macro avg": {
+        "precision": 0.6049643357898319,
+        "recall": 0.5677581863979849,
+        "f1-score": 0.565688579057067,
+        "support": 3970.0
+      },
+      "weighted avg": {
+        "precision": 0.604964335789832,
+        "recall": 0.5677581863979849,
+        "f1-score": 0.565688579057067,
+        "support": 3970.0
+      }
+    }
+  },
+  "val_split": 0.15,
+  "seed": 42,
+  "val_size": 1787,
+  "selection_metric": "validation_accuracy",
+  "val_eval_history": [
+    {
+      "epoch": 1,
+      "accuracy": 0.7481813094571909,
+      "precision_macro": 0.7819261384308057,
+      "recall_macro": 0.7491183879093198,
+      "f1_macro": 0.7316284831729615
+    },
+    {
+      "epoch": 2,
+      "accuracy": 0.7890318970341355,
+      "precision_macro": 0.8224633434016305,
+      "recall_macro": 0.7882871536523929,
+      "f1_macro": 0.7779340619539168
+    },
+    {
+      "epoch": 3,
+      "accuracy": 0.795747062115277,
+      "precision_macro": 0.8291756172738541,
+      "recall_macro": 0.795088161209068,
+      "f1_macro": 0.7879671196421827
+    },
+    {
+      "epoch": 4,
+      "accuracy": 0.7991046446558477,
+      "precision_macro": 0.826960591885025,
+      "recall_macro": 0.798110831234257,
+      "f1_macro": 0.7918929587065607
+    },
+    {
+      "epoch": 5,
+      "accuracy": 0.7940682708449917,
+      "precision_macro": 0.8216478385873852,
+      "recall_macro": 0.794206549118388,
+      "f1_macro": 0.7853096698333029
+    },
+    {
+      "epoch": 6,
+      "accuracy": 0.7951874650251819,
+      "precision_macro": 0.8237473693393088,
+      "recall_macro": 0.7943324937027708,
+      "f1_macro": 0.7891112875369803
+    },
+    {
+      "epoch": 7,
+      "accuracy": 0.7901510912143257,
+      "precision_macro": 0.8306038925760365,
+      "recall_macro": 0.7890428211586902,
+      "f1_macro": 0.7856681731366869
+    },
+    {
+      "epoch": 8,
+      "accuracy": 0.7783995523223279,
+      "precision_macro": 0.8059447479472668,
+      "recall_macro": 0.7783375314861462,
+      "f1_macro": 0.7699382691196291
+    },
+    {
+      "epoch": 9,
+      "accuracy": 0.7979854504756575,
+      "precision_macro": 0.821366144351031,
+      "recall_macro": 0.7968513853904281,
+      "f1_macro": 0.7907383129045599
+    },
+    {
+      "epoch": 10,
+      "accuracy": 0.7912702853945159,
+      "precision_macro": 0.8148768178365156,
+      "recall_macro": 0.7887909319899243,
+      "f1_macro": 0.7821463870582258
+    },
+    {
+      "epoch": 11,
+      "accuracy": 0.7918298824846111,
+      "precision_macro": 0.8174143376914157,
+      "recall_macro": 0.790176322418136,
+      "f1_macro": 0.7867377934128565
+    },
+    {
+      "epoch": 12,
+      "accuracy": 0.7811975377728035,
+      "precision_macro": 0.8149217980452238,
+      "recall_macro": 0.781234256926952,
+      "f1_macro": 0.7779676522749571
+    },
+    {
+      "epoch": 13,
+      "accuracy": 0.7817571348628987,
+      "precision_macro": 0.8098126824197354,
+      "recall_macro": 0.7806045340050377,
+      "f1_macro": 0.7730529189166337
+    },
+    {
+      "epoch": 14,
+      "accuracy": 0.7834359261331841,
+      "precision_macro": 0.8096973695210471,
+      "recall_macro": 0.7836272040302268,
+      "f1_macro": 0.7766792052056536
+    },
+    {
+      "epoch": 15,
+      "accuracy": 0.7895914941242306,
+      "precision_macro": 0.8120027188037263,
+      "recall_macro": 0.7884130982367759,
+      "f1_macro": 0.7831799043385945
+    },
+    {
+      "epoch": 16,
+      "accuracy": 0.7901510912143257,
+      "precision_macro": 0.8145999396629119,
+      "recall_macro": 0.789294710327456,
+      "f1_macro": 0.7839723249043148
+    }
+  ],
+  "best_val_epoch": 4,
+  "best_val_accuracy": 0.7991046446558477,
+  "note": "'results' is the ONE-TIME test-set evaluation of the epoch 4 checkpoint, chosen by VALIDATION accuracy (0.7991) over 16 epochs; the test set (3970 images, from the dataset's own test/ folder) was never inspected before this single evaluation, and was not used for model selection."
+}

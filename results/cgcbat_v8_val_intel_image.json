@@ -1,0 +1,147 @@
+{
+  "model": "cg_cbat_resnet50",
+  "dataset_dir": "../../datasets/intel_image",
+  "num_classes": 6,
+  "train_size": 11929,
+  "test_size": 3000,
+  "config": {
+    "epochs": 8,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "optimizer": "AdamW",
+    "loss_function": "CrossEntropyLoss",
+    "image_size": 224,
+    "pretrained": true,
+    "device": "mps"
+  },
+  "classes": [
+    "buildings",
+    "forest",
+    "glacier",
+    "mountain",
+    "sea",
+    "street"
+  ],
+  "results": {
+    "accuracy": 0.9363333333333334,
+    "precision_macro": 0.9385761402468731,
+    "recall_macro": 0.9376921395047125,
+    "f1_macro": 0.9379696320568051,
+    "per_class": {
+      "buildings": {
+        "precision": 0.9664268585131894,
+        "recall": 0.9221967963386728,
+        "f1-score": 0.9437939110070258,
+        "support": 437.0
+      },
+      "forest": {
+        "precision": 0.9853862212943633,
+        "recall": 0.9957805907172996,
+        "f1-score": 0.9905561385099685,
+        "support": 474.0
+      },
+      "glacier": {
+        "precision": 0.8959854014598541,
+        "recall": 0.8878842676311031,
+        "f1-score": 0.8919164396003633,
+        "support": 553.0
+      },
+      "mountain": {
+        "precision": 0.8882575757575758,
+        "recall": 0.8933333333333333,
+        "f1-score": 0.8907882241215574,
+        "support": 525.0
+      },
+      "sea": {
+        "precision": 0.9624505928853755,
+        "recall": 0.9549019607843138,
+        "f1-score": 0.9586614173228346,
+        "support": 510.0
+      },
+      "street": {
+        "precision": 0.9329501915708812,
+        "recall": 0.9720558882235529,
+        "f1-score": 0.9521016617790812,
+        "support": 501.0
+      },
+      "accuracy": 0.9363333333333334,
+      "macro avg": {
+        "precision": 0.9385761402468731,
+        "recall": 0.9376921395047125,
+        "f1-score": 0.9379696320568051,
+        "support": 3000.0
+      },
+      "weighted avg": {
+        "precision": 0.9364915362307905,
+        "recall": 0.9363333333333334,
+        "f1-score": 0.9362584709708598,
+        "support": 3000.0
+      }
+    }
+  },
+  "val_split": 0.15,
+  "seed": 42,
+  "val_size": 2105,
+  "selection_metric": "validation_accuracy",
+  "val_eval_history": [
+    {
+      "epoch": 1,
+      "accuracy": 0.9947743467933492,
+      "precision_macro": 0.9950424177566807,
+      "recall_macro": 0.9949111685302006,
+      "f1_macro": 0.9949291951334427
+    },
+    {
+      "epoch": 2,
+      "accuracy": 0.995249406175772,
+      "precision_macro": 0.9953980335159031,
+      "recall_macro": 0.995352710710443,
+      "f1_macro": 0.9953577729376596
+    },
+    {
+      "epoch": 3,
+      "accuracy": 0.9966745843230403,
+      "precision_macro": 0.9969234845943279,
+      "recall_macro": 0.9967233312845384,
+      "f1_macro": 0.9968007839126526
+    },
+    {
+      "epoch": 4,
+      "accuracy": 0.9966745843230403,
+      "precision_macro": 0.9967730153414388,
+      "recall_macro": 0.9967774844666284,
+      "f1_macro": 0.996766930911645
+    },
+    {
+      "epoch": 5,
+      "accuracy": 0.9947743467933492,
+      "precision_macro": 0.9951216096975574,
+      "recall_macro": 0.9949163414211483,
+      "f1_macro": 0.9949625680339617
+    },
+    {
+      "epoch": 6,
+      "accuracy": 0.9947743467933492,
+      "precision_macro": 0.9950302273070156,
+      "recall_macro": 0.9948429207639128,
+      "f1_macro": 0.9949061078776201
+    },
+    {
+      "epoch": 7,
+      "accuracy": 0.9947743467933492,
+      "precision_macro": 0.9950760280811002,
+      "recall_macro": 0.994871436325262,
+      "f1_macro": 0.9949289714115022
+    },
+    {
+      "epoch": 8,
+      "accuracy": 0.995249406175772,
+      "precision_macro": 0.9954345719225118,
+      "recall_macro": 0.9954120367834808,
+      "f1_macro": 0.9954107595357587
+    }
+  ],
+  "best_val_epoch": 3,
+  "best_val_accuracy": 0.9966745843230403,
+  "note": "'results' is the ONE-TIME test-set evaluation of the epoch 3 checkpoint, chosen by VALIDATION accuracy (0.9967) over 8 epochs; the test set (3000 images, from the dataset's own test/ folder) was never inspected before this single evaluation, and was not used for model selection."
+}
