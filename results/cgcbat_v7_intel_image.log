@@ -1,0 +1,227 @@
+Using device: mps
+Classes: ['buildings', 'forest', 'glacier', 'mountain', 'sea', 'street']
+Train size: 14034, Test size: 3000
+[load_backbone_checkpoint] loaded 318/318 backbone tensors from '../../results/resnet50_8ep_intel_image_checkpoint.pt' (dropped 2 non-backbone keys: ['fc.weight', 'fc.bias'])
+Round 6 frozen-backbone mode: loaded 318 backbone tensors from ../../results/resnet50_8ep_intel_image_checkpoint.pt, dropped 2 non-backbone keys, backbone frozen for all 8 epochs.
+Round 6 frozen-backbone optimizer: new/head modules lr=0.00030000000000000003 (wd=0.05), backbone excluded from optimizer updates (frozen).
+Epoch 1: backbone permanently frozen (Round 6 mode, no warm-up schedule)
+  batch 20/439 - loss: 0.4126 - elapsed: 17.8s
+  batch 40/439 - loss: 0.0979 - elapsed: 27.8s
+  batch 60/439 - loss: 0.0619 - elapsed: 37.8s
+  batch 80/439 - loss: 0.0478 - elapsed: 47.8s
+  batch 100/439 - loss: 0.0227 - elapsed: 57.9s
+  batch 120/439 - loss: 0.0153 - elapsed: 67.9s
+  batch 140/439 - loss: 0.0116 - elapsed: 77.9s
+  batch 160/439 - loss: 0.0118 - elapsed: 87.9s
+  batch 180/439 - loss: 0.0183 - elapsed: 97.8s
+  batch 200/439 - loss: 0.0073 - elapsed: 107.8s
+  batch 220/439 - loss: 0.0055 - elapsed: 117.7s
+  batch 240/439 - loss: 0.0080 - elapsed: 127.9s
+  batch 260/439 - loss: 0.0969 - elapsed: 138.0s
+  batch 280/439 - loss: 0.0786 - elapsed: 147.9s
+  batch 300/439 - loss: 0.0079 - elapsed: 157.9s
+  batch 320/439 - loss: 0.0204 - elapsed: 167.9s
+  batch 340/439 - loss: 0.0052 - elapsed: 177.9s
+  batch 360/439 - loss: 0.0255 - elapsed: 187.9s
+  batch 380/439 - loss: 0.0020 - elapsed: 198.0s
+  batch 400/439 - loss: 0.0068 - elapsed: 208.0s
+  batch 420/439 - loss: 0.0197 - elapsed: 217.9s
+  batch 439/439 - loss: 0.0032 - elapsed: 227.5s
+Epoch 1/8 - loss: 0.0790 - time: 247.5s
+Saved checkpoint to ../../results/cgcbat_v7_intel_image_checkpoint.pt (epoch 1)
+Epoch 1 eval: accuracy=0.9357 precision_macro=0.9362 recall_macro=0.9373 f1_macro=0.9367
+  batch 20/439 - loss: 0.0087 - elapsed: 17.5s
+  batch 40/439 - loss: 0.0035 - elapsed: 27.9s
+  batch 60/439 - loss: 0.0046 - elapsed: 38.1s
+  batch 80/439 - loss: 0.0014 - elapsed: 48.6s
+  batch 100/439 - loss: 0.0190 - elapsed: 59.1s
+  batch 120/439 - loss: 0.0014 - elapsed: 69.5s
+  batch 140/439 - loss: 0.0131 - elapsed: 79.6s
+  batch 160/439 - loss: 0.0113 - elapsed: 90.1s
+  batch 180/439 - loss: 0.0051 - elapsed: 100.4s
+  batch 200/439 - loss: 0.0023 - elapsed: 110.4s
+  batch 220/439 - loss: 0.0024 - elapsed: 120.5s
+  batch 240/439 - loss: 0.0270 - elapsed: 130.5s
+  batch 260/439 - loss: 0.0129 - elapsed: 140.5s
+  batch 280/439 - loss: 0.0019 - elapsed: 150.4s
+  batch 300/439 - loss: 0.0315 - elapsed: 160.4s
+  batch 320/439 - loss: 0.0418 - elapsed: 170.5s
+  batch 340/439 - loss: 0.0027 - elapsed: 180.4s
+  batch 360/439 - loss: 0.0099 - elapsed: 190.2s
+  batch 380/439 - loss: 0.0316 - elapsed: 200.3s
+  batch 400/439 - loss: 0.0231 - elapsed: 210.2s
+  batch 420/439 - loss: 0.0036 - elapsed: 220.0s
+  batch 439/439 - loss: 0.0039 - elapsed: 229.3s
+Epoch 2/8 - loss: 0.0149 - time: 249.3s
+Saved checkpoint to ../../results/cgcbat_v7_intel_image_checkpoint.pt (epoch 2)
+Epoch 2 eval: accuracy=0.9347 precision_macro=0.9358 recall_macro=0.9364 f1_macro=0.9360
+  batch 20/439 - loss: 0.0021 - elapsed: 18.1s
+  batch 40/439 - loss: 0.0080 - elapsed: 28.2s
+  batch 60/439 - loss: 0.0010 - elapsed: 38.3s
+  batch 80/439 - loss: 0.0025 - elapsed: 48.4s
+  batch 100/439 - loss: 0.0089 - elapsed: 58.4s
+  batch 120/439 - loss: 0.0011 - elapsed: 68.3s
+  batch 140/439 - loss: 0.0008 - elapsed: 78.5s
+  batch 160/439 - loss: 0.0014 - elapsed: 88.5s
+  batch 180/439 - loss: 0.0010 - elapsed: 98.5s
+  batch 200/439 - loss: 0.0035 - elapsed: 108.5s
+  batch 220/439 - loss: 0.0026 - elapsed: 118.5s
+  batch 240/439 - loss: 0.0017 - elapsed: 128.5s
+  batch 260/439 - loss: 0.0015 - elapsed: 138.5s
+  batch 280/439 - loss: 0.0028 - elapsed: 148.7s
+  batch 300/439 - loss: 0.2279 - elapsed: 158.8s
+  batch 320/439 - loss: 0.0027 - elapsed: 168.7s
+  batch 340/439 - loss: 0.0013 - elapsed: 178.6s
+  batch 360/439 - loss: 0.0046 - elapsed: 188.6s
+  batch 380/439 - loss: 0.0046 - elapsed: 198.6s
+  batch 400/439 - loss: 0.0140 - elapsed: 208.6s
+  batch 420/439 - loss: 0.1043 - elapsed: 218.6s
+  batch 439/439 - loss: 0.0042 - elapsed: 227.8s
+Epoch 3/8 - loss: 0.0142 - time: 247.8s
+Saved checkpoint to ../../results/cgcbat_v7_intel_image_checkpoint.pt (epoch 3)
+Epoch 3 eval: accuracy=0.9347 precision_macro=0.9353 recall_macro=0.9365 f1_macro=0.9357
+  batch 20/439 - loss: 0.0069 - elapsed: 18.0s
+  batch 40/439 - loss: 0.0009 - elapsed: 28.1s
+  batch 60/439 - loss: 0.0040 - elapsed: 38.3s
+  batch 80/439 - loss: 0.0103 - elapsed: 48.3s
+  batch 100/439 - loss: 0.0688 - elapsed: 58.4s
+  batch 120/439 - loss: 0.0007 - elapsed: 68.4s
+  batch 140/439 - loss: 0.0015 - elapsed: 78.4s
+  batch 160/439 - loss: 0.0016 - elapsed: 88.4s
+  batch 180/439 - loss: 0.0285 - elapsed: 98.4s
+  batch 200/439 - loss: 0.0628 - elapsed: 108.6s
+  batch 220/439 - loss: 0.0024 - elapsed: 118.7s
+  batch 240/439 - loss: 0.0004 - elapsed: 128.5s
+  batch 260/439 - loss: 0.0370 - elapsed: 138.4s
+  batch 280/439 - loss: 0.0223 - elapsed: 148.7s
+  batch 300/439 - loss: 0.0100 - elapsed: 159.0s
+  batch 320/439 - loss: 0.0183 - elapsed: 168.9s
+  batch 340/439 - loss: 0.0026 - elapsed: 178.9s
+  batch 360/439 - loss: 0.0008 - elapsed: 189.0s
+  batch 380/439 - loss: 0.0007 - elapsed: 199.1s
+  batch 400/439 - loss: 0.0005 - elapsed: 209.1s
+  batch 420/439 - loss: 0.0005 - elapsed: 219.0s
+  batch 439/439 - loss: 0.0003 - elapsed: 228.2s
+Epoch 4/8 - loss: 0.0124 - time: 248.2s
+Saved checkpoint to ../../results/cgcbat_v7_intel_image_checkpoint.pt (epoch 4)
+Epoch 4 eval: accuracy=0.9360 precision_macro=0.9371 recall_macro=0.9378 f1_macro=0.9373
+  batch 20/439 - loss: 0.0079 - elapsed: 17.9s
+  batch 40/439 - loss: 0.0007 - elapsed: 28.0s
+  batch 60/439 - loss: 0.0095 - elapsed: 38.1s
+  batch 80/439 - loss: 0.0115 - elapsed: 48.0s
+  batch 100/439 - loss: 0.0001 - elapsed: 58.0s
+  batch 120/439 - loss: 0.0016 - elapsed: 68.1s
+  batch 140/439 - loss: 0.0012 - elapsed: 78.2s
+  batch 160/439 - loss: 0.0009 - elapsed: 88.1s
+  batch 180/439 - loss: 0.0018 - elapsed: 98.1s
+  batch 200/439 - loss: 0.0038 - elapsed: 108.3s
+  batch 220/439 - loss: 0.0014 - elapsed: 118.8s
+  batch 240/439 - loss: 0.0132 - elapsed: 128.9s
+  batch 260/439 - loss: 0.0012 - elapsed: 139.1s
+  batch 280/439 - loss: 0.0004 - elapsed: 149.4s
+  batch 300/439 - loss: 0.0005 - elapsed: 159.5s
+  batch 320/439 - loss: 0.0022 - elapsed: 169.8s
+  batch 340/439 - loss: 0.0005 - elapsed: 179.9s
+  batch 360/439 - loss: 0.0803 - elapsed: 190.1s
+  batch 380/439 - loss: 0.0020 - elapsed: 200.2s
+  batch 400/439 - loss: 0.0005 - elapsed: 210.2s
+  batch 420/439 - loss: 0.0014 - elapsed: 220.3s
+  batch 439/439 - loss: 0.1067 - elapsed: 229.8s
+Epoch 5/8 - loss: 0.0098 - time: 249.8s
+Saved checkpoint to ../../results/cgcbat_v7_intel_image_checkpoint.pt (epoch 5)
+Epoch 5 eval: accuracy=0.9373 precision_macro=0.9383 recall_macro=0.9390 f1_macro=0.9385
+  batch 20/439 - loss: 0.0006 - elapsed: 17.6s
+  batch 40/439 - loss: 0.0084 - elapsed: 27.7s
+  batch 60/439 - loss: 0.0128 - elapsed: 37.8s
+  batch 80/439 - loss: 0.0269 - elapsed: 48.0s
+  batch 100/439 - loss: 0.0012 - elapsed: 58.0s
+  batch 120/439 - loss: 0.0204 - elapsed: 68.2s
+  batch 140/439 - loss: 0.0554 - elapsed: 78.3s
+  batch 160/439 - loss: 0.0002 - elapsed: 88.5s
+  batch 180/439 - loss: 0.0045 - elapsed: 98.7s
+  batch 200/439 - loss: 0.0003 - elapsed: 108.7s
+  batch 220/439 - loss: 0.0019 - elapsed: 118.6s
+  batch 240/439 - loss: 0.0008 - elapsed: 128.5s
+  batch 260/439 - loss: 0.0031 - elapsed: 138.5s
+  batch 280/439 - loss: 0.0021 - elapsed: 148.4s
+  batch 300/439 - loss: 0.0000 - elapsed: 158.3s
+  batch 320/439 - loss: 0.0005 - elapsed: 168.3s
+  batch 340/439 - loss: 0.0097 - elapsed: 178.2s
+  batch 360/439 - loss: 0.0001 - elapsed: 188.1s
+  batch 380/439 - loss: 0.0001 - elapsed: 198.2s
+  batch 400/439 - loss: 0.0079 - elapsed: 208.2s
+  batch 420/439 - loss: 0.0017 - elapsed: 218.2s
+  batch 439/439 - loss: 0.0002 - elapsed: 227.5s
+Epoch 6/8 - loss: 0.0074 - time: 247.5s
+Saved checkpoint to ../../results/cgcbat_v7_intel_image_checkpoint.pt (epoch 6)
+Epoch 6 eval: accuracy=0.9317 precision_macro=0.9333 recall_macro=0.9333 f1_macro=0.9330
+  batch 20/439 - loss: 0.0020 - elapsed: 18.7s
+  batch 40/439 - loss: 0.0036 - elapsed: 28.9s
+  batch 60/439 - loss: 0.0009 - elapsed: 39.2s
+  batch 80/439 - loss: 0.0003 - elapsed: 49.3s
+  batch 100/439 - loss: 0.0004 - elapsed: 59.5s
+  batch 120/439 - loss: 0.0010 - elapsed: 69.6s
+  batch 140/439 - loss: 0.0006 - elapsed: 79.5s
+  batch 160/439 - loss: 0.0324 - elapsed: 89.4s
+  batch 180/439 - loss: 0.0014 - elapsed: 99.4s
+  batch 200/439 - loss: 0.0011 - elapsed: 109.3s
+  batch 220/439 - loss: 0.0003 - elapsed: 119.5s
+  batch 240/439 - loss: 0.0005 - elapsed: 129.4s
+  batch 260/439 - loss: 0.0132 - elapsed: 139.3s
+  batch 280/439 - loss: 0.0018 - elapsed: 149.6s
+  batch 300/439 - loss: 0.0003 - elapsed: 159.5s
+  batch 320/439 - loss: 0.0002 - elapsed: 169.6s
+  batch 340/439 - loss: 0.0002 - elapsed: 179.6s
+  batch 360/439 - loss: 0.0000 - elapsed: 189.6s
+  batch 380/439 - loss: 0.0009 - elapsed: 199.6s
+  batch 400/439 - loss: 0.0208 - elapsed: 209.6s
+  batch 420/439 - loss: 0.0003 - elapsed: 219.7s
+  batch 439/439 - loss: 0.0005 - elapsed: 229.0s
+Epoch 7/8 - loss: 0.0071 - time: 249.0s
+Saved checkpoint to ../../results/cgcbat_v7_intel_image_checkpoint.pt (epoch 7)
+Epoch 7 eval: accuracy=0.9380 precision_macro=0.9395 recall_macro=0.9395 f1_macro=0.9394
+  batch 20/439 - loss: 0.0008 - elapsed: 17.6s
+  batch 40/439 - loss: 0.0003 - elapsed: 27.8s
+  batch 60/439 - loss: 0.0002 - elapsed: 37.9s
+  batch 80/439 - loss: 0.0144 - elapsed: 48.1s
+  batch 100/439 - loss: 0.0029 - elapsed: 58.2s
+  batch 120/439 - loss: 0.0002 - elapsed: 68.4s
+  batch 140/439 - loss: 0.0091 - elapsed: 78.6s
+  batch 160/439 - loss: 0.0068 - elapsed: 88.7s
+  batch 180/439 - loss: 0.0012 - elapsed: 98.8s
+  batch 200/439 - loss: 0.0120 - elapsed: 109.0s
+  batch 220/439 - loss: 0.0189 - elapsed: 119.1s
+  batch 240/439 - loss: 0.0002 - elapsed: 129.2s
+  batch 260/439 - loss: 0.0021 - elapsed: 139.3s
+  batch 280/439 - loss: 0.0044 - elapsed: 149.5s
+  batch 300/439 - loss: 0.0065 - elapsed: 159.7s
+  batch 320/439 - loss: 0.0226 - elapsed: 169.8s
+  batch 340/439 - loss: 0.0031 - elapsed: 180.2s
+  batch 360/439 - loss: 0.0389 - elapsed: 190.3s
+  batch 380/439 - loss: 0.0033 - elapsed: 200.5s
+  batch 400/439 - loss: 0.0001 - elapsed: 210.6s
+  batch 420/439 - loss: 0.0003 - elapsed: 220.8s
+  batch 439/439 - loss: 0.0004 - elapsed: 230.2s
+Epoch 8/8 - loss: 0.0073 - time: 250.2s
+Saved checkpoint to ../../results/cgcbat_v7_intel_image_checkpoint.pt (epoch 8)
+Epoch 8 eval: accuracy=0.9310 precision_macro=0.9318 recall_macro=0.9329 f1_macro=0.9322
+
+Best epoch by test accuracy: epoch 7 with accuracy=0.9380
+
+=== Per-class results ===
+Class           Precision    Recall        F1
+---------------------------------------------
+buildings           0.915     0.941     0.928
+forest              0.987     0.996     0.992
+glacier             0.894     0.886     0.890
+mountain            0.902     0.876     0.889
+sea                 0.947     0.975     0.960
+street              0.945     0.924     0.934
+
+=== Overall ===
+Accuracy       0.931
+Precision (macro)   0.932
+Recall (macro)      0.933
+F1 (macro)          0.932
+
+Saved results to ../../results/cgcbat_v7_intel_image.json

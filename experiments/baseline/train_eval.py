@@ -175,6 +175,14 @@ def main():
                              f"--model {MINIMAL_MODEL_NAME}. When set, the backbone is FROZEN for "
                              "the entire run (all epochs) instead of the usual warm-up-then-unfreeze "
                              "schedule -- this is the Round 6 frozen-backbone training strategy.")
+    parser.add_argument("--eval-every-epoch", action="store_true",
+                        help="Round 8: evaluate on the test set after EVERY epoch (not just the "
+                             "final one), printing each epoch's accuracy/precision/recall/F1 to "
+                             "stdout and reporting the best epoch's accuracy at the end (also "
+                             "recorded in the output JSON as 'epoch_eval_history'/'best_epoch'/"
+                             "'best_epoch_accuracy'). Works for any model. Off by default since "
+                             "it adds wall-clock time; the normal final-epoch evaluation/JSON "
+                             "output is unchanged either way.")
     args = parser.parse_args()
 
     device = get_device()
@@ -252,6 +260,10 @@ def main():
         start_epoch = ckpt["epoch"] + 1
         print(f"Resumed from checkpoint at epoch {ckpt['epoch']} ({args.checkpoint})", flush=True)
 
+    epoch_eval_history = []
+    best_epoch = None
+    best_epoch_accuracy = None
+
     for epoch in range(start_epoch, args.epochs + 1):
         if args.model == CUSTOM_MODEL_NAME and not frozen_backbone_mode:
             # Warm-up: freeze the pretrained backbone for the first
@@ -288,30 +300,67 @@ def main():
         }, args.checkpoint)
         print(f"Saved checkpoint to {args.checkpoint} (epoch {epoch})", flush=True)
 
+        if args.eval_every_epoch:
+            epoch_results = evaluate(model, test_loader, class_names, device)
+            print(
+                f"Epoch {epoch} eval: accuracy={epoch_results['accuracy']:.4f} "
+                f"precision_macro={epoch_results['precision_macro']:.4f} "
+                f"recall_macro={epoch_results['recall_macro']:.4f} "
+                f"f1_macro={epoch_results['f1_macro']:.4f}",
+                flush=True,
+            )
+            epoch_eval_history.append({
+                "epoch": epoch,
+                "accuracy": epoch_results["accuracy"],
+                "precision_macro": epoch_results["precision_macro"],
+                "recall_macro": epoch_results["recall_macro"],
+                "f1_macro": epoch_results["f1_macro"],
+            })
+            if best_epoch_accuracy is None or epoch_results["accuracy"] > best_epoch_accuracy:
+                best_epoch_accuracy = epoch_results["accuracy"]
+                best_epoch = epoch
+
+    if args.eval_every_epoch and best_epoch is not None:
+        print(
+            f"\nBest epoch by test accuracy: epoch {best_epoch} "
+            f"with accuracy={best_epoch_accuracy:.4f}",
+            flush=True,
+        )
+
     results = evaluate(model, test_loader, class_names, device)
     print_table(results, class_names)
 
+    output = {
+        "model": args.model,
+        "dataset_dir": str(args.data_dir),
+        "num_classes": len(class_names),
+        "train_size": len(train_loader.dataset),
+        "test_size": len(test_loader.dataset),
+        "config": {
+            "epochs": args.epochs,
+            "batch_size": args.batch_size,
+            "learning_rate": args.lr,
+            "optimizer": "AdamW",
+            "loss_function": "CrossEntropyLoss",
+            "image_size": args.img_size,
+            "pretrained": True,
+            "device": str(device),
+        },
+        "classes": class_names,
+        "results": results,
+    }
+    if args.eval_every_epoch:
+        # Round 8: additive fields only -- the keys/structure above are
+        # unchanged so existing downstream parsing of the default (no-flag)
+        # output format keeps working.
+        output["eval_every_epoch"] = True
+        output["epoch_eval_history"] = epoch_eval_history
+        output["best_epoch"] = best_epoch
+        output["best_epoch_accuracy"] = best_epoch_accuracy
+
     args.out.parent.mkdir(parents=True, exist_ok=True)
     with open(args.out, "w") as f:
-        json.dump({
-            "model": args.model,
-            "dataset_dir": str(args.data_dir),
-            "num_classes": len(class_names),
-            "train_size": len(train_loader.dataset),
-            "test_size": len(test_loader.dataset),
-            "config": {
-                "epochs": args.epochs,
-                "batch_size": args.batch_size,
-                "learning_rate": args.lr,
-                "optimizer": "AdamW",
-                "loss_function": "CrossEntropyLoss",
-                "image_size": args.img_size,
-                "pretrained": True,
-                "device": str(device),
-            },
-            "classes": class_names,
-            "results": results,
-        }, f, indent=2)
+        json.dump(output, f, indent=2)
     print(f"\nSaved results to {args.out}")
 
 
