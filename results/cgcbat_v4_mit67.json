@@ -1,0 +1,509 @@
+{
+  "model": "cg_cbat_resnet50",
+  "dataset_dir": "../../datasets/mit67",
+  "num_classes": 67,
+  "train_size": 14097,
+  "test_size": 1600,
+  "config": {
+    "epochs": 8,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "optimizer": "AdamW",
+    "loss_function": "CrossEntropyLoss",
+    "image_size": 224,
+    "pretrained": true,
+    "device": "mps"
+  },
+  "classes": [
+    "airport_inside",
+    "artstudio",
+    "auditorium",
+    "bakery",
+    "bar",
+    "bathroom",
+    "bedroom",
+    "bookstore",
+    "bowling",
+    "buffet",
+    "casino",
+    "children_room",
+    "church_inside",
+    "classroom",
+    "cloister",
+    "closet",
+    "clothingstore",
+    "computerroom",
+    "concert_hall",
+    "corridor",
+    "deli",
+    "dentaloffice",
+    "dining_room",
+    "elevator",
+    "fastfood_restaurant",
+    "florist",
+    "gameroom",
+    "garage",
+    "greenhouse",
+    "grocerystore",
+    "gym",
+    "hairsalon",
+    "hospitalroom",
+    "inside_bus",
+    "inside_subway",
+    "jewelleryshop",
+    "kindergarden",
+    "kitchen",
+    "laboratorywet",
+    "laundromat",
+    "library",
+    "livingroom",
+    "lobby",
+    "locker_room",
+    "mall",
+    "meeting_room",
+    "movietheater",
+    "museum",
+    "nursery",
+    "office",
+    "operating_room",
+    "pantry",
+    "poolinside",
+    "prisoncell",
+    "restaurant",
+    "restaurant_kitchen",
+    "shoeshop",
+    "stairscase",
+    "studiomusic",
+    "subway",
+    "toystore",
+    "trainstation",
+    "tv_studio",
+    "videostore",
+    "waitingroom",
+    "warehouse",
+    "winecellar"
+  ],
+  "results": {
+    "accuracy": 0.70875,
+    "precision_macro": 0.6695802346396137,
+    "recall_macro": 0.7395360076805667,
+    "f1_macro": 0.6405218417254979,
+    "per_class": {
+      "airport_inside": {
+        "precision": 0.07142857142857142,
+        "recall": 1.0,
+        "f1-score": 0.13333333333333333,
+        "support": 2.0
+      },
+      "artstudio": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "auditorium": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1-score": 0.4,
+        "support": 2.0
+      },
+      "bakery": {
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1-score": 0.5714285714285714,
+        "support": 2.0
+      },
+      "bar": {
+        "precision": 0.04081632653061224,
+        "recall": 1.0,
+        "f1-score": 0.0784313725490196,
+        "support": 2.0
+      },
+      "bathroom": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "bedroom": {
+        "precision": 0.1111111111111111,
+        "recall": 1.0,
+        "f1-score": 0.2,
+        "support": 2.0
+      },
+      "bookstore": {
+        "precision": 0.14285714285714285,
+        "recall": 1.0,
+        "f1-score": 0.25,
+        "support": 2.0
+      },
+      "bowling": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "buffet": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "casino": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "children_room": {
+        "precision": 0.18181818181818182,
+        "recall": 1.0,
+        "f1-score": 0.3076923076923077,
+        "support": 2.0
+      },
+      "church_inside": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1-score": 0.5,
+        "support": 2.0
+      },
+      "classroom": {
+        "precision": 0.2857142857142857,
+        "recall": 1.0,
+        "f1-score": 0.4444444444444444,
+        "support": 2.0
+      },
+      "cloister": {
+        "precision": 1.0,
+        "recall": 0.8536585365853658,
+        "f1-score": 0.9210526315789473,
+        "support": 41.0
+      },
+      "closet": {
+        "precision": 0.9666666666666667,
+        "recall": 0.725,
+        "f1-score": 0.8285714285714286,
+        "support": 40.0
+      },
+      "clothingstore": {
+        "precision": 0.6923076923076923,
+        "recall": 0.782608695652174,
+        "f1-score": 0.7346938775510204,
+        "support": 23.0
+      },
+      "computerroom": {
+        "precision": 0.8,
+        "recall": 0.5714285714285714,
+        "f1-score": 0.6666666666666666,
+        "support": 7.0
+      },
+      "concert_hall": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "corridor": {
+        "precision": 0.5833333333333334,
+        "recall": 0.875,
+        "f1-score": 0.7,
+        "support": 8.0
+      },
+      "deli": {
+        "precision": 0.2,
+        "recall": 1.0,
+        "f1-score": 0.3333333333333333,
+        "support": 2.0
+      },
+      "dentaloffice": {
+        "precision": 0.8064516129032258,
+        "recall": 0.5681818181818182,
+        "f1-score": 0.6666666666666666,
+        "support": 44.0
+      },
+      "dining_room": {
+        "precision": 0.6893203883495146,
+        "recall": 0.7319587628865979,
+        "f1-score": 0.71,
+        "support": 97.0
+      },
+      "elevator": {
+        "precision": 0.9523809523809523,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.7843137254901961,
+        "support": 30.0
+      },
+      "fastfood_restaurant": {
+        "precision": 1.0,
+        "recall": 0.2962962962962963,
+        "f1-score": 0.45714285714285713,
+        "support": 27.0
+      },
+      "florist": {
+        "precision": 1.0,
+        "recall": 0.7083333333333334,
+        "f1-score": 0.8292682926829268,
+        "support": 24.0
+      },
+      "gameroom": {
+        "precision": 1.0,
+        "recall": 0.6216216216216216,
+        "f1-score": 0.7666666666666667,
+        "support": 37.0
+      },
+      "garage": {
+        "precision": 1.0,
+        "recall": 0.4642857142857143,
+        "f1-score": 0.6341463414634146,
+        "support": 28.0
+      },
+      "greenhouse": {
+        "precision": 0.7692307692307693,
+        "recall": 1.0,
+        "f1-score": 0.8695652173913043,
+        "support": 10.0
+      },
+      "grocerystore": {
+        "precision": 1.0,
+        "recall": 0.7083333333333334,
+        "f1-score": 0.8292682926829268,
+        "support": 48.0
+      },
+      "gym": {
+        "precision": 0.9655172413793104,
+        "recall": 0.875,
+        "f1-score": 0.9180327868852459,
+        "support": 64.0
+      },
+      "hairsalon": {
+        "precision": 1.0,
+        "recall": 0.4880952380952381,
+        "f1-score": 0.656,
+        "support": 84.0
+      },
+      "hospitalroom": {
+        "precision": 0.6666666666666666,
+        "recall": 0.34782608695652173,
+        "f1-score": 0.45714285714285713,
+        "support": 23.0
+      },
+      "inside_bus": {
+        "precision": 1.0,
+        "recall": 0.8108108108108109,
+        "f1-score": 0.8955223880597015,
+        "support": 37.0
+      },
+      "inside_subway": {
+        "precision": 0.9541984732824428,
+        "recall": 0.9259259259259259,
+        "f1-score": 0.9398496240601504,
+        "support": 135.0
+      },
+      "jewelleryshop": {
+        "precision": 0.5294117647058824,
+        "recall": 0.5294117647058824,
+        "f1-score": 0.5294117647058824,
+        "support": 17.0
+      },
+      "kindergarden": {
+        "precision": 0.5,
+        "recall": 0.7,
+        "f1-score": 0.5833333333333334,
+        "support": 10.0
+      },
+      "kitchen": {
+        "precision": 0.8571428571428571,
+        "recall": 0.7228915662650602,
+        "f1-score": 0.7843137254901961,
+        "support": 83.0
+      },
+      "laboratorywet": {
+        "precision": 0.5,
+        "recall": 0.4444444444444444,
+        "f1-score": 0.47058823529411764,
+        "support": 9.0
+      },
+      "laundromat": {
+        "precision": 0.9310344827586207,
+        "recall": 0.8181818181818182,
+        "f1-score": 0.8709677419354839,
+        "support": 33.0
+      },
+      "library": {
+        "precision": 1.0,
+        "recall": 0.38461538461538464,
+        "f1-score": 0.5555555555555556,
+        "support": 13.0
+      },
+      "livingroom": {
+        "precision": 0.6666666666666666,
+        "recall": 0.631578947368421,
+        "f1-score": 0.6486486486486487,
+        "support": 57.0
+      },
+      "lobby": {
+        "precision": 0.5,
+        "recall": 0.2727272727272727,
+        "f1-score": 0.35294117647058826,
+        "support": 11.0
+      },
+      "locker_room": {
+        "precision": 0.5652173913043478,
+        "recall": 0.7428571428571429,
+        "f1-score": 0.6419753086419753,
+        "support": 35.0
+      },
+      "mall": {
+        "precision": 0.75,
+        "recall": 0.9230769230769231,
+        "f1-score": 0.8275862068965517,
+        "support": 13.0
+      },
+      "meeting_room": {
+        "precision": 0.64,
+        "recall": 0.8421052631578947,
+        "f1-score": 0.7272727272727273,
+        "support": 19.0
+      },
+      "movietheater": {
+        "precision": 0.8181818181818182,
+        "recall": 0.8571428571428571,
+        "f1-score": 0.8372093023255814,
+        "support": 21.0
+      },
+      "museum": {
+        "precision": 0.43478260869565216,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.5263157894736842,
+        "support": 15.0
+      },
+      "nursery": {
+        "precision": 0.75,
+        "recall": 0.5454545454545454,
+        "f1-score": 0.631578947368421,
+        "support": 11.0
+      },
+      "office": {
+        "precision": 0.21739130434782608,
+        "recall": 0.625,
+        "f1-score": 0.3225806451612903,
+        "support": 8.0
+      },
+      "operating_room": {
+        "precision": 0.3793103448275862,
+        "recall": 0.7857142857142857,
+        "f1-score": 0.5116279069767442,
+        "support": 14.0
+      },
+      "pantry": {
+        "precision": 0.8372093023255814,
+        "recall": 0.8780487804878049,
+        "f1-score": 0.8571428571428571,
+        "support": 41.0
+      },
+      "poolinside": {
+        "precision": 0.8333333333333334,
+        "recall": 0.7142857142857143,
+        "f1-score": 0.7692307692307693,
+        "support": 14.0
+      },
+      "prisoncell": {
+        "precision": 0.8,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.47058823529411764,
+        "support": 12.0
+      },
+      "restaurant": {
+        "precision": 0.5531914893617021,
+        "recall": 0.48148148148148145,
+        "f1-score": 0.5148514851485149,
+        "support": 54.0
+      },
+      "restaurant_kitchen": {
+        "precision": 0.3,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.41379310344827586,
+        "support": 9.0
+      },
+      "shoeshop": {
+        "precision": 0.4444444444444444,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.5333333333333333,
+        "support": 12.0
+      },
+      "stairscase": {
+        "precision": 0.8,
+        "recall": 0.7058823529411765,
+        "f1-score": 0.75,
+        "support": 17.0
+      },
+      "studiomusic": {
+        "precision": 0.75,
+        "recall": 0.5,
+        "f1-score": 0.6,
+        "support": 12.0
+      },
+      "subway": {
+        "precision": 0.7333333333333333,
+        "recall": 0.7021276595744681,
+        "f1-score": 0.717391304347826,
+        "support": 47.0
+      },
+      "toystore": {
+        "precision": 0.6428571428571429,
+        "recall": 0.8181818181818182,
+        "f1-score": 0.72,
+        "support": 33.0
+      },
+      "trainstation": {
+        "precision": 0.9230769230769231,
+        "recall": 0.631578947368421,
+        "f1-score": 0.75,
+        "support": 19.0
+      },
+      "tv_studio": {
+        "precision": 0.6818181818181818,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.75,
+        "support": 18.0
+      },
+      "videostore": {
+        "precision": 0.875,
+        "recall": 0.5,
+        "f1-score": 0.6363636363636364,
+        "support": 14.0
+      },
+      "waitingroom": {
+        "precision": 0.7142857142857143,
+        "recall": 0.3125,
+        "f1-score": 0.43478260869565216,
+        "support": 16.0
+      },
+      "warehouse": {
+        "precision": 0.7818181818181819,
+        "recall": 0.9347826086956522,
+        "f1-score": 0.8514851485148515,
+        "support": 46.0
+      },
+      "winecellar": {
+        "precision": 0.7058823529411765,
+        "recall": 0.8571428571428571,
+        "f1-score": 0.7741935483870968,
+        "support": 28.0
+      },
+      "accuracy": 0.70875,
+      "macro avg": {
+        "precision": 0.6695802346396137,
+        "recall": 0.7395360076805667,
+        "f1-score": 0.6405218417254979,
+        "support": 1600.0
+      },
+      "weighted avg": {
+        "precision": 0.8044823521478323,
+        "recall": 0.70875,
+        "f1-score": 0.7307512990097877,
+        "support": 1600.0
+      }
+    }
+  }
+}

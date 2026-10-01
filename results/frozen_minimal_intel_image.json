@@ -1,0 +1,82 @@
+{
+  "model": "frozen_minimal_resnet50",
+  "dataset_dir": "../../datasets/intel_image",
+  "num_classes": 6,
+  "train_size": 14034,
+  "test_size": 3000,
+  "config": {
+    "epochs": 8,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "optimizer": "AdamW",
+    "loss_function": "CrossEntropyLoss",
+    "image_size": 224,
+    "pretrained": true,
+    "device": "mps"
+  },
+  "classes": [
+    "buildings",
+    "forest",
+    "glacier",
+    "mountain",
+    "sea",
+    "street"
+  ],
+  "results": {
+    "accuracy": 0.937,
+    "precision_macro": 0.937721888041123,
+    "recall_macro": 0.9385575343377083,
+    "f1_macro": 0.9380840348083845,
+    "per_class": {
+      "buildings": {
+        "precision": 0.9235955056179775,
+        "recall": 0.9405034324942791,
+        "f1-score": 0.9319727891156463,
+        "support": 437.0
+      },
+      "forest": {
+        "precision": 0.9874476987447699,
+        "recall": 0.9957805907172996,
+        "f1-score": 0.9915966386554622,
+        "support": 474.0
+      },
+      "glacier": {
+        "precision": 0.9032846715328468,
+        "recall": 0.895117540687161,
+        "f1-score": 0.8991825613079019,
+        "support": 553.0
+      },
+      "mountain": {
+        "precision": 0.90715667311412,
+        "recall": 0.8933333333333333,
+        "f1-score": 0.9001919385796545,
+        "support": 525.0
+      },
+      "sea": {
+        "precision": 0.9576923076923077,
+        "recall": 0.9764705882352941,
+        "f1-score": 0.9669902912621359,
+        "support": 510.0
+      },
+      "street": {
+        "precision": 0.9471544715447154,
+        "recall": 0.9301397205588823,
+        "f1-score": 0.9385699899295066,
+        "support": 501.0
+      },
+      "accuracy": 0.937,
+      "macro avg": {
+        "precision": 0.937721888041123,
+        "recall": 0.9385575343377083,
+        "f1-score": 0.9380840348083845,
+        "support": 3000.0
+      },
+      "weighted avg": {
+        "precision": 0.9367941963565446,
+        "recall": 0.937,
+        "f1-score": 0.9368420844073956,
+        "support": 3000.0
+      }
+    }
+  }
+}

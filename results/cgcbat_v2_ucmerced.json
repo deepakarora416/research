@@ -1,0 +1,187 @@
+{
+  "model": "cg_cbat_resnet50",
+  "dataset_dir": "../../datasets/ucmerced",
+  "num_classes": 21,
+  "train_size": 1680,
+  "test_size": 420,
+  "config": {
+    "epochs": 8,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "optimizer": "AdamW",
+    "loss_function": "CrossEntropyLoss",
+    "image_size": 224,
+    "pretrained": true,
+    "device": "mps"
+  },
+  "classes": [
+    "agricultural",
+    "airplane",
+    "baseballdiamond",
+    "beach",
+    "buildings",
+    "chaparral",
+    "denseresidential",
+    "forest",
+    "freeway",
+    "golfcourse",
+    "harbor",
+    "intersection",
+    "mediumresidential",
+    "mobilehomepark",
+    "overpass",
+    "parkinglot",
+    "river",
+    "runway",
+    "sparseresidential",
+    "storagetanks",
+    "tenniscourt"
+  ],
+  "results": {
+    "accuracy": 0.8714285714285714,
+    "precision_macro": 0.8739075479023173,
+    "recall_macro": 0.8714285714285713,
+    "f1_macro": 0.8653838836512445,
+    "per_class": {
+      "agricultural": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1-score": 0.975609756097561,
+        "support": 20.0
+      },
+      "airplane": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "baseballdiamond": {
+        "precision": 0.85,
+        "recall": 0.85,
+        "f1-score": 0.85,
+        "support": 20.0
+      },
+      "beach": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "buildings": {
+        "precision": 0.7391304347826086,
+        "recall": 0.85,
+        "f1-score": 0.7906976744186046,
+        "support": 20.0
+      },
+      "chaparral": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "denseresidential": {
+        "precision": 0.6,
+        "recall": 0.3,
+        "f1-score": 0.4,
+        "support": 20.0
+      },
+      "forest": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "freeway": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1-score": 0.8888888888888888,
+        "support": 20.0
+      },
+      "golfcourse": {
+        "precision": 0.9473684210526315,
+        "recall": 0.9,
+        "f1-score": 0.9230769230769231,
+        "support": 20.0
+      },
+      "harbor": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 20.0
+      },
+      "intersection": {
+        "precision": 0.9166666666666666,
+        "recall": 0.55,
+        "f1-score": 0.6875,
+        "support": 20.0
+      },
+      "mediumresidential": {
+        "precision": 0.55,
+        "recall": 0.55,
+        "f1-score": 0.55,
+        "support": 20.0
+      },
+      "mobilehomepark": {
+        "precision": 0.6521739130434783,
+        "recall": 0.75,
+        "f1-score": 0.6976744186046512,
+        "support": 20.0
+      },
+      "overpass": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1-score": 0.8888888888888888,
+        "support": 20.0
+      },
+      "parkinglot": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1-score": 0.975609756097561,
+        "support": 20.0
+      },
+      "river": {
+        "precision": 0.95,
+        "recall": 0.95,
+        "f1-score": 0.95,
+        "support": 20.0
+      },
+      "runway": {
+        "precision": 0.9523809523809523,
+        "recall": 1.0,
+        "f1-score": 0.975609756097561,
+        "support": 20.0
+      },
+      "sparseresidential": {
+        "precision": 0.6785714285714286,
+        "recall": 0.95,
+        "f1-score": 0.7916666666666666,
+        "support": 20.0
+      },
+      "storagetanks": {
+        "precision": 0.9473684210526315,
+        "recall": 0.9,
+        "f1-score": 0.9230769230769231,
+        "support": 20.0
+      },
+      "tenniscourt": {
+        "precision": 0.8636363636363636,
+        "recall": 0.95,
+        "f1-score": 0.9047619047619048,
+        "support": 20.0
+      },
+      "accuracy": 0.8714285714285714,
+      "macro avg": {
+        "precision": 0.8739075479023173,
+        "recall": 0.8714285714285713,
+        "f1-score": 0.8653838836512445,
+        "support": 420.0
+      },
+      "weighted avg": {
+        "precision": 0.8739075479023173,
+        "recall": 0.8714285714285714,
+        "f1-score": 0.8653838836512444,
+        "support": 420.0
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "model": "resnet50",
+  "dataset_dir": "../../datasets/intel_image",
+  "num_classes": 6,
+  "train_size": 14034,
+  "test_size": 3000,
+  "config": {
+    "epochs": 8,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "optimizer": "AdamW",
+    "loss_function": "CrossEntropyLoss",
+    "image_size": 224,
+    "pretrained": true,
+    "device": "mps"
+  },
+  "classes": [
+    "buildings",
+    "forest",
+    "glacier",
+    "mountain",
+    "sea",
+    "street"
+  ],
+  "results": {
+    "accuracy": 0.9363333333333334,
+    "precision_macro": 0.9376715788442403,
+    "recall_macro": 0.9383293387774766,
+    "f1_macro": 0.9376279680337195,
+    "per_class": {
+      "buildings": {
+        "precision": 0.9359267734553776,
+        "recall": 0.9359267734553776,
+        "f1-score": 0.9359267734553776,
+        "support": 437.0
+      },
+      "forest": {
+        "precision": 0.9936842105263158,
+        "recall": 0.9957805907172996,
+        "f1-score": 0.9947312961011591,
+        "support": 474.0
+      },
+      "glacier": {
+        "precision": 0.9273084479371316,
+        "recall": 0.8535262206148282,
+        "f1-score": 0.8888888888888888,
+        "support": 553.0
+      },
+      "mountain": {
+        "precision": 0.8759124087591241,
+        "recall": 0.9142857142857143,
+        "f1-score": 0.8946877912395154,
+        "support": 525.0
+      },
+      "sea": {
+        "precision": 0.9488636363636364,
+        "recall": 0.9823529411764705,
+        "f1-score": 0.9653179190751445,
+        "support": 510.0
+      },
+      "street": {
+        "precision": 0.9443339960238568,
+        "recall": 0.9481037924151696,
+        "f1-score": 0.9462151394422311,
+        "support": 501.0
+      },
+      "accuracy": 0.9363333333333334,
+      "macro avg": {
+        "precision": 0.9376715788442403,
+        "recall": 0.9383293387774766,
+        "f1-score": 0.9376279680337195,
+        "support": 3000.0
+      },
+      "weighted avg": {
+        "precision": 0.9365645628835515,
+        "recall": 0.9363333333333334,
+        "f1-score": 0.9360450679657106,
+        "support": 3000.0
+      }
+    }
+  }
+}

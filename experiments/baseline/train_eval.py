@@ -21,6 +21,7 @@ Usage:
 
 import argparse
 import json
+import sys
 import time
 from pathlib import Path
 
@@ -30,6 +31,24 @@ from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 from sklearn.metrics import precision_recall_fscore_support, accuracy_score, classification_report
 import timm
+
+sys.path.insert(0, str(Path(__file__).parent.parent / "improved"))
+
+CUSTOM_MODEL_NAME = "cg_cbat_resnet50"
+MINIMAL_MODEL_NAME = "frozen_minimal_resnet50"  # Round 6 sanity-check floor
+WARMUP_EPOCHS = 2  # cg_cbat_resnet50 only, and only when NOT using --backbone-init-checkpoint
+
+
+def build_model(model_name: str, num_classes: int, img_size: int):
+    """Returns a timm model, or one of our custom models when model_name
+    matches CUSTOM_MODEL_NAME / MINIMAL_MODEL_NAME."""
+    if model_name == CUSTOM_MODEL_NAME:
+        from model import ContextGatedCBATNet
+        return ContextGatedCBATNet(num_classes=num_classes, img_size=img_size)
+    if model_name == MINIMAL_MODEL_NAME:
+        from model import FrozenBackboneMinimalNet
+        return FrozenBackboneMinimalNet(num_classes=num_classes, img_size=img_size)
+    return timm.create_model(model_name, pretrained=True, num_classes=num_classes)
 
 
 def get_device():
@@ -64,8 +83,16 @@ def build_dataloaders(data_dir: Path, batch_size: int, img_size: int = 224, work
     return train_loader, test_loader, train_ds.classes
 
 
-def train_one_epoch(model, loader, optimizer, criterion, device, log_every=20):
+def train_one_epoch(model, loader, optimizer, criterion, device, log_every=20,
+                     freeze_backbone_bn=False):
     model.train()
+    if freeze_backbone_bn:
+        # model.train() above just re-enabled BatchNorm training-mode
+        # (running-stats updates + batch statistics) on EVERY submodule,
+        # including model.backbone. Round 6 freezes the backbone completely,
+        # so its BN running stats must stay fixed at their trained values
+        # too -- put it back in eval() after the blanket model.train() call.
+        model.backbone.eval()
     total_loss = 0.0
     num_batches = len(loader)
     start = time.time()
@@ -140,6 +167,14 @@ def main():
     parser.add_argument("--out", type=Path, default=Path("../../results/baseline_results.json"))
     parser.add_argument("--checkpoint", type=Path, default=Path("../../results/baseline_checkpoint.pt"),
                         help="Path to save/resume training checkpoint after each epoch")
+    parser.add_argument("--backbone-init-checkpoint", type=Path, default=None,
+                        help="Round 6: path to a plain timm resnet50 train_eval.py checkpoint "
+                             "(dict with 'model_state', full classifier-head model) whose backbone "
+                             "conv/bn weights are loaded into the model's `backbone` submodule "
+                             "before training. Only meaningful for --model cg_cbat_resnet50 or "
+                             f"--model {MINIMAL_MODEL_NAME}. When set, the backbone is FROZEN for "
+                             "the entire run (all epochs) instead of the usual warm-up-then-unfreeze "
+                             "schedule -- this is the Round 6 frozen-backbone training strategy.")
     args = parser.parse_args()
 
     device = get_device()
@@ -151,10 +186,62 @@ def main():
     print(f"Classes: {class_names}")
     print(f"Train size: {len(train_loader.dataset)}, Test size: {len(test_loader.dataset)}")
 
-    model = timm.create_model(args.model, pretrained=True, num_classes=len(class_names))
+    model = build_model(args.model, num_classes=len(class_names), img_size=args.img_size)
+
+    frozen_backbone_mode = args.backbone_init_checkpoint is not None
+    if frozen_backbone_mode:
+        if args.model not in (CUSTOM_MODEL_NAME, MINIMAL_MODEL_NAME):
+            raise ValueError(
+                f"--backbone-init-checkpoint is only supported for --model "
+                f"{CUSTOM_MODEL_NAME} or {MINIMAL_MODEL_NAME}, got --model {args.model}"
+            )
+        # Round 6: load the fully-trained plain-ResNet50 checkpoint's backbone
+        # weights, then freeze the backbone for the ENTIRE run. See
+        # model.py's load_backbone_checkpoint() docstring for exactly how the
+        # state-dict keys were verified to line up (identical key names/
+        # shapes except the checkpoint's fc.weight/fc.bias, which features_only
+        # has no use for and which we intentionally drop).
+        num_matched, num_dropped = model.load_backbone_checkpoint(str(args.backbone_init_checkpoint))
+        model.freeze_backbone()
+        print(f"Round 6 frozen-backbone mode: loaded {num_matched} backbone tensors from "
+              f"{args.backbone_init_checkpoint}, dropped {num_dropped} non-backbone keys, "
+              f"backbone frozen for all {args.epochs} epochs.", flush=True)
+
     model.to(device)
 
-    optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
+    if args.model == CUSTOM_MODEL_NAME and not frozen_backbone_mode:
+        # Differential LR: pretrained backbone needs small updates, new
+        # randomly-initialized modules (CBAM/Transformer/gate) need to learn
+        # much faster since they start from scratch.
+        backbone_params = list(model.backbone.parameters())
+        new_params = [p for n, p in model.named_parameters() if not n.startswith("backbone.")]
+        # v5 regularization fix: matched-epoch validation showed v4 (10x LR,
+        # no weight decay on the new modules) overfitting badly in
+        # low-images-per-class regimes (worst on SUN397). Reduced the new-
+        # modules LR multiplier 10x -> 5x and added meaningful weight decay
+        # to that group specifically; the backbone keeps its light 0.1x LR
+        # and near-zero weight decay since it's pretrained, not random-init.
+        optimizer = torch.optim.AdamW([
+            {"params": backbone_params, "lr": args.lr * 0.1, "weight_decay": 0.0},
+            {"params": new_params, "lr": args.lr * 5, "weight_decay": 0.05},
+        ])
+        print(f"Using differential LR: backbone={args.lr * 0.1} (wd=0.0), "
+              f"new modules={args.lr * 5} (wd=0.05)", flush=True)
+    elif frozen_backbone_mode:
+        # Round 6: backbone is permanently frozen (requires_grad=False), so
+        # there's no LR-multiplier hack needed to protect it from noisy
+        # gradients -- there simply are no gradients to it. Train the new
+        # modules (or, for the MINIMAL model, just the classifier) at a
+        # single standard LR, keeping the Round 5 weight decay as a
+        # reasonable starting regularizer.
+        new_params = [p for n, p in model.named_parameters() if not n.startswith("backbone.")]
+        optimizer = torch.optim.AdamW([
+            {"params": new_params, "lr": args.lr * 3, "weight_decay": 0.05},
+        ])
+        print(f"Round 6 frozen-backbone optimizer: new/head modules lr={args.lr * 3} (wd=0.05), "
+              f"backbone excluded from optimizer updates (frozen).", flush=True)
+    else:
+        optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr)
     criterion = nn.CrossEntropyLoss()
 
     start_epoch = 1
@@ -166,8 +253,30 @@ def main():
         print(f"Resumed from checkpoint at epoch {ckpt['epoch']} ({args.checkpoint})", flush=True)
 
     for epoch in range(start_epoch, args.epochs + 1):
+        if args.model == CUSTOM_MODEL_NAME and not frozen_backbone_mode:
+            # Warm-up: freeze the pretrained backbone for the first
+            # WARMUP_EPOCHS epochs so the randomly-initialized new modules
+            # (CBAM, Transformer branch, gate MLP) stabilize first, instead
+            # of also nudging the backbone's good pretrained weights with
+            # noisy gradients coming from those still-random modules. The
+            # optimizer already has both param groups registered (with their
+            # differential LRs) from the start -- setting requires_grad is
+            # enough, since AdamW simply skips params whose .grad is None.
+            backbone_frozen = epoch <= WARMUP_EPOCHS
+            for p in model.backbone.parameters():
+                p.requires_grad = not backbone_frozen
+            if epoch == start_epoch or epoch == WARMUP_EPOCHS + 1:
+                state = f"frozen (warm-up, {WARMUP_EPOCHS} epochs total)" if backbone_frozen else "unfrozen"
+                print(f"Epoch {epoch}: backbone {state}", flush=True)
+        elif frozen_backbone_mode and epoch == start_epoch:
+            print(f"Epoch {epoch}: backbone permanently frozen (Round 6 mode, "
+                  f"no warm-up schedule)", flush=True)
+
         start = time.time()
-        train_loss = train_one_epoch(model, train_loader, optimizer, criterion, device)
+        train_loss = train_one_epoch(
+            model, train_loader, optimizer, criterion, device,
+            freeze_backbone_bn=frozen_backbone_mode,
+        )
         elapsed = time.time() - start
         print(f"Epoch {epoch}/{args.epochs} - loss: {train_loss:.4f} - time: {elapsed:.1f}s", flush=True)
 

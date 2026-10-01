@@ -1,0 +1,1325 @@
+=== scene15 MINIMAL frozen ===
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Using device: mps
+Classes: ['bedroom', 'coast', 'forest', 'highway', 'industrial', 'insidecity', 'kitchen', 'livingroom', 'mountain', 'office', 'opencountry', 'store', 'street', 'suburb', 'tallbuilding']
+Train size: 1500, Test size: 2985
+[load_backbone_checkpoint] loaded 318/318 backbone tensors from '../../results/resnet50_8ep_scene15_checkpoint.pt' (dropped 2 non-backbone keys: ['fc.weight', 'fc.bias'])
+Round 6 frozen-backbone mode: loaded 318 backbone tensors from ../../results/resnet50_8ep_scene15_checkpoint.pt, dropped 2 non-backbone keys, backbone frozen for all 8 epochs.
+Round 6 frozen-backbone optimizer: new/head modules lr=0.00030000000000000003 (wd=0.05), backbone excluded from optimizer updates (frozen).
+Epoch 1: backbone permanently frozen (Round 6 mode, no warm-up schedule)
+  batch 20/47 - loss: 1.5870 - elapsed: 5.6s
+  batch 40/47 - loss: 0.7786 - elapsed: 8.5s
+  batch 47/47 - loss: 0.8132 - elapsed: 9.5s
+Epoch 1/8 - loss: 1.5086 - time: 29.5s
+Saved checkpoint to ../../results/frozen_minimal_scene15_checkpoint.pt (epoch 1)
+  batch 20/47 - loss: 0.3185 - elapsed: 5.3s
+  batch 40/47 - loss: 0.4268 - elapsed: 8.2s
+  batch 47/47 - loss: 0.2072 - elapsed: 9.2s
+Epoch 2/8 - loss: 0.4008 - time: 29.2s
+Saved checkpoint to ../../results/frozen_minimal_scene15_checkpoint.pt (epoch 2)
+  batch 20/47 - loss: 0.1754 - elapsed: 5.3s
+  batch 40/47 - loss: 0.1666 - elapsed: 8.2s
+  batch 47/47 - loss: 0.1141 - elapsed: 9.2s
+Epoch 3/8 - loss: 0.2039 - time: 29.2s
+Saved checkpoint to ../../results/frozen_minimal_scene15_checkpoint.pt (epoch 3)
+  batch 20/47 - loss: 0.0947 - elapsed: 5.2s
+  batch 40/47 - loss: 0.1025 - elapsed: 8.1s
+  batch 47/47 - loss: 0.1272 - elapsed: 9.1s
+Epoch 4/8 - loss: 0.1411 - time: 29.1s
+Saved checkpoint to ../../results/frozen_minimal_scene15_checkpoint.pt (epoch 4)
+  batch 20/47 - loss: 0.0840 - elapsed: 5.3s
+  batch 40/47 - loss: 0.0776 - elapsed: 8.3s
+  batch 47/47 - loss: 0.1414 - elapsed: 9.3s
+Epoch 5/8 - loss: 0.1067 - time: 29.3s
+Saved checkpoint to ../../results/frozen_minimal_scene15_checkpoint.pt (epoch 5)
+  batch 20/47 - loss: 0.0705 - elapsed: 5.3s
+  batch 40/47 - loss: 0.0484 - elapsed: 8.2s
+  batch 47/47 - loss: 0.0395 - elapsed: 9.2s
+Epoch 6/8 - loss: 0.0913 - time: 29.3s
+Saved checkpoint to ../../results/frozen_minimal_scene15_checkpoint.pt (epoch 6)
+  batch 20/47 - loss: 0.0591 - elapsed: 5.3s
+  batch 40/47 - loss: 0.0635 - elapsed: 8.3s
+  batch 47/47 - loss: 0.0787 - elapsed: 9.3s
+Epoch 7/8 - loss: 0.0770 - time: 29.3s
+Saved checkpoint to ../../results/frozen_minimal_scene15_checkpoint.pt (epoch 7)
+  batch 20/47 - loss: 0.0761 - elapsed: 5.3s
+  batch 40/47 - loss: 0.0656 - elapsed: 8.2s
+  batch 47/47 - loss: 0.0735 - elapsed: 9.2s
+Epoch 8/8 - loss: 0.0649 - time: 29.2s
+Saved checkpoint to ../../results/frozen_minimal_scene15_checkpoint.pt (epoch 8)
+
+=== Per-class results ===
+Class           Precision    Recall        F1
+---------------------------------------------
+bedroom             0.864     0.767     0.813
+coast               0.894     0.938     0.916
+forest              0.927     0.895     0.911
+highway             0.926     0.944     0.935
+industrial          0.898     0.915     0.906
+insidecity          0.911     0.841     0.875
+kitchen             0.938     0.827     0.879
+livingroom          0.746     0.899     0.815
+mountain            0.882     0.956     0.918
+office              0.866     0.957     0.909
+opencountry         0.871     0.826     0.848
+store               0.984     0.837     0.905
+street              0.900     0.943     0.921
+suburb              0.965     0.979     0.972
+tallbuilding        0.960     0.934     0.947
+
+=== Overall ===
+Accuracy       0.899
+Precision (macro)   0.902
+Recall (macro)      0.897
+F1 (macro)          0.898
+
+Saved results to ../../results/frozen_minimal_scene15.json
+=== scene15 CG-CBAT v6 frozen ===
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Using device: mps
+Classes: ['bedroom', 'coast', 'forest', 'highway', 'industrial', 'insidecity', 'kitchen', 'livingroom', 'mountain', 'office', 'opencountry', 'store', 'street', 'suburb', 'tallbuilding']
+Train size: 1500, Test size: 2985
+[load_backbone_checkpoint] loaded 318/318 backbone tensors from '../../results/resnet50_8ep_scene15_checkpoint.pt' (dropped 2 non-backbone keys: ['fc.weight', 'fc.bias'])
+Round 6 frozen-backbone mode: loaded 318 backbone tensors from ../../results/resnet50_8ep_scene15_checkpoint.pt, dropped 2 non-backbone keys, backbone frozen for all 8 epochs.
+Round 6 frozen-backbone optimizer: new/head modules lr=0.00030000000000000003 (wd=0.05), backbone excluded from optimizer updates (frozen).
+Epoch 1: backbone permanently frozen (Round 6 mode, no warm-up schedule)
+  batch 20/47 - loss: 1.2342 - elapsed: 12.1s
+  batch 40/47 - loss: 0.2789 - elapsed: 21.7s
+  batch 47/47 - loss: 0.2012 - elapsed: 25.1s
+Epoch 1/8 - loss: 1.1490 - time: 45.1s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_scene15_checkpoint.pt (epoch 1)
+  batch 20/47 - loss: 0.1537 - elapsed: 12.0s
+  batch 40/47 - loss: 0.0386 - elapsed: 21.7s
+  batch 47/47 - loss: 0.0635 - elapsed: 25.0s
+Epoch 2/8 - loss: 0.1008 - time: 45.0s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_scene15_checkpoint.pt (epoch 2)
+  batch 20/47 - loss: 0.0442 - elapsed: 12.1s
+  batch 40/47 - loss: 0.0295 - elapsed: 21.7s
+  batch 47/47 - loss: 0.0509 - elapsed: 25.1s
+Epoch 3/8 - loss: 0.0512 - time: 45.1s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_scene15_checkpoint.pt (epoch 3)
+  batch 20/47 - loss: 0.0311 - elapsed: 12.1s
+  batch 40/47 - loss: 0.0298 - elapsed: 21.8s
+  batch 47/47 - loss: 0.0142 - elapsed: 25.1s
+Epoch 4/8 - loss: 0.0301 - time: 45.1s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_scene15_checkpoint.pt (epoch 4)
+  batch 20/47 - loss: 0.0121 - elapsed: 12.0s
+  batch 40/47 - loss: 0.0592 - elapsed: 21.7s
+  batch 47/47 - loss: 0.0148 - elapsed: 25.0s
+Epoch 5/8 - loss: 0.0215 - time: 45.0s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_scene15_checkpoint.pt (epoch 5)
+  batch 20/47 - loss: 0.0108 - elapsed: 12.0s
+  batch 40/47 - loss: 0.0163 - elapsed: 21.7s
+  batch 47/47 - loss: 0.0124 - elapsed: 25.0s
+Epoch 6/8 - loss: 0.0175 - time: 45.0s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_scene15_checkpoint.pt (epoch 6)
+  batch 20/47 - loss: 0.0201 - elapsed: 12.1s
+  batch 40/47 - loss: 0.0093 - elapsed: 21.7s
+  batch 47/47 - loss: 0.0114 - elapsed: 25.0s
+Epoch 7/8 - loss: 0.0088 - time: 45.1s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_scene15_checkpoint.pt (epoch 7)
+  batch 20/47 - loss: 0.0103 - elapsed: 12.0s
+  batch 40/47 - loss: 0.0057 - elapsed: 21.6s
+  batch 47/47 - loss: 0.0107 - elapsed: 25.0s
+Epoch 8/8 - loss: 0.0061 - time: 45.0s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_scene15_checkpoint.pt (epoch 8)
+
+=== Per-class results ===
+Class           Precision    Recall        F1
+---------------------------------------------
+bedroom             0.918     0.767     0.836
+coast               0.882     0.946     0.913
+forest              0.930     0.934     0.932
+highway             0.943     0.925     0.934
+industrial          0.897     0.905     0.901
+insidecity          0.908     0.856     0.881
+kitchen             0.912     0.845     0.877
+livingroom          0.760     0.937     0.839
+mountain            0.869     0.971     0.917
+office              0.900     0.939     0.919
+opencountry         0.908     0.794     0.847
+store               0.984     0.860     0.918
+street              0.912     0.969     0.939
+suburb              0.965     0.979     0.972
+tallbuilding        0.960     0.926     0.942
+
+=== Overall ===
+Accuracy       0.905
+Precision (macro)   0.910
+Recall (macro)      0.904
+F1 (macro)          0.905
+
+Saved results to ../../results/cgcbat_v6_frozen_scene15.json
+=== sun397 MINIMAL frozen ===
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Using device: mps
+Classes: ['abbey', 'airplane cabin', 'airport terminal', 'alley', 'amphitheater', 'amusement arcade', 'amusement park', 'anechoic chamber', 'apartment building outdoor', 'apse indoor', 'aquarium', 'aqueduct', 'arch', 'archive', 'arrival gate outdoor', 'art gallery', 'art school', 'art studio', 'assembly line', 'athletic field outdoor', 'atrium public', 'attic', 'auditorium', 'auto factory', 'badlands', 'badminton court indoor', 'baggage claim', 'bakery shop', 'balcony exterior', 'balcony interior', 'ball pit', 'ballroom', 'bamboo forest', 'banquet hall', 'bar', 'barn', 'barndoor', 'baseball field', 'basement', 'basilica', 'basketball court outdoor', 'bathroom', 'batters box', 'bayou', 'bazaar indoor', 'bazaar outdoor', 'beach', 'beauty salon', 'bedroom', 'berth', 'biology laboratory', 'bistro indoor', 'boardwalk', 'boat deck', 'boathouse', 'bookstore', 'booth indoor', 'botanical garden', 'bow window indoor', 'bow window outdoor', 'bowling alley', 'boxing ring', 'brewery indoor', 'bridge', 'building facade', 'bullring', 'burial chamber', 'bus interior', 'butchers shop', 'butte', 'cabin outdoor', 'cafeteria', 'campsite', 'campus', 'canal natural', 'canal urban', 'candy store', 'canyon', 'car interior backseat', 'car interior frontseat', 'carrousel', 'casino indoor', 'castle', 'catacomb', 'cathedral indoor', 'cathedral outdoor', 'cavern indoor', 'cemetery', 'chalet', 'cheese factory', 'chemistry lab', 'chicken coop indoor', 'chicken coop outdoor', 'childs room', 'church indoor', 'church outdoor', 'classroom', 'clean room', 'cliff', 'cloister indoor', 'closet', 'clothing store', 'coast', 'cockpit', 'coffee shop', 'computer room', 'conference center', 'conference room', 'construction site', 'control room', 'control tower outdoor', 'corn field', 'corral', 'corridor', 'cottage garden', 'courthouse', 'courtroom', 'courtyard', 'covered bridge exterior', 'creek', 'crevasse', 'crosswalk', 'cubicle office', 'dam', 'delicatessen', 'dentists office', 'desert sand', 'desert vegetation', 'diner indoor', 'diner outdoor', 'dinette home', 'dinette vehicle', 'dining car', 'dining room', 'discotheque', 'dock', 'doorway outdoor', 'dorm room', 'driveway', 'driving range outdoor', 'drugstore', 'electrical substation', 'elevator door', 'elevator interior', 'elevator shaft', 'engine room', 'escalator indoor', 'excavation', 'factory indoor', 'fairway', 'fastfood restaurant', 'field cultivated', 'field wild', 'fire escape', 'fire station', 'firing range indoor', 'fishpond', 'florist shop indoor', 'food court', 'forest broadleaf', 'forest needleleaf', 'forest path', 'forest road', 'formal garden', 'fountain', 'galley', 'game room', 'garage indoor', 'garbage dump', 'gas station', 'gazebo exterior', 'general store indoor', 'general store outdoor', 'gift shop', 'golf course', 'greenhouse indoor', 'greenhouse outdoor', 'gymnasium indoor', 'hangar indoor', 'hangar outdoor', 'harbor', 'hayfield', 'heliport', 'herb garden', 'highway', 'hill', 'home office', 'hospital', 'hospital room', 'hot spring', 'hot tub outdoor', 'hotel outdoor', 'hotel room', 'house', 'hunting lodge outdoor', 'ice cream parlor', 'ice floe', 'ice shelf', 'ice skating rink indoor', 'ice skating rink outdoor', 'iceberg', 'igloo', 'industrial area', 'inn outdoor', 'islet', 'jacuzzi indoor', 'jail cell', 'jail indoor', 'jewelry shop', 'kasbah', 'kennel indoor', 'kennel outdoor', 'kindergarden classroom', 'kitchen', 'kitchenette', 'labyrinth outdoor', 'lake natural', 'landfill', 'landing deck', 'laundromat', 'lecture room', 'library indoor', 'library outdoor', 'lido deck outdoor', 'lift bridge', 'lighthouse', 'limousine interior', 'living room', 'lobby', 'lock chamber', 'locker room', 'mansion', 'manufactured home', 'market indoor', 'market outdoor', 'marsh', 'martial arts gym', 'mausoleum', 'medina', 'moat water', 'monastery outdoor', 'mosque indoor', 'mosque outdoor', 'motel', 'mountain', 'mountain snowy', 'movie theater indoor', 'museum indoor', 'music store', 'music studio', 'nuclear power plant outdoor', 'nursery', 'oast house', 'observatory outdoor', 'ocean', 'office', 'office building', 'oil refinery outdoor', 'oilrig', 'operating room', 'orchard', 'outhouse outdoor', 'pagoda', 'palace', 'pantry', 'park', 'parking garage indoor', 'parking garage outdoor', 'parking lot', 'parlor', 'pasture', 'patio', 'pavilion', 'pharmacy', 'phone booth', 'physics laboratory', 'picnic area', 'pilothouse indoor', 'planetarium outdoor', 'playground', 'playroom', 'plaza', 'podium indoor', 'podium outdoor', 'pond', 'poolroom establishment', 'poolroom home', 'power plant outdoor', 'promenade deck', 'pub indoor', 'pulpit', 'putting green', 'racecourse', 'raceway', 'raft', 'railroad track', 'rainforest', 'reception', 'recreation room', 'residential neighborhood', 'restaurant', 'restaurant kitchen', 'restaurant patio', 'rice paddy', 'riding arena', 'river', 'rock arch', 'rope bridge', 'ruin', 'runway', 'sandbar', 'sandbox', 'sauna', 'schoolhouse', 'sea cliff', 'server room', 'shed', 'shoe shop', 'shopfront', 'shopping mall indoor', 'shower', 'skatepark', 'ski lodge', 'ski resort', 'ski slope', 'sky', 'skyscraper', 'slum', 'snowfield', 'squash court', 'stable', 'stadium baseball', 'stadium football', 'stage indoor', 'staircase', 'street', 'subway interior', 'subway station platform', 'supermarket', 'sushi bar', 'swamp', 'swimming pool indoor', 'swimming pool outdoor', 'synagogue indoor', 'synagogue outdoor', 'television studio', 'temple east asia', 'temple south asia', 'tennis court indoor', 'tennis court outdoor', 'tent outdoor', 'theater indoor procenium', 'theater indoor seats', 'thriftshop', 'throne room', 'ticket booth', 'toll plaza', 'topiary garden', 'tower', 'toyshop', 'track outdoor', 'train railway', 'train station platform', 'tree farm', 'tree house', 'trench', 'underwater coral reef', 'utility room', 'valley', 'van interior', 'vegetable garden', 'veranda', 'veterinarians office', 'viaduct', 'videostore', 'village', 'vineyard', 'volcano', 'volleyball court indoor', 'volleyball court outdoor', 'waiting room', 'warehouse indoor', 'water tower', 'waterfall block', 'waterfall fan', 'waterfall plunge', 'watering hole', 'wave', 'wet bar', 'wheat field', 'wind farm', 'windmill', 'wine cellar barrel storage', 'wine cellar bottle storage', 'wrestling ring indoor', 'yard', 'youth hostel']
+Train size: 11910, Test size: 3970
+[load_backbone_checkpoint] loaded 318/318 backbone tensors from '../../results/resnet50_8ep_sun397_checkpoint.pt' (dropped 2 non-backbone keys: ['fc.weight', 'fc.bias'])
+Round 6 frozen-backbone mode: loaded 318 backbone tensors from ../../results/resnet50_8ep_sun397_checkpoint.pt, dropped 2 non-backbone keys, backbone frozen for all 8 epochs.
+Round 6 frozen-backbone optimizer: new/head modules lr=0.00030000000000000003 (wd=0.05), backbone excluded from optimizer updates (frozen).
+Epoch 1: backbone permanently frozen (Round 6 mode, no warm-up schedule)
+  batch 20/373 - loss: 5.6450 - elapsed: 10.0s
+  batch 40/373 - loss: 4.9641 - elapsed: 13.0s
+  batch 60/373 - loss: 4.0992 - elapsed: 16.0s
+  batch 80/373 - loss: 3.6193 - elapsed: 19.0s
+  batch 100/373 - loss: 3.1217 - elapsed: 22.0s
+  batch 120/373 - loss: 2.6789 - elapsed: 24.9s
+  batch 140/373 - loss: 2.3741 - elapsed: 27.9s
+  batch 160/373 - loss: 2.2997 - elapsed: 30.9s
+  batch 180/373 - loss: 2.0960 - elapsed: 33.9s
+  batch 200/373 - loss: 2.0716 - elapsed: 36.8s
+  batch 220/373 - loss: 1.7084 - elapsed: 39.8s
+  batch 240/373 - loss: 1.5115 - elapsed: 42.8s
+  batch 260/373 - loss: 1.6722 - elapsed: 45.8s
+  batch 280/373 - loss: 1.3113 - elapsed: 48.7s
+  batch 300/373 - loss: 1.6104 - elapsed: 51.7s
+  batch 320/373 - loss: 1.4848 - elapsed: 54.7s
+  batch 340/373 - loss: 1.3079 - elapsed: 57.6s
+  batch 360/373 - loss: 1.1575 - elapsed: 60.6s
+  batch 373/373 - loss: 0.5100 - elapsed: 62.5s
+Epoch 1/8 - loss: 2.5808 - time: 82.5s
+Saved checkpoint to ../../results/frozen_minimal_sun397_checkpoint.pt (epoch 1)
+  batch 20/373 - loss: 0.8307 - elapsed: 9.7s
+  batch 40/373 - loss: 0.7966 - elapsed: 12.7s
+  batch 60/373 - loss: 0.8430 - elapsed: 15.7s
+  batch 80/373 - loss: 0.9266 - elapsed: 18.7s
+  batch 100/373 - loss: 0.7884 - elapsed: 21.7s
+  batch 120/373 - loss: 0.9843 - elapsed: 24.6s
+  batch 140/373 - loss: 0.7044 - elapsed: 27.6s
+  batch 160/373 - loss: 0.6970 - elapsed: 30.6s
+  batch 180/373 - loss: 0.6399 - elapsed: 33.6s
+  batch 200/373 - loss: 0.6372 - elapsed: 36.5s
+  batch 220/373 - loss: 0.7146 - elapsed: 39.5s
+  batch 240/373 - loss: 0.6693 - elapsed: 42.5s
+  batch 260/373 - loss: 1.3733 - elapsed: 45.5s
+  batch 280/373 - loss: 0.8051 - elapsed: 48.4s
+  batch 300/373 - loss: 0.5460 - elapsed: 51.4s
+  batch 320/373 - loss: 0.6801 - elapsed: 54.4s
+  batch 340/373 - loss: 0.7885 - elapsed: 57.4s
+  batch 360/373 - loss: 0.5574 - elapsed: 60.3s
+  batch 373/373 - loss: 0.2412 - elapsed: 62.1s
+Epoch 2/8 - loss: 0.8034 - time: 82.2s
+Saved checkpoint to ../../results/frozen_minimal_sun397_checkpoint.pt (epoch 2)
+  batch 20/373 - loss: 0.7159 - elapsed: 10.0s
+  batch 40/373 - loss: 0.5319 - elapsed: 13.1s
+  batch 60/373 - loss: 0.6989 - elapsed: 16.2s
+  batch 80/373 - loss: 0.5993 - elapsed: 19.4s
+  batch 100/373 - loss: 0.4683 - elapsed: 22.5s
+  batch 120/373 - loss: 0.4725 - elapsed: 25.7s
+  batch 140/373 - loss: 0.4792 - elapsed: 28.8s
+  batch 160/373 - loss: 0.6782 - elapsed: 32.0s
+  batch 180/373 - loss: 0.4315 - elapsed: 35.1s
+  batch 200/373 - loss: 0.5893 - elapsed: 38.3s
+  batch 220/373 - loss: 0.4144 - elapsed: 41.5s
+  batch 240/373 - loss: 0.6675 - elapsed: 44.6s
+  batch 260/373 - loss: 0.5036 - elapsed: 47.8s
+  batch 280/373 - loss: 0.6302 - elapsed: 51.0s
+  batch 300/373 - loss: 0.6987 - elapsed: 54.1s
+  batch 320/373 - loss: 0.5573 - elapsed: 57.3s
+  batch 340/373 - loss: 0.4950 - elapsed: 60.5s
+  batch 360/373 - loss: 0.3852 - elapsed: 63.7s
+  batch 373/373 - loss: 0.8625 - elapsed: 65.6s
+Epoch 3/8 - loss: 0.5500 - time: 85.6s
+Saved checkpoint to ../../results/frozen_minimal_sun397_checkpoint.pt (epoch 3)
+  batch 20/373 - loss: 0.4896 - elapsed: 9.8s
+  batch 40/373 - loss: 0.5259 - elapsed: 12.9s
+  batch 60/373 - loss: 0.4277 - elapsed: 15.9s
+  batch 80/373 - loss: 0.4335 - elapsed: 19.0s
+  batch 100/373 - loss: 0.2460 - elapsed: 22.1s
+  batch 120/373 - loss: 0.2472 - elapsed: 25.2s
+  batch 140/373 - loss: 0.3676 - elapsed: 28.3s
+  batch 160/373 - loss: 0.3708 - elapsed: 31.5s
+  batch 180/373 - loss: 0.3804 - elapsed: 34.6s
+  batch 200/373 - loss: 0.4469 - elapsed: 37.7s
+  batch 220/373 - loss: 0.2649 - elapsed: 40.9s
+  batch 240/373 - loss: 0.4818 - elapsed: 44.0s
+  batch 260/373 - loss: 0.4657 - elapsed: 47.2s
+  batch 280/373 - loss: 0.1661 - elapsed: 50.4s
+  batch 300/373 - loss: 0.2878 - elapsed: 53.5s
+  batch 320/373 - loss: 0.3239 - elapsed: 56.7s
+  batch 340/373 - loss: 0.3885 - elapsed: 59.9s
+  batch 360/373 - loss: 0.4369 - elapsed: 63.1s
+  batch 373/373 - loss: 0.7778 - elapsed: 65.0s
+Epoch 4/8 - loss: 0.4272 - time: 85.0s
+Saved checkpoint to ../../results/frozen_minimal_sun397_checkpoint.pt (epoch 4)
+  batch 20/373 - loss: 0.4707 - elapsed: 10.2s
+  batch 40/373 - loss: 0.3407 - elapsed: 13.2s
+  batch 60/373 - loss: 0.3903 - elapsed: 16.2s
+  batch 80/373 - loss: 0.1784 - elapsed: 19.3s
+  batch 100/373 - loss: 0.4052 - elapsed: 22.4s
+  batch 120/373 - loss: 0.4558 - elapsed: 25.5s
+  batch 140/373 - loss: 0.4275 - elapsed: 28.6s
+  batch 160/373 - loss: 0.2907 - elapsed: 31.7s
+  batch 180/373 - loss: 0.3195 - elapsed: 34.8s
+  batch 200/373 - loss: 0.3962 - elapsed: 38.0s
+  batch 220/373 - loss: 0.4137 - elapsed: 41.1s
+  batch 240/373 - loss: 0.3354 - elapsed: 44.2s
+  batch 260/373 - loss: 0.3597 - elapsed: 47.4s
+  batch 280/373 - loss: 0.1724 - elapsed: 50.5s
+  batch 300/373 - loss: 0.3574 - elapsed: 53.7s
+  batch 320/373 - loss: 0.2991 - elapsed: 56.8s
+  batch 340/373 - loss: 0.3692 - elapsed: 60.0s
+  batch 360/373 - loss: 0.4813 - elapsed: 63.2s
+  batch 373/373 - loss: 0.6285 - elapsed: 65.1s
+Epoch 5/8 - loss: 0.3467 - time: 85.1s
+Saved checkpoint to ../../results/frozen_minimal_sun397_checkpoint.pt (epoch 5)
+  batch 20/373 - loss: 0.2882 - elapsed: 10.2s
+  batch 40/373 - loss: 0.2828 - elapsed: 13.2s
+  batch 60/373 - loss: 0.2342 - elapsed: 16.2s
+  batch 80/373 - loss: 0.2765 - elapsed: 19.3s
+  batch 100/373 - loss: 0.3018 - elapsed: 22.3s
+  batch 120/373 - loss: 0.2244 - elapsed: 25.4s
+  batch 140/373 - loss: 0.4564 - elapsed: 28.5s
+  batch 160/373 - loss: 0.2483 - elapsed: 31.6s
+  batch 180/373 - loss: 0.2835 - elapsed: 34.8s
+  batch 200/373 - loss: 0.2403 - elapsed: 37.9s
+  batch 220/373 - loss: 0.2051 - elapsed: 41.0s
+  batch 240/373 - loss: 0.2574 - elapsed: 44.1s
+  batch 260/373 - loss: 0.3530 - elapsed: 47.3s
+  batch 280/373 - loss: 0.2990 - elapsed: 50.4s
+  batch 300/373 - loss: 0.3201 - elapsed: 53.5s
+  batch 320/373 - loss: 0.2455 - elapsed: 56.7s
+  batch 340/373 - loss: 0.3526 - elapsed: 59.8s
+  batch 360/373 - loss: 0.3620 - elapsed: 63.0s
+  batch 373/373 - loss: 0.0762 - elapsed: 64.8s
+Epoch 6/8 - loss: 0.2857 - time: 84.9s
+Saved checkpoint to ../../results/frozen_minimal_sun397_checkpoint.pt (epoch 6)
+  batch 20/373 - loss: 0.2571 - elapsed: 10.3s
+  batch 40/373 - loss: 0.1601 - elapsed: 13.3s
+  batch 60/373 - loss: 0.3300 - elapsed: 16.3s
+  batch 80/373 - loss: 0.2266 - elapsed: 19.4s
+  batch 100/373 - loss: 0.1354 - elapsed: 22.4s
+  batch 120/373 - loss: 0.2440 - elapsed: 25.5s
+  batch 140/373 - loss: 0.1883 - elapsed: 28.6s
+  batch 160/373 - loss: 0.2997 - elapsed: 31.7s
+  batch 180/373 - loss: 0.2248 - elapsed: 34.8s
+  batch 200/373 - loss: 0.1533 - elapsed: 37.9s
+  batch 220/373 - loss: 0.1375 - elapsed: 41.0s
+  batch 240/373 - loss: 0.3557 - elapsed: 44.2s
+  batch 260/373 - loss: 0.2642 - elapsed: 47.3s
+  batch 280/373 - loss: 0.2482 - elapsed: 50.4s
+  batch 300/373 - loss: 0.1321 - elapsed: 53.6s
+  batch 320/373 - loss: 0.4571 - elapsed: 56.7s
+  batch 340/373 - loss: 0.3511 - elapsed: 59.8s
+  batch 360/373 - loss: 0.3010 - elapsed: 62.9s
+  batch 373/373 - loss: 0.4246 - elapsed: 64.8s
+Epoch 7/8 - loss: 0.2426 - time: 84.8s
+Saved checkpoint to ../../results/frozen_minimal_sun397_checkpoint.pt (epoch 7)
+  batch 20/373 - loss: 0.2226 - elapsed: 10.1s
+  batch 40/373 - loss: 0.2392 - elapsed: 13.1s
+  batch 60/373 - loss: 0.2731 - elapsed: 16.2s
+  batch 80/373 - loss: 0.1609 - elapsed: 19.3s
+  batch 100/373 - loss: 0.1945 - elapsed: 22.3s
+  batch 120/373 - loss: 0.2531 - elapsed: 25.4s
+  batch 140/373 - loss: 0.1273 - elapsed: 28.5s
+  batch 160/373 - loss: 0.2518 - elapsed: 31.6s
+  batch 180/373 - loss: 0.2976 - elapsed: 34.7s
+  batch 200/373 - loss: 0.2784 - elapsed: 37.8s
+  batch 220/373 - loss: 0.1841 - elapsed: 40.9s
+  batch 240/373 - loss: 0.2001 - elapsed: 44.0s
+  batch 260/373 - loss: 0.2100 - elapsed: 47.2s
+  batch 280/373 - loss: 0.1627 - elapsed: 50.3s
+  batch 300/373 - loss: 0.2653 - elapsed: 53.4s
+  batch 320/373 - loss: 0.2576 - elapsed: 56.5s
+  batch 340/373 - loss: 0.2879 - elapsed: 59.7s
+  batch 360/373 - loss: 0.5566 - elapsed: 62.8s
+  batch 373/373 - loss: 0.4345 - elapsed: 64.7s
+Epoch 8/8 - loss: 0.2084 - time: 84.7s
+Saved checkpoint to ../../results/frozen_minimal_sun397_checkpoint.pt (epoch 8)
+
+=== Per-class results ===
+Class           Precision    Recall        F1
+---------------------------------------------
+abbey               0.333     0.300     0.316
+airplane cabin      0.700     0.700     0.700
+airport terminal     0.143     0.200     0.167
+alley               0.625     0.500     0.556
+amphitheater        0.692     0.900     0.783
+amusement arcade     0.750     0.600     0.667
+amusement park      0.714     0.500     0.588
+anechoic chamber     0.368     0.700     0.483
+apartment building outdoor     0.375     0.300     0.333
+apse indoor         0.615     0.800     0.696
+aquarium            0.714     0.500     0.588
+aqueduct            0.500     0.700     0.583
+arch                0.471     0.800     0.593
+archive             0.833     0.500     0.625
+arrival gate outdoor     0.833     0.500     0.625
+art gallery         0.750     0.300     0.429
+art school          0.267     0.400     0.320
+art studio          0.500     0.300     0.375
+assembly line       0.222     0.200     0.211
+athletic field outdoor     0.333     0.200     0.250
+atrium public       0.312     0.500     0.385
+attic               0.333     0.500     0.400
+auditorium          0.286     0.200     0.235
+auto factory        0.714     0.500     0.588
+badlands            0.667     0.600     0.632
+badminton court indoor     0.615     0.800     0.696
+baggage claim       0.429     0.600     0.500
+bakery shop         0.500     0.200     0.286
+balcony exterior     0.500     0.600     0.545
+balcony interior     0.667     0.600     0.632
+ball pit            0.909     1.000     0.952
+ballroom            0.500     0.300     0.375
+bamboo forest       0.889     0.800     0.842
+banquet hall        0.545     0.600     0.571
+bar                 0.231     0.300     0.261
+barn                0.667     1.000     0.800
+barndoor            0.857     0.600     0.706
+baseball field      0.421     0.800     0.552
+basement            0.444     0.400     0.421
+basilica            0.261     0.600     0.364
+basketball court outdoor     0.417     0.500     0.455
+bathroom            0.583     0.700     0.636
+batters box         1.000     1.000     1.000
+bayou               0.800     0.800     0.800
+bazaar indoor       0.636     0.700     0.667
+bazaar outdoor      0.571     0.400     0.471
+beach               0.800     0.400     0.533
+beauty salon        0.727     0.800     0.762
+bedroom             0.714     0.500     0.588
+berth               0.750     0.600     0.667
+biology laboratory     0.556     0.500     0.526
+bistro indoor       0.438     0.700     0.538
+boardwalk           0.667     0.600     0.632
+boat deck           0.444     0.400     0.421
+boathouse           0.778     0.700     0.737
+bookstore           0.600     0.300     0.400
+booth indoor        0.500     0.600     0.545
+botanical garden     0.176     0.300     0.222
+bow window indoor     0.875     0.700     0.778
+bow window outdoor     0.800     0.800     0.800
+bowling alley       0.900     0.900     0.900
+boxing ring         0.750     0.900     0.818
+brewery indoor      1.000     0.800     0.889
+bridge              0.714     0.500     0.588
+building facade     0.500     0.200     0.286
+bullring            1.000     0.800     0.889
+burial chamber      0.375     0.300     0.333
+bus interior        0.600     0.600     0.600
+butchers shop       0.833     0.500     0.625
+butte               0.545     0.600     0.571
+cabin outdoor       1.000     0.200     0.333
+cafeteria           0.412     0.700     0.519
+campsite            0.667     0.600     0.632
+campus              0.455     0.500     0.476
+canal natural       1.000     0.200     0.333
+canal urban         0.667     0.200     0.308
+candy store         0.500     0.300     0.375
+canyon              0.636     0.700     0.667
+car interior backseat     0.833     1.000     0.909
+car interior frontseat     0.727     0.800     0.762
+carrousel           1.000     0.800     0.889
+casino indoor       0.778     0.700     0.737
+castle              0.455     0.500     0.476
+catacomb            0.700     0.700     0.700
+cathedral indoor     0.556     0.500     0.526
+cathedral outdoor     0.667     0.400     0.500
+cavern indoor       0.538     0.700     0.609
+cemetery            0.500     0.500     0.500
+chalet              0.400     0.200     0.267
+cheese factory      0.636     0.700     0.667
+chemistry lab       0.750     0.600     0.667
+chicken coop indoor     0.583     0.700     0.636
+chicken coop outdoor     0.375     0.300     0.333
+childs room         0.125     0.100     0.111
+church indoor       0.364     0.400     0.381
+church outdoor      0.308     0.400     0.348
+classroom           0.462     0.600     0.522
+clean room          0.333     0.600     0.429
+cliff               0.462     0.600     0.522
+cloister indoor     0.700     0.700     0.700
+closet              0.625     0.500     0.556
+clothing store      0.444     0.400     0.421
+coast               0.538     0.700     0.609
+cockpit             0.875     0.700     0.778
+coffee shop         0.125     0.100     0.111
+computer room       0.750     0.900     0.818
+conference center     0.333     0.500     0.400
+conference room     0.800     0.400     0.533
+construction site     0.222     0.400     0.286
+control room        0.583     0.700     0.636
+control tower outdoor     0.750     0.600     0.667
+corn field          0.600     0.600     0.600
+corral              0.500     0.400     0.444
+corridor            0.778     0.700     0.737
+cottage garden      1.000     0.400     0.571
+courthouse          0.333     0.300     0.316
+courtroom           0.625     0.500     0.556
+courtyard           0.444     0.400     0.421
+covered bridge exterior     0.727     0.800     0.762
+creek               0.375     0.300     0.333
+crevasse            0.750     0.900     0.818
+crosswalk           0.375     0.300     0.333
+cubicle office      0.692     0.900     0.783
+dam                 0.571     0.800     0.667
+delicatessen        0.158     0.300     0.207
+dentists office     0.700     0.700     0.700
+desert sand         0.636     0.700     0.667
+desert vegetation     0.700     0.700     0.700
+diner indoor        0.444     0.400     0.421
+diner outdoor       0.385     0.500     0.435
+dinette home        0.429     0.600     0.500
+dinette vehicle     0.545     0.600     0.571
+dining car          0.545     0.600     0.571
+dining room         0.400     0.400     0.400
+discotheque         0.818     0.900     0.857
+dock                0.800     0.800     0.800
+doorway outdoor     0.600     0.600     0.600
+dorm room           0.357     0.500     0.417
+driveway            0.562     0.900     0.692
+driving range outdoor     0.400     0.200     0.267
+drugstore           0.556     0.500     0.526
+electrical substation     1.000     0.900     0.947
+elevator door       0.636     0.700     0.667
+elevator interior     0.625     0.500     0.556
+elevator shaft      0.500     0.600     0.545
+engine room         0.600     0.900     0.720
+escalator indoor     0.583     0.700     0.636
+excavation          0.556     0.500     0.526
+factory indoor      0.385     0.500     0.435
+fairway             0.412     0.700     0.519
+fastfood restaurant     0.231     0.300     0.261
+field cultivated     0.833     0.500     0.625
+field wild          0.400     0.600     0.480
+fire escape         0.700     0.700     0.700
+fire station        0.545     0.600     0.571
+firing range indoor     0.600     0.600     0.600
+fishpond            1.000     0.600     0.750
+florist shop indoor     0.818     0.900     0.857
+food court          0.375     0.300     0.333
+forest broadleaf     0.667     0.400     0.500
+forest needleleaf     0.571     0.400     0.471
+forest path         0.375     0.300     0.333
+forest road         0.667     0.600     0.632
+formal garden       0.714     0.500     0.588
+fountain            0.714     0.500     0.588
+galley              0.467     0.700     0.560
+game room           0.333     0.300     0.316
+garage indoor       0.400     0.200     0.267
+garbage dump        0.214     0.300     0.250
+gas station         0.538     0.700     0.609
+gazebo exterior     0.625     0.500     0.556
+general store indoor     0.286     0.200     0.235
+general store outdoor     0.500     0.400     0.444
+gift shop           0.231     0.600     0.333
+golf course         0.500     0.100     0.167
+greenhouse indoor     0.700     0.700     0.700
+greenhouse outdoor     0.818     0.900     0.857
+gymnasium indoor     1.000     0.800     0.889
+hangar indoor       0.500     0.600     0.545
+hangar outdoor      0.714     0.500     0.588
+harbor              0.750     0.900     0.818
+hayfield            0.750     0.600     0.667
+heliport            0.778     0.700     0.737
+herb garden         0.385     0.500     0.435
+highway             0.385     0.500     0.435
+hill                0.500     0.400     0.444
+home office         0.700     0.700     0.700
+hospital            0.300     0.300     0.300
+hospital room       0.444     0.400     0.421
+hot spring          0.833     0.500     0.625
+hot tub outdoor     0.818     0.900     0.857
+hotel outdoor       0.429     0.300     0.353
+hotel room          0.750     0.600     0.667
+house               0.444     0.400     0.421
+hunting lodge outdoor     0.381     0.800     0.516
+ice cream parlor     0.500     0.300     0.375
+ice floe            0.857     0.600     0.706
+ice shelf           0.455     0.500     0.476
+ice skating rink indoor     1.000     0.900     0.947
+ice skating rink outdoor     0.625     0.500     0.556
+iceberg             0.615     0.800     0.696
+igloo               0.800     0.800     0.800
+industrial area     0.615     0.800     0.696
+inn outdoor         0.455     0.500     0.476
+islet               0.400     0.600     0.480
+jacuzzi indoor      0.667     0.800     0.727
+jail cell           0.833     0.500     0.625
+jail indoor         0.600     0.600     0.600
+jewelry shop        0.000     0.000     0.000
+kasbah              0.800     0.800     0.800
+kennel indoor       0.455     0.500     0.476
+kennel outdoor      0.625     0.500     0.556
+kindergarden classroom     0.500     0.400     0.444
+kitchen             0.444     0.400     0.421
+kitchenette         0.375     0.300     0.333
+labyrinth outdoor     0.900     0.900     0.900
+lake natural        0.375     0.300     0.333
+landfill            0.556     0.500     0.526
+landing deck        0.800     0.800     0.800
+laundromat          1.000     0.800     0.889
+lecture room        0.500     0.300     0.375
+library indoor      0.500     0.400     0.444
+library outdoor     0.286     0.200     0.235
+lido deck outdoor     0.818     0.900     0.857
+lift bridge         0.583     0.700     0.636
+lighthouse          0.909     1.000     0.952
+limousine interior     0.667     0.600     0.632
+living room         0.368     0.700     0.483
+lobby               0.000     0.000     0.000
+lock chamber        0.800     0.800     0.800
+locker room         0.333     0.500     0.400
+mansion             0.091     0.100     0.095
+manufactured home     1.000     1.000     1.000
+market indoor       0.273     0.300     0.286
+market outdoor      0.312     0.500     0.385
+marsh               0.400     0.400     0.400
+martial arts gym     0.600     0.600     0.600
+mausoleum           0.833     0.500     0.625
+medina              0.308     0.400     0.348
+moat water          0.300     0.300     0.300
+monastery outdoor     0.125     0.100     0.111
+mosque indoor       0.455     0.500     0.476
+mosque outdoor      0.833     0.500     0.625
+motel               0.235     0.400     0.296
+mountain            0.400     0.200     0.267
+mountain snowy      0.500     0.300     0.375
+movie theater indoor     0.625     0.500     0.556
+museum indoor       0.105     0.200     0.138
+music store         1.000     0.800     0.889
+music studio        0.474     0.900     0.621
+nuclear power plant outdoor     0.500     0.700     0.583
+nursery             0.636     0.700     0.667
+oast house          1.000     0.800     0.889
+observatory outdoor     0.455     0.500     0.476
+ocean               0.625     1.000     0.769
+office              0.750     0.300     0.429
+office building     0.167     0.200     0.182
+oil refinery outdoor     0.667     0.800     0.727
+oilrig              0.818     0.900     0.857
+operating room      0.778     0.700     0.737
+orchard             0.600     0.600     0.600
+outhouse outdoor     0.778     0.700     0.737
+pagoda              0.818     0.900     0.857
+palace              0.400     0.400     0.400
+pantry              0.889     0.800     0.842
+park                0.667     0.400     0.500
+parking garage indoor     0.727     0.800     0.762
+parking garage outdoor     0.667     0.600     0.632
+parking lot         0.455     0.500     0.476
+parlor              0.571     0.800     0.667
+pasture             0.188     0.300     0.231
+patio               0.429     0.300     0.353
+pavilion            0.625     0.500     0.556
+pharmacy            0.462     0.600     0.522
+phone booth         1.000     0.700     0.824
+physics laboratory     0.571     0.400     0.471
+picnic area         0.667     0.600     0.632
+pilothouse indoor     0.667     0.600     0.632
+planetarium outdoor     0.600     0.900     0.720
+playground          0.474     0.900     0.621
+playroom            0.417     0.500     0.455
+plaza               0.333     0.600     0.429
+podium indoor       0.727     0.800     0.762
+podium outdoor      0.909     1.000     0.952
+pond                0.571     0.400     0.471
+poolroom establishment     0.545     0.600     0.571
+poolroom home       0.750     0.600     0.667
+power plant outdoor     0.000     0.000     0.000
+promenade deck      0.636     0.700     0.667
+pub indoor          0.500     0.600     0.545
+pulpit              0.636     0.700     0.667
+putting green       0.500     0.500     0.500
+racecourse          0.667     0.400     0.500
+raceway             0.875     0.700     0.778
+raft                1.000     0.900     0.947
+railroad track      0.667     0.400     0.500
+rainforest          0.308     0.400     0.348
+reception           0.889     0.800     0.842
+recreation room     0.333     0.300     0.316
+residential neighborhood     0.583     0.700     0.636
+restaurant          0.667     0.200     0.308
+restaurant kitchen     1.000     0.500     0.667
+restaurant patio     0.562     0.900     0.692
+rice paddy          0.000     0.000     0.000
+riding arena        0.750     0.900     0.818
+river               0.353     0.600     0.444
+rock arch           1.000     0.800     0.889
+rope bridge         0.750     0.900     0.818
+ruin                0.636     0.700     0.667
+runway              0.667     0.600     0.632
+sandbar             0.545     0.600     0.571
+sandbox             1.000     0.600     0.750
+sauna               0.600     0.900     0.720
+schoolhouse         0.412     0.700     0.519
+sea cliff           1.000     0.400     0.571
+server room         0.500     0.500     0.500
+shed                0.538     0.700     0.609
+shoe shop           0.571     0.800     0.667
+shopfront           0.545     0.600     0.571
+shopping mall indoor     0.400     0.200     0.267
+shower              0.714     0.500     0.588
+skatepark           0.800     0.400     0.533
+ski lodge           0.600     0.600     0.600
+ski resort          0.714     1.000     0.833
+ski slope           0.556     0.500     0.526
+sky                 0.833     1.000     0.909
+skyscraper          0.778     0.700     0.737
+slum                1.000     0.300     0.462
+snowfield           0.294     0.500     0.370
+squash court        0.700     0.700     0.700
+stable              0.778     0.700     0.737
+stadium baseball     0.900     0.900     0.900
+stadium football     0.769     1.000     0.870
+stage indoor        0.400     0.200     0.267
+staircase           0.800     0.400     0.533
+street              0.778     0.700     0.737
+subway interior     0.800     0.800     0.800
+subway station platform     0.667     0.800     0.727
+supermarket         0.333     0.400     0.364
+sushi bar           0.833     0.500     0.625
+swamp               0.727     0.800     0.762
+swimming pool indoor     0.750     0.600     0.667
+swimming pool outdoor     0.889     0.800     0.842
+synagogue indoor     0.400     0.200     0.267
+synagogue outdoor     0.500     0.500     0.500
+television studio     0.429     0.600     0.500
+temple east asia     0.583     0.700     0.636
+temple south asia     0.667     0.200     0.308
+tennis court indoor     0.900     0.900     0.900
+tennis court outdoor     0.625     0.500     0.556
+tent outdoor        0.727     0.800     0.762
+theater indoor procenium     0.667     0.400     0.500
+theater indoor seats     0.700     0.700     0.700
+thriftshop          0.333     0.200     0.250
+throne room         0.700     0.700     0.700
+ticket booth        0.444     0.400     0.421
+toll plaza          0.500     0.500     0.500
+topiary garden      0.818     0.900     0.857
+tower               0.462     0.600     0.522
+toyshop             0.800     0.400     0.533
+track outdoor       0.778     0.700     0.737
+train railway       0.667     0.800     0.727
+train station platform     1.000     0.900     0.947
+tree farm           0.273     0.300     0.286
+tree house          0.778     0.700     0.737
+trench              0.625     0.500     0.556
+underwater coral reef     0.909     1.000     0.952
+utility room        0.900     0.900     0.900
+valley              0.300     0.300     0.300
+van interior        0.571     0.400     0.471
+vegetable garden     0.500     0.600     0.545
+veranda             0.429     0.300     0.353
+veterinarians office     0.818     0.900     0.857
+viaduct             0.833     0.500     0.625
+videostore          0.538     0.700     0.609
+village             0.800     0.800     0.800
+vineyard            0.312     0.500     0.385
+volcano             1.000     0.700     0.824
+volleyball court indoor     0.875     0.700     0.778
+volleyball court outdoor     0.429     0.300     0.353
+waiting room        0.600     0.600     0.600
+warehouse indoor     0.750     0.600     0.667
+water tower         0.636     0.700     0.667
+waterfall block     0.778     0.700     0.737
+waterfall fan       0.545     0.600     0.571
+waterfall plunge     0.667     0.800     0.727
+watering hole       0.778     0.700     0.737
+wave                1.000     0.600     0.750
+wet bar             0.600     0.300     0.400
+wheat field         0.750     0.600     0.667
+wind farm           0.875     0.700     0.778
+windmill            0.727     0.800     0.762
+wine cellar barrel storage     1.000     0.700     0.824
+wine cellar bottle storage     0.571     0.400     0.471
+wrestling ring indoor     0.889     0.800     0.842
+yard                0.500     0.200     0.286
+youth hostel        0.600     0.900     0.720
+
+=== Overall ===
+Accuracy       0.572
+Precision (macro)   0.600
+Recall (macro)      0.572
+F1 (macro)          0.569
+
+Saved results to ../../results/frozen_minimal_sun397.json
+=== sun397 CG-CBAT v6 frozen ===
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Using device: mps
+Classes: ['abbey', 'airplane cabin', 'airport terminal', 'alley', 'amphitheater', 'amusement arcade', 'amusement park', 'anechoic chamber', 'apartment building outdoor', 'apse indoor', 'aquarium', 'aqueduct', 'arch', 'archive', 'arrival gate outdoor', 'art gallery', 'art school', 'art studio', 'assembly line', 'athletic field outdoor', 'atrium public', 'attic', 'auditorium', 'auto factory', 'badlands', 'badminton court indoor', 'baggage claim', 'bakery shop', 'balcony exterior', 'balcony interior', 'ball pit', 'ballroom', 'bamboo forest', 'banquet hall', 'bar', 'barn', 'barndoor', 'baseball field', 'basement', 'basilica', 'basketball court outdoor', 'bathroom', 'batters box', 'bayou', 'bazaar indoor', 'bazaar outdoor', 'beach', 'beauty salon', 'bedroom', 'berth', 'biology laboratory', 'bistro indoor', 'boardwalk', 'boat deck', 'boathouse', 'bookstore', 'booth indoor', 'botanical garden', 'bow window indoor', 'bow window outdoor', 'bowling alley', 'boxing ring', 'brewery indoor', 'bridge', 'building facade', 'bullring', 'burial chamber', 'bus interior', 'butchers shop', 'butte', 'cabin outdoor', 'cafeteria', 'campsite', 'campus', 'canal natural', 'canal urban', 'candy store', 'canyon', 'car interior backseat', 'car interior frontseat', 'carrousel', 'casino indoor', 'castle', 'catacomb', 'cathedral indoor', 'cathedral outdoor', 'cavern indoor', 'cemetery', 'chalet', 'cheese factory', 'chemistry lab', 'chicken coop indoor', 'chicken coop outdoor', 'childs room', 'church indoor', 'church outdoor', 'classroom', 'clean room', 'cliff', 'cloister indoor', 'closet', 'clothing store', 'coast', 'cockpit', 'coffee shop', 'computer room', 'conference center', 'conference room', 'construction site', 'control room', 'control tower outdoor', 'corn field', 'corral', 'corridor', 'cottage garden', 'courthouse', 'courtroom', 'courtyard', 'covered bridge exterior', 'creek', 'crevasse', 'crosswalk', 'cubicle office', 'dam', 'delicatessen', 'dentists office', 'desert sand', 'desert vegetation', 'diner indoor', 'diner outdoor', 'dinette home', 'dinette vehicle', 'dining car', 'dining room', 'discotheque', 'dock', 'doorway outdoor', 'dorm room', 'driveway', 'driving range outdoor', 'drugstore', 'electrical substation', 'elevator door', 'elevator interior', 'elevator shaft', 'engine room', 'escalator indoor', 'excavation', 'factory indoor', 'fairway', 'fastfood restaurant', 'field cultivated', 'field wild', 'fire escape', 'fire station', 'firing range indoor', 'fishpond', 'florist shop indoor', 'food court', 'forest broadleaf', 'forest needleleaf', 'forest path', 'forest road', 'formal garden', 'fountain', 'galley', 'game room', 'garage indoor', 'garbage dump', 'gas station', 'gazebo exterior', 'general store indoor', 'general store outdoor', 'gift shop', 'golf course', 'greenhouse indoor', 'greenhouse outdoor', 'gymnasium indoor', 'hangar indoor', 'hangar outdoor', 'harbor', 'hayfield', 'heliport', 'herb garden', 'highway', 'hill', 'home office', 'hospital', 'hospital room', 'hot spring', 'hot tub outdoor', 'hotel outdoor', 'hotel room', 'house', 'hunting lodge outdoor', 'ice cream parlor', 'ice floe', 'ice shelf', 'ice skating rink indoor', 'ice skating rink outdoor', 'iceberg', 'igloo', 'industrial area', 'inn outdoor', 'islet', 'jacuzzi indoor', 'jail cell', 'jail indoor', 'jewelry shop', 'kasbah', 'kennel indoor', 'kennel outdoor', 'kindergarden classroom', 'kitchen', 'kitchenette', 'labyrinth outdoor', 'lake natural', 'landfill', 'landing deck', 'laundromat', 'lecture room', 'library indoor', 'library outdoor', 'lido deck outdoor', 'lift bridge', 'lighthouse', 'limousine interior', 'living room', 'lobby', 'lock chamber', 'locker room', 'mansion', 'manufactured home', 'market indoor', 'market outdoor', 'marsh', 'martial arts gym', 'mausoleum', 'medina', 'moat water', 'monastery outdoor', 'mosque indoor', 'mosque outdoor', 'motel', 'mountain', 'mountain snowy', 'movie theater indoor', 'museum indoor', 'music store', 'music studio', 'nuclear power plant outdoor', 'nursery', 'oast house', 'observatory outdoor', 'ocean', 'office', 'office building', 'oil refinery outdoor', 'oilrig', 'operating room', 'orchard', 'outhouse outdoor', 'pagoda', 'palace', 'pantry', 'park', 'parking garage indoor', 'parking garage outdoor', 'parking lot', 'parlor', 'pasture', 'patio', 'pavilion', 'pharmacy', 'phone booth', 'physics laboratory', 'picnic area', 'pilothouse indoor', 'planetarium outdoor', 'playground', 'playroom', 'plaza', 'podium indoor', 'podium outdoor', 'pond', 'poolroom establishment', 'poolroom home', 'power plant outdoor', 'promenade deck', 'pub indoor', 'pulpit', 'putting green', 'racecourse', 'raceway', 'raft', 'railroad track', 'rainforest', 'reception', 'recreation room', 'residential neighborhood', 'restaurant', 'restaurant kitchen', 'restaurant patio', 'rice paddy', 'riding arena', 'river', 'rock arch', 'rope bridge', 'ruin', 'runway', 'sandbar', 'sandbox', 'sauna', 'schoolhouse', 'sea cliff', 'server room', 'shed', 'shoe shop', 'shopfront', 'shopping mall indoor', 'shower', 'skatepark', 'ski lodge', 'ski resort', 'ski slope', 'sky', 'skyscraper', 'slum', 'snowfield', 'squash court', 'stable', 'stadium baseball', 'stadium football', 'stage indoor', 'staircase', 'street', 'subway interior', 'subway station platform', 'supermarket', 'sushi bar', 'swamp', 'swimming pool indoor', 'swimming pool outdoor', 'synagogue indoor', 'synagogue outdoor', 'television studio', 'temple east asia', 'temple south asia', 'tennis court indoor', 'tennis court outdoor', 'tent outdoor', 'theater indoor procenium', 'theater indoor seats', 'thriftshop', 'throne room', 'ticket booth', 'toll plaza', 'topiary garden', 'tower', 'toyshop', 'track outdoor', 'train railway', 'train station platform', 'tree farm', 'tree house', 'trench', 'underwater coral reef', 'utility room', 'valley', 'van interior', 'vegetable garden', 'veranda', 'veterinarians office', 'viaduct', 'videostore', 'village', 'vineyard', 'volcano', 'volleyball court indoor', 'volleyball court outdoor', 'waiting room', 'warehouse indoor', 'water tower', 'waterfall block', 'waterfall fan', 'waterfall plunge', 'watering hole', 'wave', 'wet bar', 'wheat field', 'wind farm', 'windmill', 'wine cellar barrel storage', 'wine cellar bottle storage', 'wrestling ring indoor', 'yard', 'youth hostel']
+Train size: 11910, Test size: 3970
+[load_backbone_checkpoint] loaded 318/318 backbone tensors from '../../results/resnet50_8ep_sun397_checkpoint.pt' (dropped 2 non-backbone keys: ['fc.weight', 'fc.bias'])
+Round 6 frozen-backbone mode: loaded 318 backbone tensors from ../../results/resnet50_8ep_sun397_checkpoint.pt, dropped 2 non-backbone keys, backbone frozen for all 8 epochs.
+Round 6 frozen-backbone optimizer: new/head modules lr=0.00030000000000000003 (wd=0.05), backbone excluded from optimizer updates (frozen).
+Epoch 1: backbone permanently frozen (Round 6 mode, no warm-up schedule)
+  batch 20/373 - loss: 5.9552 - elapsed: 16.6s
+  batch 40/373 - loss: 5.8650 - elapsed: 26.3s
+  batch 60/373 - loss: 4.7325 - elapsed: 36.1s
+  batch 80/373 - loss: 3.9552 - elapsed: 46.0s
+  batch 100/373 - loss: 2.2625 - elapsed: 55.9s
+  batch 120/373 - loss: 1.8587 - elapsed: 65.7s
+  batch 140/373 - loss: 1.6499 - elapsed: 75.5s
+  batch 160/373 - loss: 1.2212 - elapsed: 85.4s
+  batch 180/373 - loss: 1.3000 - elapsed: 95.3s
+  batch 200/373 - loss: 1.2587 - elapsed: 105.2s
+  batch 220/373 - loss: 1.4181 - elapsed: 115.1s
+  batch 240/373 - loss: 0.8624 - elapsed: 125.0s
+  batch 260/373 - loss: 0.7684 - elapsed: 134.9s
+  batch 280/373 - loss: 1.4018 - elapsed: 144.8s
+  batch 300/373 - loss: 0.7525 - elapsed: 154.6s
+  batch 320/373 - loss: 0.8995 - elapsed: 164.5s
+  batch 340/373 - loss: 0.9097 - elapsed: 174.4s
+  batch 360/373 - loss: 1.2451 - elapsed: 184.3s
+  batch 373/373 - loss: 0.3332 - elapsed: 190.3s
+Epoch 1/8 - loss: 2.1804 - time: 210.4s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_sun397_checkpoint.pt (epoch 1)
+  batch 20/373 - loss: 0.6596 - elapsed: 16.9s
+  batch 40/373 - loss: 0.4399 - elapsed: 26.6s
+  batch 60/373 - loss: 0.4727 - elapsed: 36.5s
+  batch 80/373 - loss: 0.6996 - elapsed: 46.3s
+  batch 100/373 - loss: 0.3524 - elapsed: 56.1s
+  batch 120/373 - loss: 0.5945 - elapsed: 66.1s
+  batch 140/373 - loss: 0.6056 - elapsed: 76.0s
+  batch 160/373 - loss: 0.6054 - elapsed: 85.9s
+  batch 180/373 - loss: 0.6030 - elapsed: 95.7s
+  batch 200/373 - loss: 0.7396 - elapsed: 105.6s
+  batch 220/373 - loss: 0.3816 - elapsed: 115.5s
+  batch 240/373 - loss: 0.5126 - elapsed: 125.5s
+  batch 260/373 - loss: 0.7542 - elapsed: 135.4s
+  batch 280/373 - loss: 0.6986 - elapsed: 145.3s
+  batch 300/373 - loss: 0.4446 - elapsed: 155.1s
+  batch 320/373 - loss: 0.6322 - elapsed: 165.0s
+  batch 340/373 - loss: 0.6222 - elapsed: 174.9s
+  batch 360/373 - loss: 0.4479 - elapsed: 184.9s
+  batch 373/373 - loss: 0.2586 - elapsed: 190.9s
+Epoch 2/8 - loss: 0.5650 - time: 210.9s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_sun397_checkpoint.pt (epoch 2)
+  batch 20/373 - loss: 0.2492 - elapsed: 16.9s
+  batch 40/373 - loss: 0.2745 - elapsed: 26.7s
+  batch 60/373 - loss: 0.3346 - elapsed: 36.5s
+  batch 80/373 - loss: 0.4147 - elapsed: 46.3s
+  batch 100/373 - loss: 0.5500 - elapsed: 56.2s
+  batch 120/373 - loss: 0.2437 - elapsed: 66.1s
+  batch 140/373 - loss: 0.4609 - elapsed: 76.0s
+  batch 160/373 - loss: 0.3732 - elapsed: 85.9s
+  batch 180/373 - loss: 0.1630 - elapsed: 95.8s
+  batch 200/373 - loss: 0.5904 - elapsed: 105.7s
+  batch 220/373 - loss: 0.3503 - elapsed: 115.6s
+  batch 240/373 - loss: 0.2806 - elapsed: 125.5s
+  batch 260/373 - loss: 0.3150 - elapsed: 135.4s
+  batch 280/373 - loss: 0.2701 - elapsed: 145.3s
+  batch 300/373 - loss: 0.5424 - elapsed: 155.2s
+  batch 320/373 - loss: 0.3798 - elapsed: 165.1s
+  batch 340/373 - loss: 0.1904 - elapsed: 175.0s
+  batch 360/373 - loss: 0.3493 - elapsed: 184.9s
+  batch 373/373 - loss: 0.1985 - elapsed: 190.9s
+Epoch 3/8 - loss: 0.3519 - time: 210.9s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_sun397_checkpoint.pt (epoch 3)
+  batch 20/373 - loss: 0.1221 - elapsed: 16.8s
+  batch 40/373 - loss: 0.1906 - elapsed: 26.6s
+  batch 60/373 - loss: 0.1646 - elapsed: 36.3s
+  batch 80/373 - loss: 0.1531 - elapsed: 46.2s
+  batch 100/373 - loss: 0.1617 - elapsed: 56.0s
+  batch 120/373 - loss: 0.2004 - elapsed: 65.9s
+  batch 140/373 - loss: 0.2613 - elapsed: 75.7s
+  batch 160/373 - loss: 0.3403 - elapsed: 85.7s
+  batch 180/373 - loss: 0.4152 - elapsed: 95.4s
+  batch 200/373 - loss: 0.2075 - elapsed: 105.3s
+  batch 220/373 - loss: 0.2505 - elapsed: 115.2s
+  batch 240/373 - loss: 0.0816 - elapsed: 125.2s
+  batch 260/373 - loss: 0.2666 - elapsed: 135.0s
+  batch 280/373 - loss: 0.2288 - elapsed: 144.9s
+  batch 300/373 - loss: 0.2174 - elapsed: 154.8s
+  batch 320/373 - loss: 0.3809 - elapsed: 164.7s
+  batch 340/373 - loss: 0.2816 - elapsed: 174.6s
+  batch 360/373 - loss: 0.2462 - elapsed: 184.4s
+  batch 373/373 - loss: 0.4016 - elapsed: 190.4s
+Epoch 4/8 - loss: 0.2277 - time: 210.5s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_sun397_checkpoint.pt (epoch 4)
+  batch 20/373 - loss: 0.1052 - elapsed: 16.9s
+  batch 40/373 - loss: 0.1757 - elapsed: 26.6s
+  batch 60/373 - loss: 0.1029 - elapsed: 36.4s
+  batch 80/373 - loss: 0.1543 - elapsed: 46.3s
+  batch 100/373 - loss: 0.2575 - elapsed: 56.1s
+  batch 120/373 - loss: 0.1293 - elapsed: 65.9s
+  batch 140/373 - loss: 0.1880 - elapsed: 75.8s
+  batch 160/373 - loss: 0.2479 - elapsed: 85.6s
+  batch 180/373 - loss: 0.1029 - elapsed: 95.5s
+  batch 200/373 - loss: 0.0964 - elapsed: 105.4s
+  batch 220/373 - loss: 0.0669 - elapsed: 115.3s
+  batch 240/373 - loss: 0.0754 - elapsed: 125.3s
+  batch 260/373 - loss: 0.1445 - elapsed: 135.1s
+  batch 280/373 - loss: 0.1630 - elapsed: 145.0s
+  batch 300/373 - loss: 0.1802 - elapsed: 154.9s
+  batch 320/373 - loss: 0.1057 - elapsed: 164.8s
+  batch 340/373 - loss: 0.2824 - elapsed: 174.8s
+  batch 360/373 - loss: 0.2946 - elapsed: 184.8s
+  batch 373/373 - loss: 0.0324 - elapsed: 190.9s
+Epoch 5/8 - loss: 0.1480 - time: 210.9s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_sun397_checkpoint.pt (epoch 5)
+  batch 20/373 - loss: 0.0600 - elapsed: 17.2s
+  batch 40/373 - loss: 0.1479 - elapsed: 27.1s
+  batch 60/373 - loss: 0.0778 - elapsed: 37.1s
+  batch 80/373 - loss: 0.1326 - elapsed: 47.1s
+  batch 100/373 - loss: 0.0785 - elapsed: 57.1s
+  batch 120/373 - loss: 0.2446 - elapsed: 67.1s
+  batch 140/373 - loss: 0.0633 - elapsed: 77.2s
+  batch 160/373 - loss: 0.0493 - elapsed: 87.2s
+  batch 180/373 - loss: 0.0470 - elapsed: 97.1s
+  batch 200/373 - loss: 0.0902 - elapsed: 107.1s
+  batch 220/373 - loss: 0.1266 - elapsed: 117.0s
+  batch 240/373 - loss: 0.0860 - elapsed: 126.9s
+  batch 260/373 - loss: 0.0660 - elapsed: 136.8s
+  batch 280/373 - loss: 0.1481 - elapsed: 146.6s
+  batch 300/373 - loss: 0.1632 - elapsed: 156.5s
+  batch 320/373 - loss: 0.0822 - elapsed: 166.4s
+  batch 340/373 - loss: 0.0410 - elapsed: 176.2s
+  batch 360/373 - loss: 0.0620 - elapsed: 186.1s
+  batch 373/373 - loss: 0.0676 - elapsed: 192.2s
+Epoch 6/8 - loss: 0.0928 - time: 212.2s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_sun397_checkpoint.pt (epoch 6)
+  batch 20/373 - loss: 0.0170 - elapsed: 16.9s
+  batch 40/373 - loss: 0.0665 - elapsed: 26.7s
+  batch 60/373 - loss: 0.0364 - elapsed: 36.4s
+  batch 80/373 - loss: 0.0477 - elapsed: 46.2s
+  batch 100/373 - loss: 0.0461 - elapsed: 56.0s
+  batch 120/373 - loss: 0.0620 - elapsed: 65.9s
+  batch 140/373 - loss: 0.0245 - elapsed: 75.8s
+  batch 160/373 - loss: 0.2131 - elapsed: 85.6s
+  batch 180/373 - loss: 0.0385 - elapsed: 95.4s
+  batch 200/373 - loss: 0.1322 - elapsed: 105.3s
+  batch 220/373 - loss: 0.1279 - elapsed: 115.2s
+  batch 240/373 - loss: 0.0342 - elapsed: 125.0s
+  batch 260/373 - loss: 0.0748 - elapsed: 134.9s
+  batch 280/373 - loss: 0.0414 - elapsed: 144.8s
+  batch 300/373 - loss: 0.1502 - elapsed: 154.7s
+  batch 320/373 - loss: 0.0623 - elapsed: 164.6s
+  batch 340/373 - loss: 0.0946 - elapsed: 174.5s
+  batch 360/373 - loss: 0.0228 - elapsed: 184.4s
+  batch 373/373 - loss: 0.1660 - elapsed: 190.4s
+Epoch 7/8 - loss: 0.0657 - time: 210.4s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_sun397_checkpoint.pt (epoch 7)
+  batch 20/373 - loss: 0.0485 - elapsed: 16.9s
+  batch 40/373 - loss: 0.0564 - elapsed: 26.6s
+  batch 60/373 - loss: 0.0343 - elapsed: 36.4s
+  batch 80/373 - loss: 0.0241 - elapsed: 46.1s
+  batch 100/373 - loss: 0.0327 - elapsed: 55.9s
+  batch 120/373 - loss: 0.0172 - elapsed: 65.7s
+  batch 140/373 - loss: 0.0223 - elapsed: 75.5s
+  batch 160/373 - loss: 0.0206 - elapsed: 85.4s
+  batch 180/373 - loss: 0.0250 - elapsed: 95.2s
+  batch 200/373 - loss: 0.0386 - elapsed: 105.0s
+  batch 220/373 - loss: 0.0668 - elapsed: 114.9s
+  batch 240/373 - loss: 0.0480 - elapsed: 124.7s
+  batch 260/373 - loss: 0.1043 - elapsed: 134.5s
+  batch 280/373 - loss: 0.0487 - elapsed: 144.4s
+  batch 300/373 - loss: 0.1324 - elapsed: 154.3s
+  batch 320/373 - loss: 0.1190 - elapsed: 164.0s
+  batch 340/373 - loss: 0.0590 - elapsed: 173.9s
+  batch 360/373 - loss: 0.0428 - elapsed: 183.7s
+  batch 373/373 - loss: 0.1736 - elapsed: 189.7s
+Epoch 8/8 - loss: 0.0446 - time: 209.7s
+Saved checkpoint to ../../results/cgcbat_v6_frozen_sun397_checkpoint.pt (epoch 8)
+
+=== Per-class results ===
+Class           Precision    Recall        F1
+---------------------------------------------
+abbey               0.400     0.200     0.267
+airplane cabin      0.636     0.700     0.667
+airport terminal     0.273     0.300     0.286
+alley               0.429     0.300     0.353
+amphitheater        0.889     0.800     0.842
+amusement arcade     0.875     0.700     0.778
+amusement park      0.667     0.400     0.500
+anechoic chamber     0.643     0.900     0.750
+apartment building outdoor     0.375     0.300     0.333
+apse indoor         0.667     0.800     0.727
+aquarium            0.778     0.700     0.737
+aqueduct            0.857     0.600     0.706
+arch                0.875     0.700     0.778
+archive             0.857     0.600     0.706
+arrival gate outdoor     1.000     0.500     0.667
+art gallery         0.750     0.300     0.429
+art school          0.667     0.400     0.500
+art studio          0.250     0.200     0.222
+assembly line       0.333     0.200     0.250
+athletic field outdoor     0.357     0.500     0.417
+atrium public       0.455     0.500     0.476
+attic               0.357     0.500     0.417
+auditorium          0.300     0.600     0.400
+auto factory        0.600     0.600     0.600
+badlands            0.500     0.900     0.643
+badminton court indoor     0.476     1.000     0.645
+baggage claim       0.500     0.500     0.500
+bakery shop         0.500     0.200     0.286
+balcony exterior     0.333     0.400     0.364
+balcony interior     0.600     0.600     0.600
+ball pit            0.833     1.000     0.909
+ballroom            0.500     0.200     0.286
+bamboo forest       0.727     0.800     0.762
+banquet hall        0.438     0.700     0.538
+bar                 0.400     0.200     0.267
+barn                0.474     0.900     0.621
+barndoor            0.875     0.700     0.778
+baseball field      0.500     0.400     0.444
+basement            0.500     0.500     0.500
+basilica            0.231     0.300     0.261
+basketball court outdoor     0.467     0.700     0.560
+bathroom            0.429     0.300     0.353
+batters box         0.909     1.000     0.952
+bayou               0.727     0.800     0.762
+bazaar indoor       0.714     0.500     0.588
+bazaar outdoor      0.500     0.500     0.500
+beach               0.636     0.700     0.667
+beauty salon        0.556     0.500     0.526
+bedroom             1.000     0.400     0.571
+berth               0.778     0.700     0.737
+biology laboratory     0.353     0.600     0.444
+bistro indoor       0.222     0.200     0.211
+boardwalk           0.857     0.600     0.706
+boat deck           0.429     0.300     0.353
+boathouse           0.857     0.600     0.706
+bookstore           0.750     0.600     0.667
+booth indoor        0.545     0.600     0.571
+botanical garden     0.222     0.200     0.211
+bow window indoor     0.889     0.800     0.842
+bow window outdoor     0.643     0.900     0.750
+bowling alley       0.818     0.900     0.857
+boxing ring         0.643     0.900     0.750
+brewery indoor      1.000     0.800     0.889
+bridge              0.471     0.800     0.593
+building facade     0.500     0.300     0.375
+bullring            0.889     0.800     0.842
+burial chamber      0.286     0.200     0.235
+bus interior        0.714     0.500     0.588
+butchers shop       0.438     0.700     0.538
+butte               0.600     0.600     0.600
+cabin outdoor       0.714     0.500     0.588
+cafeteria           0.353     0.600     0.444
+campsite            0.625     0.500     0.556
+campus              0.600     0.600     0.600
+canal natural       0.833     0.500     0.625
+canal urban         0.571     0.400     0.471
+candy store         0.333     0.500     0.400
+canyon              0.467     0.700     0.560
+car interior backseat     0.800     0.800     0.800
+car interior frontseat     0.667     0.800     0.727
+carrousel           1.000     0.900     0.947
+casino indoor       0.700     0.700     0.700
+castle              0.500     0.300     0.375
+catacomb            0.889     0.800     0.842
+cathedral indoor     0.600     0.600     0.600
+cathedral outdoor     0.545     0.600     0.571
+cavern indoor       0.700     0.700     0.700
+cemetery            0.714     0.500     0.588
+chalet              0.200     0.300     0.240
+cheese factory      0.389     0.700     0.500
+chemistry lab       0.667     0.200     0.308
+chicken coop indoor     0.625     0.500     0.556
+chicken coop outdoor     0.625     0.500     0.556
+childs room         0.200     0.200     0.200
+church indoor       0.667     0.200     0.308
+church outdoor      0.240     0.600     0.343
+classroom           0.600     0.600     0.600
+clean room          0.273     0.300     0.286
+cliff               0.800     0.400     0.533
+cloister indoor     0.636     0.700     0.667
+closet              0.667     0.600     0.632
+clothing store      0.500     0.400     0.444
+coast               0.714     0.500     0.588
+cockpit             1.000     0.700     0.824
+coffee shop         0.286     0.200     0.235
+computer room       0.818     0.900     0.857
+conference center     0.438     0.700     0.538
+conference room     0.667     0.600     0.632
+construction site     0.200     0.200     0.200
+control room        0.538     0.700     0.609
+control tower outdoor     0.857     0.600     0.706
+corn field          0.600     0.600     0.600
+corral              0.600     0.600     0.600
+corridor            0.583     0.700     0.636
+cottage garden      0.222     0.400     0.286
+courthouse          0.333     0.500     0.400
+courtroom           0.667     0.600     0.632
+courtyard           0.500     0.200     0.286
+covered bridge exterior     0.800     0.800     0.800
+creek               0.273     0.300     0.286
+crevasse            0.643     0.900     0.750
+crosswalk           0.625     0.500     0.556
+cubicle office      0.727     0.800     0.762
+dam                 0.615     0.800     0.696
+delicatessen        0.600     0.300     0.400
+dentists office     0.583     0.700     0.636
+desert sand         0.667     0.800     0.727
+desert vegetation     0.625     0.500     0.556
+diner indoor        1.000     0.500     0.667
+diner outdoor       0.308     0.400     0.348
+dinette home        0.533     0.800     0.640
+dinette vehicle     1.000     0.500     0.667
+dining car          0.636     0.700     0.667
+dining room         0.667     0.200     0.308
+discotheque         0.750     0.900     0.818
+dock                0.800     0.800     0.800
+doorway outdoor     0.778     0.700     0.737
+dorm room           0.429     0.600     0.500
+driveway            0.769     1.000     0.870
+driving range outdoor     0.500     0.300     0.375
+drugstore           0.800     0.400     0.533
+electrical substation     1.000     1.000     1.000
+elevator door       0.700     0.700     0.700
+elevator interior     0.538     0.700     0.609
+elevator shaft      0.833     0.500     0.625
+engine room         0.692     0.900     0.783
+escalator indoor     0.500     0.700     0.583
+excavation          0.600     0.600     0.600
+factory indoor      0.545     0.600     0.571
+fairway             0.400     0.600     0.480
+fastfood restaurant     0.200     0.200     0.200
+field cultivated     0.800     0.400     0.533
+field wild          0.250     0.900     0.391
+fire escape         0.667     0.600     0.632
+fire station        0.857     0.600     0.706
+firing range indoor     0.400     0.400     0.400
+fishpond            0.714     0.500     0.588
+florist shop indoor     0.875     0.700     0.778
+food court          0.500     0.400     0.444
+forest broadleaf     1.000     0.300     0.462
+forest needleleaf     0.714     0.500     0.588
+forest path         0.417     0.500     0.455
+forest road         0.714     0.500     0.588
+formal garden       1.000     0.400     0.571
+fountain            0.385     0.500     0.435
+galley              0.615     0.800     0.696
+game room           0.750     0.300     0.429
+garage indoor       0.750     0.300     0.429
+garbage dump        0.500     0.400     0.444
+gas station         0.462     0.600     0.522
+gazebo exterior     0.833     0.500     0.625
+general store indoor     0.400     0.200     0.267
+general store outdoor     0.571     0.400     0.471
+gift shop           1.000     0.300     0.462
+golf course         0.667     0.200     0.308
+greenhouse indoor     0.750     0.600     0.667
+greenhouse outdoor     0.750     0.900     0.818
+gymnasium indoor     1.000     0.800     0.889
+hangar indoor       0.750     0.600     0.667
+hangar outdoor      0.700     0.700     0.700
+harbor              0.750     0.900     0.818
+hayfield            0.857     0.600     0.706
+heliport            0.667     0.600     0.632
+herb garden         0.238     0.500     0.323
+highway             0.333     0.600     0.429
+hill                0.700     0.700     0.700
+home office         0.800     0.800     0.800
+hospital            0.667     0.200     0.308
+hospital room       0.375     0.900     0.529
+hot spring          0.667     0.800     0.727
+hot tub outdoor     0.750     0.900     0.818
+hotel outdoor       0.500     0.400     0.444
+hotel room          0.529     0.900     0.667
+house               0.538     0.700     0.609
+hunting lodge outdoor     0.500     0.200     0.286
+ice cream parlor     0.500     0.200     0.286
+ice floe            1.000     0.400     0.571
+ice shelf           0.417     0.500     0.455
+ice skating rink indoor     0.900     0.900     0.900
+ice skating rink outdoor     0.625     0.500     0.556
+iceberg             0.533     0.800     0.640
+igloo               0.750     0.900     0.818
+industrial area     0.455     0.500     0.476
+inn outdoor         0.227     0.500     0.312
+islet               0.500     0.600     0.545
+jacuzzi indoor      0.778     0.700     0.737
+jail cell           0.545     0.600     0.571
+jail indoor         0.714     0.500     0.588
+jewelry shop        0.200     0.100     0.133
+kasbah              0.900     0.900     0.900
+kennel indoor       0.500     0.600     0.545
+kennel outdoor      0.667     0.200     0.308
+kindergarden classroom     0.500     0.400     0.444
+kitchen             0.400     0.200     0.267
+kitchenette         0.278     0.500     0.357
+labyrinth outdoor     0.909     1.000     0.952
+lake natural        0.353     0.600     0.444
+landfill            0.615     0.800     0.696
+landing deck        0.889     0.800     0.842
+laundromat          1.000     0.800     0.889
+lecture room        0.500     0.300     0.375
+library indoor      0.625     0.500     0.556
+library outdoor     0.500     0.400     0.444
+lido deck outdoor     0.750     0.900     0.818
+lift bridge         0.875     0.700     0.778
+lighthouse          0.909     1.000     0.952
+limousine interior     0.700     0.700     0.700
+living room         0.429     0.600     0.500
+lobby               0.286     0.200     0.235
+lock chamber        0.778     0.700     0.737
+locker room         0.750     0.600     0.667
+mansion             0.167     0.100     0.125
+manufactured home     1.000     0.900     0.947
+market indoor       0.333     0.300     0.316
+market outdoor      0.364     0.400     0.381
+marsh               0.500     0.400     0.444
+martial arts gym     0.727     0.800     0.762
+mausoleum           0.625     0.500     0.556
+medina              0.462     0.600     0.522
+moat water          0.250     0.300     0.273
+monastery outdoor     0.250     0.200     0.222
+mosque indoor       0.438     0.700     0.538
+mosque outdoor      0.833     0.500     0.625
+motel               0.182     0.400     0.250
+mountain            0.333     0.300     0.316
+mountain snowy      0.500     0.300     0.375
+movie theater indoor     0.286     0.200     0.235
+museum indoor       0.111     0.100     0.105
+music store         0.750     0.900     0.818
+music studio        0.529     0.900     0.667
+nuclear power plant outdoor     0.538     0.700     0.609
+nursery             0.636     0.700     0.667
+oast house          1.000     0.700     0.824
+observatory outdoor     0.667     0.600     0.632
+ocean               0.692     0.900     0.783
+office              0.444     0.400     0.421
+office building     0.188     0.300     0.231
+oil refinery outdoor     0.600     0.600     0.600
+oilrig              0.900     0.900     0.900
+operating room      0.700     0.700     0.700
+orchard             0.667     0.400     0.500
+outhouse outdoor     0.889     0.800     0.842
+pagoda              0.692     0.900     0.783
+palace              0.571     0.400     0.471
+pantry              0.750     0.900     0.818
+park                0.375     0.300     0.333
+parking garage indoor     0.643     0.900     0.750
+parking garage outdoor     0.636     0.700     0.667
+parking lot         0.500     0.500     0.500
+parlor              0.400     0.800     0.533
+pasture             0.200     0.200     0.200
+patio               0.455     0.500     0.476
+pavilion            0.714     1.000     0.833
+pharmacy            0.286     0.600     0.387
+phone booth         1.000     0.700     0.824
+physics laboratory     0.333     0.400     0.364
+picnic area         0.714     0.500     0.588
+pilothouse indoor     0.750     0.600     0.667
+planetarium outdoor     0.714     1.000     0.833
+playground          0.636     0.700     0.667
+playroom            0.417     0.500     0.455
+plaza               0.353     0.600     0.444
+podium indoor       0.600     0.900     0.720
+podium outdoor      1.000     0.900     0.947
+pond                0.438     0.700     0.538
+poolroom establishment     0.467     0.700     0.560
+poolroom home       0.625     0.500     0.556
+power plant outdoor     0.100     0.100     0.100
+promenade deck      0.368     0.700     0.483
+pub indoor          0.667     0.400     0.500
+pulpit              0.750     0.600     0.667
+putting green       0.571     0.800     0.667
+racecourse          0.800     0.400     0.533
+raceway             1.000     0.600     0.750
+raft                1.000     1.000     1.000
+railroad track      0.500     0.400     0.444
+rainforest          0.400     0.400     0.400
+reception           1.000     0.800     0.889
+recreation room     0.333     0.300     0.316
+residential neighborhood     0.750     0.600     0.667
+restaurant          0.184     0.700     0.292
+restaurant kitchen     0.714     0.500     0.588
+restaurant patio     0.818     0.900     0.857
+rice paddy          0.500     0.200     0.286
+riding arena        0.750     0.900     0.818
+river               0.400     0.400     0.400
+rock arch           0.900     0.900     0.900
+rope bridge         0.818     0.900     0.857
+ruin                0.889     0.800     0.842
+runway              0.600     0.600     0.600
+sandbar             0.455     0.500     0.476
+sandbox             1.000     0.700     0.824
+sauna               0.833     1.000     0.909
+schoolhouse         0.500     0.500     0.500
+sea cliff           1.000     0.300     0.462
+server room         0.357     0.500     0.417
+shed                0.667     0.800     0.727
+shoe shop           0.714     0.500     0.588
+shopfront           0.583     0.700     0.636
+shopping mall indoor     0.500     0.300     0.375
+shower              1.000     0.600     0.750
+skatepark           0.833     0.500     0.625
+ski lodge           0.667     0.200     0.308
+ski resort          0.667     0.800     0.727
+ski slope           0.714     0.500     0.588
+sky                 0.909     1.000     0.952
+skyscraper          0.778     0.700     0.737
+slum                0.800     0.800     0.800
+snowfield           0.385     0.500     0.435
+squash court        0.875     0.700     0.778
+stable              0.889     0.800     0.842
+stadium baseball     0.875     0.700     0.778
+stadium football     0.667     1.000     0.800
+stage indoor        0.286     0.200     0.235
+staircase           0.625     0.500     0.556
+street              1.000     0.600     0.750
+subway interior     0.615     0.800     0.696
+subway station platform     0.889     0.800     0.842
+supermarket         0.231     0.300     0.261
+sushi bar           0.833     0.500     0.625
+swamp               0.700     0.700     0.700
+swimming pool indoor     0.833     0.500     0.625
+swimming pool outdoor     0.750     0.900     0.818
+synagogue indoor     0.500     0.300     0.375
+synagogue outdoor     0.375     0.300     0.333
+television studio     0.714     0.500     0.588
+temple east asia     0.667     0.600     0.632
+temple south asia     0.800     0.400     0.533
+tennis court indoor     0.833     1.000     0.909
+tennis court outdoor     0.750     0.600     0.667
+tent outdoor        0.900     0.900     0.900
+theater indoor procenium     0.750     0.300     0.429
+theater indoor seats     0.500     0.300     0.375
+thriftshop          0.222     0.400     0.286
+throne room         0.833     0.500     0.625
+ticket booth        1.000     0.400     0.571
+toll plaza          0.500     0.600     0.545
+topiary garden      0.889     0.800     0.842
+tower               0.462     0.600     0.522
+toyshop             0.667     0.400     0.500
+track outdoor       0.778     0.700     0.737
+train railway       0.727     0.800     0.762
+train station platform     0.833     1.000     0.909
+tree farm           0.312     0.500     0.385
+tree house          0.750     0.900     0.818
+trench              0.385     0.500     0.435
+underwater coral reef     1.000     1.000     1.000
+utility room        1.000     0.700     0.824
+valley              0.333     0.300     0.316
+van interior        0.400     0.600     0.480
+vegetable garden     0.500     0.300     0.375
+veranda             0.429     0.300     0.353
+veterinarians office     0.818     0.900     0.857
+viaduct             0.818     0.900     0.857
+videostore          0.800     0.800     0.800
+village             0.727     0.800     0.762
+vineyard            0.364     0.400     0.381
+volcano             1.000     0.600     0.750
+volleyball court indoor     1.000     0.200     0.333
+volleyball court outdoor     0.400     0.400     0.400
+waiting room        0.625     0.500     0.556
+warehouse indoor     0.857     0.600     0.706
+water tower         0.615     0.800     0.696
+waterfall block     0.467     0.700     0.560
+waterfall fan       1.000     0.300     0.462
+waterfall plunge     0.714     0.500     0.588
+watering hole       0.778     0.700     0.737
+wave                0.889     0.800     0.842
+wet bar             0.750     0.300     0.429
+wheat field         0.667     0.600     0.632
+wind farm           0.750     0.600     0.667
+windmill            0.727     0.800     0.762
+wine cellar barrel storage     0.889     0.800     0.842
+wine cellar bottle storage     0.556     0.500     0.526
+wrestling ring indoor     0.875     0.700     0.778
+yard                0.231     0.300     0.261
+youth hostel        0.700     0.700     0.700
+
+=== Overall ===
+Accuracy       0.581
+Precision (macro)   0.623
+Recall (macro)      0.581
+F1 (macro)          0.579
+
+Saved results to ../../results/cgcbat_v6_frozen_sun397.json
+=== ALL DONE ===
