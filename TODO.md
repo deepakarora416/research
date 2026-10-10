@@ -3,10 +3,6 @@
 Tracked here so it survives across sessions. Update status as items are completed.
 
 ## For PhD thesis
-- [ ] **Places365** — deprioritized early during architecture debugging, never finished.
-      Need: ResNet50 baseline (8ep, matched) + CG-CBAT using the final, proven recipe
-      (frozen backbone + validation-split early stopping) directly — no need to re-run
-      the old v1-v5 architecture iteration, we already know the winning method.
 - [ ] **Thesis write-up** — all experiments/results exist, but no thesis chapters or
       structured document have been drafted yet.
 
@@ -27,7 +23,13 @@ Tracked here so it survives across sessions. Update status as items are complete
 - [x] Swin-T vs ResNet50 baseline across 6 datasets
 - [x] CG-CBAT architecture (v1-v6) with iterative fixes
 - [x] Frozen-backbone training strategy (the real fix for joint-training instability)
-- [x] Final validated scoreboard: 3 wins, 2 ties, 0 losses (5 datasets, honest methodology)
 - [x] Test-set leakage bug caught and fixed (proper validation split)
 - [x] Interpretability analysis (Grad-CAM + CBAM attention maps)
 - [x] Robustness analysis (corruption testing + confusable-class stress test)
+- [x] Places365 finished with the proven recipe (frozen backbone + validation split)
+- [x] **FINAL validated scoreboard across all 6 datasets, honest methodology, no test-set
+      leakage: 3 wins (Scene15 +0.81pp, MIT67 +2.12pp, UC Merced +1.19pp), 2 ties
+      (Intel Image 0.00pp, SUN397 -0.15pp), 1 loss (Places365 -2.19pp). Pattern: wins on
+      moderate-data/moderate-difficulty tasks, ties on easy/near-ceiling or very-hard-
+      but-not-impossible tasks, loses only on the most extreme data-scarcity regime
+      (Places365: ~30 images/class across 365 classes, same regime as SUN397's tie).**
